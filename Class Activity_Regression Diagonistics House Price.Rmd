@@ -1,0 +1,163 @@
+---
+title: "RegressionDiagonistics"
+author: "Subhadip Pal"
+date: '2023-09-12'
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Read the Data From Appropriatew Folder 
+Name of the Dataset: "Houseprice.csv"
+1) Read the Data set to R workspace and call it by the name 'hp'
+2) Remove the rows that has missing values. 
+
+```{r}
+hp <- read.csv(, header= ?)
+
+# To remove all the rows that has  NA values in any one of the columns
+hp <- na.omit(hp)
+```
+
+## Create a Scatter plots of the data. X variable= CrimeRate, Y Variable= HousePrice
+Note: The attach command makes the variable available in the workspace.
+
+```{r }
+attach(hp) # This attach() function loads the variable in the R workspace. This is not a mandetory command. For Example, instead of attach we can simply try hp$CrimeRate. However if we do attach(hp) then the varibale   CrimeRate is also available 
+plot(?,? , col="blue", pch=20, xlab="Crime Rate", ylab="House Price")
+
+```
+
+
+
+## Fit a Linear Reghression Model 
+The command/function to fit a linear regression model is lm(). Create a model fit object: model.1. Y variable is:HousePrice, X variable is:CrimeRate
+
+Prepare a summary of the model.1
+Prepare a scatterplot (code included)
+The command abline created the fitted line plot 
+
+```{r }
+model.1 <- lm(? ~ ?) # This fits the Linear Regression HousePrice= \beta_0+ \beta_1 *CrimeRate 
+summary(model.1)
+# summary command prints summary of all the data points. 
+
+
+plot(CrimeRate, HousePrice, col="blue", pch=20, xlab="Crime Rate", ylab="House Price")
+# In the plot function change pch to 21 
+abline(model.1,col="dark red")
+```
+
+
+### Residual plot for the mode
+
+```{r }
+Residuals <- residuals(model.1)
+plot(CrimeRate, Residuals, pch=20)
+abline(h=0, col="dark red", lty=2)
+
+```
+
+
+# The diagonistics plots are provided Below. Simply need to type plot() and input the name of the model object; Here it is model.1
+
+```{r }
+
+plot(model.1)
+```
+
+We have observed that there is an influential point in the data. hence we remove the influential point for further analysis. 
+
+
+
+
+# A second Fit Remiving the Influential Points
+We will discuss in Class what attach and detach command does.  
+Fit model.2 after removing the 62 nd row, that pertains to the incluential point. 
+
+
+```{r }
+
+
+hp.new <- hp[-62,]
+dim(hp.new)
+detach(hp)
+attach(hp.new)
+
+model.2=lm(hp.new$HousePrice~hp.new$CrimeRate)
+plot(CrimeRate, HousePrice, col="blue", pch=20, xlab="Crime Rate", ylab="House Price")
+abline(model.1,col="dark red", lty=2)
+abline(model.2,col="dark red")
+
+
+#model.2 <- lm(HousePrice~CrimeRate, data=hp.new)
+summary(model.2)
+
+```
+```{r }
+plot(CrimeRate, HousePrice, col="blue", pch=20, xlab="Crime Rate", ylab="House Price")
+abline(lm(HousePrice~CrimeRate),col="dark red")
+
+Residuals <- residuals(model.2)
+plot(CrimeRate, Residuals, pch=20)
+abline(h=0, col="dark red", lty=2)
+
+
+```
+
+
+### Plotting regression diagonistics for the model.2 
+
+```{r }
+plot(model.2)
+
+```
+#### To test formally/statistically whether the residuals are normally distributed or not.
+```{r }
+shapiro.test(model.2$residuals)
+
+```
+ It appears that the residuals are not normally distributed. Hence we try a third model with a log transformation to the response Y. 
+
+
+### A third model with transformed Y 
+```{r }
+
+model.3=lm(log(HousePrice)~CrimeRate, data=hp.new)
+summary(model.3)
+
+
+plot(CrimeRate, log(HousePrice), col="blue", pch=20, xlab="Crime Rate", ylab="House Price")
+abline(model.3,col="dark red")
+
+```
+
+### Visual Regression diagonistics for the third model.
+
+```{r }
+plot(model.3)
+```
+
+
+### Testing whether the residuals for the model3 are normal. Just to remind you that the residuals incurred from model.2 was not normally distributed. 
+```{r }
+shapiro.test(model.2$residuals)
+
+shapiro.test(model.3$residuals)
+```
+
+
+
+
+### If we consider a transformation in the Y variable, we need to be careful how to use the fitted line for the prediction. 
+```{r }
+predicted_log_value<-predict(model.3, list(CrimeRate=30))
+predicted_Y_value= exp(predicted_log_value)
+predicted_Y_value
+```
