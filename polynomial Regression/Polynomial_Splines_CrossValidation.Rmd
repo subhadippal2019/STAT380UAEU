@@ -1,0 +1,304 @@
+---
+title: "Splines and Cross Validation"
+author: ' STAT 380'
+date: ' '
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Loading the  BostonHousing Data 
+1) Using the read.csv() command: Read in the R worksopace as the name 'Daten' 
+Note that the names are case sensitive. that is 'Daten' is not same as 'daten'. 
+
+2) Apply the basic functions on the data.frame  'Daten' to check its structure.
+
+```{r }
+#########################################################################
+# STAT380: Statistical Machine Learning
+# Content: Dataset Boston housing    
+#########################################################################
+
+#Daten<-read.csv("")
+
+Daten<-read.csv("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv")
+#Daten
+
+
+# Additional information for a quick check to identify whether the data is loaded appropriately
+head(Daten, 6) # shows the first 6 rows from the data.
+str(Daten) # provides structure of an R object in general. In this case it will show the names of the variables inside it. 
+summary(Daten) # This commands provides the summary of all the variables of the dataset.
+
+```
+# Data Partition
+1)  Split data in two partitions (80% Training, 20% Validation)
+2) set.seed(10)
+3)  Use the function create Data Partition from `caret' package.
+4) Read the help manual for the function `createDataPartition' The corresponding command is   '?createDataPartition'  OR 'help(createDataPartition)' 
+
+```{r }
+#########################################################################
+  # 2. Data Partitioning                      
+  #########################################################################
+ 
+ # Split data in three partitions (80% Training, 20% Validation)
+ 
+  library(caret)
+#install.packages('caret') # Use this command to install the package,  if case the package is not installed and you get an error "rror in library(caret) : there is no package called ‘caret’"
+  set.seed(10) # An optional argument butr sometimes convinient to set the see to reproduce the result. 
+  #We are going to use the createDataPartition function. Hence see the documentation on the function
+ # help(createDataPartition)
+```
+  
+```{r }
+library(caret)
+
+createDataPartition_alt<-function(y,p = 0.5, list=FALSE){
+  n=length(y)
+  Train_size=round(n*p)
+  sel_sample=sample(x = 1:n,size =Train_size ,replace = FALSE)
+  return(sel_sample)
+}
+
+
+
+
+```  
+
+
+```{r }
+
+  Daten=na.omit(Daten)
+  #inTrain = createDataPartition(Daten$CRIM, p = 0.8, list = FALSE)
+  inTrain = createDataPartition_alt(Daten$CRIM, p = 0.8, list = FALSE)
+  train = Daten[inTrain, ]
+  dim(train)
+  dim(Daten)
+  
+```
+
+
+
+## Creating the Testing Set
+ 1) Create the Testing set 'test'. Not ethat test set will have all the data rows that are not included in the trainig set. 
+ 
+ 2) Plot the variable 'MEDV' available in the 'train' and 'test' dataset and plot the points in a different color 
+ 
+ 3) Put the legend command to see what changes does it make to the plot.
+
+```{r }
+  
+
+  test = Daten[-inTrain,]
+  dim(test)
+  
+  plot(train$LSTAT, train$MEDV, col="orange", pch=19 , ylab="MEDV", xlab="")
+  points(test$LSTAT, test$MEDV,col="blue", pch=19)
+  legend(280, 47, legend=c("train$MEDV",  "test$MEDV"),
+         col=c("orange" ,"blue"), lty=1:2, cex=0.8)
+  
+
+```
+
+
+
+# Fitting a Polynomial 
+1) We fit in the training dataset and check its performance from the testing dataset
+Degree of the polynomial is 2 in the following example. I.e. the function of the type 
+$\beta_0+\beta_1 X+\beta_2X^2$ will be considered. 
+
+
+
+```{r }
+
+model_polynomial <- lm(MEDV ~ poly(LSTAT, 2, raw = TRUE), data= train)
+
+
+#model_linear = lm(MEDV ~ LSTAT, data = train); 
+summary(model_polynomial)
+
+  
+```
+
+
+```{r }
+#Make predictions
+library(forecast)
+
+# library(forecard does not work: try the following)
+accuracy_alt<-function( pred_y,y){
+  ee<-y-pred_y
+  Error_Rate<-data.frame(
+  ME=mean(ee), 
+  RMSE = RMSE(y, pred_y),
+  MAE=mean(abs(ee)),
+  MPE=100*mean((ee/y)),
+  MAPE=100*mean(abs(ee/y))
+  )
+    return(Error_Rate)
+  
+}
+
+
+predictions_test =  predict(object =model_polynomial,newdata= test )
+
+  #MOdel performance on the Testing Data
+ data.frame(RMSE = RMSE(predictions_test, test$MEDV), R2 = R2(predictions_test, test$MEDV))
+  accuracy(predictions_test, test$MEDV)
+  #MOdel performance on the Training Data 
+ predictions_train =  predict(object =model_polynomial,newdata= train )
+ data.frame(RMSE = RMSE(predictions_train, train$MEDV), R2 = R2(predictions_train, train$MEDV))
+ 
+ 
+  
+```
+```{r }
+plt<-ggplot(train, aes(LSTAT, MEDV) ) + geom_point() +stat_smooth(method = lm, formula = y ~ poly(x, 2, raw =TRUE))
+plt
+```
+ 
+ 
+## Checking the model Assumptions:
+```{r }
+plot(model_polynomial)
+```
+
+ 
+
+ # Fitting a Regression Splines
+ 
+ ## 1) Consider Fiting a piecewise Line
+ 
+ Step1: Identify the regions to put the knots
+ Step2: Fit a spline 
+ Step3: plot the results
+ 
+```{r }
+#install.packages("splines")
+library(splines)
+ # Build the model
+knots <- quantile(train$LSTAT, p = c(0.25, .5,  0.75))
+model_ss1 <- lm (MEDV ~ bs(LSTAT, knots = knots, degree=1),  data =train)
+summary(model_ss1)
+ggplot(train, aes(LSTAT, MEDV) ) + geom_point() +
+stat_smooth(method = lm, formula = y ~ splines::bs(x, knots = knots, degree=1))
+
+
+```
+ 
+ 
+
+
+## 1) Consider Fiting a piecewise polynomial of degree 2
+
+
+
+
+```{r }
+#install.packages("splines")
+ # Build the model
+knots <- quantile(train$LSTAT, p = c(0.25, .5,  0.9))
+model_ss2 <- lm (MEDV ~ bs(LSTAT, knots = knots, degree=2),  data =train)
+summary(model_ss2)
+ggplot(train, aes(LSTAT, MEDV) ) + geom_point() +
+stat_smooth(method = lm, formula = y ~ splines::bs(x, knots = knots, degree=2))
+
+
+```
+
+## 1) Consider Fiting a piecewise polynomial of degree 3 ( most popular choice also the default option)
+
+
+```{r }
+#install.packages("splines")
+library(splines)
+ # Build the model
+knots <- quantile(train$LSTAT, p = c(0.25, .5,  0.75))
+model_ss3 <- lm (MEDV ~ bs(LSTAT, knots = knots),  data =train)
+summary(model_ss3)
+ggplot(train, aes(LSTAT, MEDV) ) + geom_point() +
+stat_smooth(method = lm, formula = y ~ splines::bs(x, knots = knots))
+```
+
+
+## Prediction Based on the 3 degree polynomial Fit. 
+```{r }
+#predictions <- modelss %>% predict(test)
+predictions <-  predict(model_ss3, test)
+plot(test$MEDV , predictions)
+# Model performance
+data.frame(
+RMSE = RMSE(predictions, test$MEDV),
+R2 = R2(predictions, test$MEDV))
+```
+
+
+# Cross Validation 
+
+```{r }
+set.seed(11)
+fit<-glm(MEDV~CRIM+RM+PTRATIO,data=Daten)
+
+library(boot)
+# Leave-one-out cross-validation
+cv_one_err<-cv.glm(Daten,fit)
+cv_one_err$delta
+
+
+
+# 5 fold Cross Validation
+cv_5_err<-cv.glm(Daten,fit,K=5)
+cv_5_err$delta
+```
+
+
+
+```{r }
+cv_error<-NULL
+
+ for(i in 1:6){
+    fit_poly<-glm(MEDV~poly(CRIM,degree=i)+RM+PTRATIO,data=Daten)
+    cv_error[i]<-cv.glm(Daten,fit_poly,K=5)$delta[1]
+ }
+ cv_error
+#[1] 34.708 34.813 35.076 34.423 41.874 51.530
+
+plot(1:6, cv_error)
+par(new=TRUE)
+plot(1:6, cv_error, type="l", col="blue")
+```
+
+
+
+```{r }
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+## Preparation for the next class
+
+```{r }
+#install.packages("glmnet"
+library(glmnet)
+
+```
+

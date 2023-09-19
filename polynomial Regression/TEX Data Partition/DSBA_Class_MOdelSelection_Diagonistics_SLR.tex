@@ -1,0 +1,822 @@
+\documentclass[compress]{beamer}
+\mode<presentation>
+\setbeamercovered{transparent}
+\usetheme{Warsaw}
+%\useoutertheme{smoothtree}
+\usepackage{multirow}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{xmpmulti}
+\usepackage{multicol}
+\usepackage{colortbl}
+%\setbeamersize{text margin left=.25 in,text margin right=.25 in}
+\setbeamersize{text margin left=.15 in,text margin right=.15 in}
+\usepackage[authoryear]{natbib}
+\usepackage{epstopdf}
+\definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{bistre}{rgb}{0.24, 0.17, 0.12}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
+\definecolor{slateblue}{rgb}{0.56, 0.74, 0.56}
+\definecolor{cordovan}{rgb}{0.54, 0.25, 0.27}
+\definecolor{darkbyzantium}{rgb}{0.36, 0.22, 0.33}
+\setbeamercolor{structure}{fg=darkbyzantium!70, bg= black!60}
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+%%%%%%%%% shaddow image %%%%%
+% some parameters for customization
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+% this draws a shadow under a rectangle node
+\newcommand\drawshadow[1]{
+\begin{pgfonlayer}{shadow}
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=innercolor] ($(#1.north west)+(-\shadowradius/12,\shadowradius/12)$) rectangle ($(#1.south east)+(\shadowradius/12,-\shadowradius/12)$);%Frame
+    \filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+\end{pgfonlayer}
+}
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow} 
+\pgfsetlayers{shadow,main}
+% Define image shadow command
+\newcommand\shadowimage[2][]{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+\drawshadow{image}
+\end{tikzpicture}}
+\usepackage{calligra}
+
+\DeclareMathOperator*{\argmax}{Arg\,max}
+\DeclareMathOperator*{\argmin}{Arg\,min}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert }
+\newcommand{\bbetaHat}{ \widehat{\bbeta}}
+\newcommand{\bbetaLSE}{ \widehat{\bbeta}_{_{\text{LSE}}}}
+\newcommand{\bbetaMLE}{ \widehat{\bbeta}_{_{\text{MLE}}}}
+\newcommand{\sqBullet}[1]{  {\tiny \tiny \tiny \qBoxCol{#1!60}{ }} }
+%***************
+%\newtheorem{thm}{Theorem}
+\input{definition_include.tex}
+\input{BoxDef}
+\input{MatrixDef}
+
+
+
+
+
+
+
+
+
+
+
+\title{  STAT 380:\\ {\color{black} Regression Diagnostics}}
+
+\author[Subhadip Pal]
+{Subhadip Pal}
+\institute[IIM] % (optional, but mostly needed)
+{
+  \inst{}%
+  %Indian Institute of Management,  Udaipur\\
+  \vspace{0.1in}
+
+  
+}
+
+\date{}
+
+
+\newcommand{\Xnew}{ \HLTEQ[orange]{X_{_{\text{i}}}} }
+\newcommand{\Ynew}{ \HLTEQ[orange]{Y_{_{\text{i}}}} }
+
+%\date{\today}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Inhalt}
+ % \begin{multicols}{1}
+	\frametitle{Outline}
+    \tableofcontents[currentsection]
+  %  \end{multicols}
+  \end{frame}
+}
+
+\begin{document}
+\maketitle
+
+%\begin{frame}{Outline}
+%%\begin{multicols}{}
+%  \tableofcontents
+%%\end{multicols}
+%\end{frame}
+
+%\section{Introduction to DSBA 2023}
+%
+%
+%\begin{frame}
+%\qBoxCol{blue!30}{
+%\begin{center} Course  Website \end{center}
+%\qbx[4.2in]{teal!40}{\sqBullet{teal} \color{blue} $ \href{https://sites.google.com/iimu.ac.in/dsba2023e/home}{https://sites.google.com/iimu.ac.in/dsba2023e/home}$
+%}\\
+%\qbx[3.0in]{green!40}{ \sqBullet{green} Regular Announcements.
+%}\\
+%\qbx[3.0in]{olive!40}{\sqBullet{olive}  Slides and other materials.
+%}
+%}
+%
+%\pause
+%\qBoxCol{blue!30}{
+%\sqBullet{blue}
+%You can contact the instructor at {\it subhadip.pal@iimu.ac.in} and schedule for office hours.  
+%}
+%\pause
+%\qBoxCol{olive!30}{
+%\sqBullet{olive}
+%Mr. Praveen Kumar has been assigned as Teaching Assistant (TA) for this course.  His email I'd is:  {\it praveen.kumar@iimu.ac. }
+%}
+%
+%
+%\end{frame}
+%
+
+
+%
+%\begin{frame}{Course Outline}
+%\hspace{-.1in}\qBoxCol{blue!35}{
+%% Please add the following required packages to your document preamble:
+%% \usepackage{booktabs}
+%\begin{table}[]
+%\begin{tabular}{@{}lll@{}}
+%\toprule
+%         & Topics                                                & Dataset or Case                                    \\ \midrule \midrule
+%\rowcolor{blue!20}     \multicolumn{1}{|l|}{1-2}   & \multicolumn{1}{l|}{Overview of Data Science}        & \multicolumn{1}{l|}{Household Data}                \\ \midrule
+%\rowcolor{purple!20} 
+%\multicolumn{1}{|l|}{3-5}   & \multicolumn{1}{l|}{Data Visualization}              & \multicolumn{1}{l|}{Global Super Store }       \\ \midrule
+%\rowcolor{blue!20} 
+%\multicolumn{1}{|l|}{6}     & \multicolumn{1}{l|}{Introduction to R/ JMP}          & \multicolumn{1}{l|}{}                              \\ \midrule
+%\rowcolor{purple!20} 
+%\multicolumn{1}{|l|}{7}     & \multicolumn{1}{l|}{Regression Analysis}             & \multicolumn{1}{l|}{Display \& Liquor Sales} \\ \midrule
+%\rowcolor{blue!20} 
+%\multicolumn{1}{|l|}{8}     & \multicolumn{1}{l|}{Multiple Regression}             & \multicolumn{1}{l|}{}                              \\ \midrule
+%\rowcolor{purple!20} 
+%\multicolumn{1}{|l|}{9}     & \multicolumn{1}{l|}{Dealing with Nominal Covariates} & \multicolumn{1}{l|}{Gender Divide}                 \\ \midrule
+%\rowcolor{blue!20} 
+%\multicolumn{1}{|l|}{10}    & \multicolumn{1}{l|}{Regression Diagonistics}         & \multicolumn{1}{l|}{}                              \\ \midrule
+%\rowcolor{purple!20} 
+%\multicolumn{1}{|l|}{11-12} & \multicolumn{1}{l|}{Project Presentations}            &\multicolumn{1}{l|}{}          \\\midrule \bottomrule
+%\end{tabular}
+%\end{table}
+%}
+%\end{frame}
+
+
+%\begin{frame}{Case Study }
+%\qBoxCol{teal!40}{\vspace{1in}\begin{center}\sqBullet{teal} \Large Case: Liquor sales and display space \end{center}
+%\vspace{1in}
+%}\\
+%\end{frame}
+
+
+\TransitionFrame[antiquebrass]{\Large Simple Linear Regression: \\Model Selection Criterion }
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{The Linear Fit}
+\qbx[4.55in]{teal!40}{ \sqBullet{teal} The simple linear regression line is given by \vspace{-.1in}
+\begin{center}
+ \qBrd[1.55in]{blue!10}{ $Y= \alpha+\beta X+\varepsilon.$}  \qBrd[1in]{olive!20}{ $\varepsilon\sim \text{N}(0,\sigma^2)$}\\
+ \end{center} }
+
+\qBoxCol{blue!30}{
+The parameters of the models are  $\alpha, \beta, \sigma^2$.
+}
+\qBoxCol{teal!30}{
+The corresponding estimates are   $\hat{\alpha}, \hat{\beta}, \hat{\sigma}^2$. We have seen expression of these estimators in terms of the observed data  in one of the previous slide. 
+}
+
+Let $(X_i, Y_i)$ be the observed value of the $i^{\text{th}}$ data points, $i =1, \ldots, n. $
+\qBrd[4.5in]{blue!30}{ The corresponding predicted response is  $\HLTW{ \hat{Y}_{_{\text{i}}}= \hat{\alpha}+\hat{\beta} \Xnew}$
+}
+%\qBox{
+
+%}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\TransitionFrame{\Large Measures of Goodness of Fit}
+
+
+\begin{frame}{$R^2$ Goodness of Fit }
+\qbx[4.5in]{blue!40}{ $$\HLTW{ \text{ESS}= \sum_{i=1}^{n}(y_i- \hat{y}_i)^2} \text{ \tiny and } \HLTY{ \text{RMSE}= \sqrt{\frac{\sum_{i=1}^{n}(y_i- \hat{y}_i)^2}{n}}} $$   $$ \HLTW{ \text{TSS}= \sum_{i=1}^{n}(y_i- \bar{Y})^2} $$  $$ \HLTW{ \text{SSR}= \sum_{i=1}^{n}(\hat{y}_i- \bar{Y})^2} $$  }
+\qbx[3in]{olive!40}{ 
+Result: $$ \HLTY{  \text{TSS}= \text{ESS}+  \text{SSR}.} $$
+}
+
+\qbx[3in]{teal!30}{ 
+$$ R^2 = 1- \frac{ESS}{TSS}  =  1- \frac{\sum_{i=1}^{n}(y_i- \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i- \bar{Y})^2}  $$
+}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Adjusted-$R^2$ Goodness of Fit }
+\qbx[4.5in]{blue!40}{ $$\HLTW{ \text{ESS}= \sum_{i=1}^{n}(y_i- \hat{y}_i)^2},  $$  $$ \HLTW{ \text{TSS}= \sum_{i=1}^{n}(y_i- \bar{Y})^2} $$  $$ \HLTW{ \text{SSR}= \sum_{i=1}^{n}(\hat{y}_i- \bar{Y})^2} $$  }
+
+\begin{center}
+
+\qbx[3in]{olive!40}{ 
+$$ R_{_{\text{adj}}}^2 = 1- \frac{\frac{ESS}{n-p}}{\frac{TSS}{n-1}}  = \HLTW{\displaystyle 1- \frac{n-1}{n-p} (1-R^2)}.  $$
+}
+\end{center}
+
+here $p=2$ as we have only two regression coefficients, namely  $\alpha, \beta$.
+
+\end{frame}
+
+
+\begin{frame}{F Statistic: Model Fitness}
+\qbx[4.5in]{blue!40}{ $$\HLTW{ \text{ESS}= \sum_{i=1}^{n}(y_i- \hat{y}_i)^2}  $$   $$ \HLTW{ \text{TSS}= \sum_{i=1}^{n}(y_i- \bar{Y})^2} $$  $$ \HLTW{ \text{SSR}= \sum_{i=1}^{n}(\hat{y}_i- \bar{Y})^2} \vspace{-.15in} $$  }
+ \begin{center}
+\qbx[3in]{olive!40}{ 
+Result: $$ \HLTY{  \text{TSS}= \text{ESS} + \text{SSR}.} \vspace{-.15in} $$
+}\vspace{.01in}
+
+\qbx[3in]{teal!30}{ 
+$$ F= \frac{\frac{SSR}{p-1}}{\frac{SSE}{n-p}} \sim \text{F}_{_{(p-1), (n-p)} \text{df}} \vspace{-.15in} $$
+}
+ 
+ \end{center}
+$p$ denotes the total number of regression coefficients including the intercept.  Here $p=2$ as we have only two regression coefficients $\alpha, \beta$.
+
+\end{frame}
+
+
+
+\TransitionFrame{\Large Model Selection Criterion: \\
+ AIC, BIC  }
+
+
+
+
+
+
+
+
+
+\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
+\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+
+
+
+
+\begin{frame}{  Likelighood of The Linear Statistical Model}
+\qBrd[1.55in]{almond!70}{ $\MakeVec{y}= X\bbeta+\MakeVec{\varepsilon}.$}  \qBrd[2in]{olive!20}{ $\MakeVec{\varepsilon}\sim \text{N}(0,\sigma^2I_{n\times n})$}
+
+
+
+
+
+\qBrd[4.4in]{almond!70}{ 
+Likelihood of the data:= Probability Density of the Response
+}
+
+\qBrd[4.4in]{olive!30}{ 
+Likelihood:=\DBX{ \frac{1}{\left(\sqrt{2\pi}\sigma\right)^n }e^{-\frac{(\MakeVec{y}-X\bbeta)^T (\MakeVec{y}-X\bbeta)}{2\sigma^2}}
+}}
+\vspace{.01in}
+
+\qBrd[4.4in]{olive!30}{ 
+Log Likelihood:=\DBX{n\log\left(\sqrt{2\pi}\sigma\right)
+{-\frac{(\MakeVec{y}-X\bbeta)^T (\MakeVec{y}-X\bbeta)}{2\sigma^2}}
+}}
+
+
+\qBrd[4.4in]{green!30}{ Maximum Likelihood Principle: 
+{\bf Larger Value for the Likelihood/ Log Likelihood indicates a better model fit.} }
+
+
+
+
+
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{  Model selection: Akaike's Information Criteria (AIC)}
+\qBrd[4.6in]{almond!70}{ The AIC Criterion for a General model is:\\ \DBX{AIC =2\HLTY{ p }- 2\times \text{Log-Likelihood}\left(\text{Model}\right).   } Here \HLTY{ p }: denotes the model dimension/ model complexity.
+}
+
+
+\vspace{-.1in}
+\qBrd[4in]{green!40}{ 
+Identify the one among the competing models that have the {\bf smallest AIC.}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{  Model selection: Schwarz's  Bayesian information criterion (BIC) }
+\qBrd[4.6in]{almond!70}{ The BIC Criterion for a General model is:\\ \DBX{BIC =\HLTY{ p }\log(n)- 2\times \text{Log-Likelihood}\left(\text{Model}\right).   } Here \HLTY{ p }: denotes the model dimension/ model complexity.
+}
+
+\vspace{-.1in}
+\qBrd[4in]{green!70}{ 
+Identify the one among the competing models that have the {\bf smallest BIC.}
+}
+
+\end{frame}
+
+
+
+
+\TransitionFrame[slateblue]{\Large Outlier, Influential Points  and Leverages}
+
+
+\begin{frame}{Assumptions of SLR }
+
+\qBoxCol{teal!30}{
+The observed data: $\{Y_i, X_i\}_{i=1}^n $.  According to the model: \HLTY{Y_i= \alpha+\beta X_i+\varepsilon_i}
+}
+
+
+\begin{enumerate}
+\item $\varepsilon_i\sim \text{Normal}(0, \sigma^2)$, $\sigma^2>0$.
+\item $\varepsilon_1, \varepsilon_2, \ldots, \varepsilon_n$ are {\it statistically  independent} (i.e.  random and unrelated. )
+\item $\sigma^2$  ( likely to be unknown ) is constant. It does not depend on the responses of the covariates. 
+\end{enumerate}
+\qBrd{teal!30}{Apart from checking the model assumptions, we also need to be cautious if there is any outlier/influential points in the data. }
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Assumptions of SLR }
+\qBoxCol{teal!30}{
+Need to check whether the data set does not violate any of the assumptions mentioned in the previous slide.
+}
+
+\qBrd{olive!40}{What else can go wrong?}
+\begin{enumerate}
+\item Regression function can be wrong- missing predictors,
+nonlinearity
+\item Outliers: both in predictors and observations.
+\item Influential Points: these points have high  influence on the
+regression function.
+\end{enumerate}
+
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Structure of Statistical Hypothesis Testing }
+\qBoxCol{teal!30}{
+There is a {\bf  NULL Hypothesis} and {\bf Alternative} Hypothesis 
+}
+\qBrd{blue!40}{Null is Denoted as $H_0$, Alternative is denoted as $H_1$ or $H_a$}
+General Procedure for Statistical Hypothesis Testing: 
+\begin{enumerate}
+\item[Step 1] Test Statistics: We calculate the value of the Test Statistic from the particular Data.
+\pause
+\item[Step 2] We obtain/know the 'Probability Distribution ' of the Test Statistic Assuming 'NULL' hypothesis to be True. 
+\pause
+\item[Step 3] Calculate corresponding p-Value of the Test that uses the Distribution in Step2 and calculated Statistic in Step1.
+\pause
+\item[Step 4: ]
+\qBrd{olive!40}{
+\begin{enumerate}
+\item If p-value is small: We {\bf have strong statistical evidence to Reject} the Null hypothesis.
+\pause
+\item If p-value is Large: We {\bf do not have enough statistical evidence to Reject } the Null hypothesis.
+\end{enumerate}
+}
+
+
+\end{enumerate}
+
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large  Measure of Leverage to Detect Influential Points}
+
+
+
+\begin{frame}{Reminder:  Confidence Interval for Predicted Responses}
+
+\qBrd[4.5in]{blue!30}{  {\bf Leverage:}  A leverage point is an observation that has an unusual covariate/predictor value (very different from the majority of the observations).
+}\\
+\vspace{.2in}
+
+\qBrd[4.5in]{slateblue!30}{  {\bf Influence point :}  An influence point is an observation whose removal from the data set would cause a large change in the estimated regression model coefficients).
+}
+
+
+
+\end{frame}
+
+
+
+
+
+
+%
+% 
+% {
+%\begin{frame}{ Influential Points}
+%Let $(X_i, Y_i)$ be the observed value of the $i^{\text{th}}$ data points, $i =1, \ldots, n. $
+%\qBrd[4.5in]{blue!30}{ The corresponding predicted response is  $\HLTW{ \hat{Y}_{_{\text{i}}}= \hat{\alpha}+\hat{\beta} \Xnew}$
+%}
+%A little bit of  algebra would provide that \qbx[4.68in]{blue!30}{ $ \text{SD}\left( \hat{Y}_{\text{i}} \right) = \sqrt{ \text{Var} \left( \hat{\alpha}+\hat{\beta}\Xnew \right)} = \cdots= \DBX{ \HLTW{\sigma}\sqrt{\frac{1}{n}+ \frac{\left(\Xnew-\bar{x}\right)^2}{ \sum_{i=1}^{n}(x_i-\bar{x})^2}}}$
+%} 
+%
+%\hspace{-.1in}\qBrd[4.74in]{cyan!10}{ $\HLTY{ \HLTW{ \hat{Y}_{_{\text{new}}}} - t_{n-p, \frac{\alpha}{2}} { \HLTW{\hat{\sigma}}\sqrt{\frac{1}{n}+ \frac{\left(\Xnew-\bar{x}\right)^2}{ \sum_{i=1}^{n}(x_i-\bar{x})^2}}}},  \HLTW{ \hat{Y}_{_{\text{new}}}} +t_{n-p, \frac{\alpha}{2}} { \HLTW{\hat{\sigma}}\sqrt{\frac{1}{n}+ \frac{\left(\Xnew-\bar{x}\right)^2}{ \sum_{i=1}^{n}(x_i-\bar{x})^2}}}$
+%} 
+%
+%\end{frame}
+%
+%}
+
+
+
+
+\begin{frame}{  Measure of Leverage to Detect Influential Points }
+\qBoxCol{teal!30}{\sqBullet{teal} A measure of Leverage for the $i^{\text{th}}$ Data-point $(X_i, Y_i)$ is given as: \\
+\vspace{-.3in}
+\begin{center}
+\tiny
+$$\DBX{ h_{_{i,i}}:=   \frac{1}{n}+ \frac{\left(\Xnew-\bar{x}\right)^2}{ \sum_{i=1}^{n}(x_i-\bar{x})^2}}  $$
+\qBrd[1in]{olive!20}{ $ \frac{1}{n} \leq h_{_{i,i}} < 1$ }
+\end{center}
+}
+
+
+ A large value of the leverage means the corresponding data point is far away from the data center.  It might be a point of significant influence to the regression coefficients. 
+
+\end{frame}
+
+
+%
+\begin{frame}{  Measure of Leverage to Detect Influential Points }
+\includegraphics[scale=.22]{figs8/Leverage_Influence.png} 
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{  Cook's Distance to Detect Influential Points }
+\qBrd[4.5in]{gray!30}{ \sqBullet{orange} { Standardized Residual residual:} \tiny   $\HLTY{\HLTW{z_i} := \frac{\hat{Y}_i-Y_i}{\hat{\sigma} }}$
+{\tiny: Based on the linear regression assumptions, we might expect the $z_i$'s to resemble a sample from a N(0, 1) distribution.}
+}\\
+\vspace{.01in}
+
+\qBrd[4.5in]{gray!30}{ \sqBullet{violet}  { Studentized Residual:} It is defined to be  \tiny $\HLTY{\HLTW{e_i} := \frac{\hat{Y}_i-Y_i}{\hat{\sigma}\sqrt{ \HLTEQ[lime]{1-h_{_{i,i}} }  }}}$. {\tiny: approximately follows a t
+distribution with $n - p$  degrees of freedom (under the standard assumptions of the SLR).  In large data sets (large n), the standardized
+and studentized residuals should not differ dramatically.}
+}\\
+\vspace{.01in}
+
+\qBrd[4.5in]{gray!30}{ \sqBullet{violet} {Cook's Distance:} \tiny $$\HLTY{\text{CD}_i:= \frac{\HLTW{e_i^2} }{p} \frac{h_{_{i,i}} }{1-h_{_{i,i}} }} .$$
+}
+
+\vspace{.1in}
+\qBrd[4.5in]{green!30}{
+{\bf 
+It is suggested to examine the cases with $\text{CD}_i > 0.5$ and that
+cases with $\text{CD}_i > 1$ can be highly influential. }}
+\end{frame}
+
+
+
+%
+%\begin{frame}{  Leverage and Influence }
+%\includegraphics[scale=.35]{figs8/Inf_lev.png} 
+%
+%
+%\end{frame}
+
+
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large Residual  Plots}
+
+
+\begin{frame}{ A Typical Desirable Residual Plot   }
+\qBrd{blue!30}{{\bf Residual Plot:} Graph of Residuals against Predictor variable or
+against the fitted values is helpful to see if the
+variance of error terms are constant. 
+}
+\includegraphics[scale=.3]{figs8/IdealResidual.png} 
+
+
+\end{frame}
+
+
+\begin{frame}{   Residual  Plots }
+
+\qBrd[4.6in]{violet!30}{ 
+\sqBullet{violet}The plots of the residuals, Studentized Residual and Standardized residuals can be utilized to visually identify  key insights, not only  in identifying influential points, but also many additional information. regarding the regression diagnostics. }
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large Detection for Lack of Normality of Residuals:\\  Shapiro-Wilk's Test for Residuals}
+
+
+\begin{frame}{ Normal Q-Q Plot }
+
+\qBrd[4.5in]{blue!30}{  {\bf Normal Q-Q Plot:} Theoretical quantiles (percentiles) from the standard normal distribution are plotted against the empirical quantiles of the standardized residuals. 
+}\\
+\vspace{.2in}
+
+\qBrd[4.5in]{green!30}{ In ideal scenario, when there is no model assumptions violation on normality of the residuals,  all the points on a Normal Q-Q plot for the standardized residuals should be on the (very close to the) X=Y straight line.
+}\\
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{  Examples: Q-Q Plots  }
+\includegraphics[scale=.3]{figs8/qq_examples.png} 
+
+
+\end{frame}
+
+
+
+\begin{frame}{  Statistical Test of Normality for Residuals: Shapiro-Wilk test  }
+
+\begin{center}
+\qBrd{blue!30}{
+It tests for whether the errors/residuals are Normally distributed or nor. 
+\vspace{-.2in} \begin{center}
+\qBrd[2in]{slateblue!50}{$H_0: \text{\tiny Residuals are Normaly Distributed}\\ \text{ vs } \\H_1: \text{ \tiny Residuals are not Normaly Distributed } \vspace{-.01in}$}
+\end{center}
+}
+%\qBrd[4.5in]{gray!30}{ \tiny Define: $e^{*}_{i}:= \hat{Y}_i - Y_i.$ .  Let $e^{*}_{(1)}< e^{*}_{(2)} < \ldots < e^{*}_{(n)}$ are the ordered values of residuals.  }
+%\qbx{gray!40}{ $$Test Statistic= \DBX{W= \frac{\sum_{i=1}^{n} a_ie^{*}_{(i)} }{ \sum_{i=1}^{n} \left( e^*_i - \bar{e}^* \right)^2} \text{  where } \bar{e}^* } = \frac{1}{n}\sum{e^*_i}. $$
+%}
+%\\
+%
+%\vspace{-.2in}
+%\qBrd[4.5in]{slateblue!50}{ $a_1, a_2, \ldots, a_n$ are appropriately chosen numbers related to the joint distribution of n ordered standard normal random variables.  {\tiny Specifically ${\bf a}:= \frac{m^T V^{-1}}{\vert m^T V^{-1}\vert }$}  }\\
+
+
+\end{center}
+
+
+\end{frame}
+
+%
+%\begin{frame}{  Statistical Test of Normality for Residuals: Shapiro-Wilk test  }
+%
+%\begin{center}
+%\qBrd{blue!30}{
+%It tests for whether the errors/residuals are Normally distributed or nor. 
+%\vspace{-.2in} \begin{center}
+%\qBrd[2in]{slateblue!50}{$H_0: \text{\tiny Residuals are Normaly Distributed}\\ \text{ vs } \\H_1: \text{ \tiny Residuals are not Normaly Distributed } \vspace{-.01in}$}
+%\end{center}
+%}
+%\qBrd[4.5in]{teal!30}{ Define: $e^{*}_{i}:= \hat{Y}_i - Y_i.$ .  Let $e^{*}_{(1)}< e^{*}_{(2)} < \ldots < e^{*}_{(n)}$ are the ordered values of residuals.  }
+%\qbx{violet!40}{ $$Test Statistic= \DBX{W= \frac{\sum_{i=1}^{n} a_ie^{*}_{(i)} }{ \sum_{i=1}^{n} \left( e^*_i - \bar{e}^* \right)^2} \text{  where } \bar{e}^* } = \frac{1}{n}\sum{e^*_i}. $$
+%}
+%\\
+%
+%\qBrd[4.5in]{slateblue!50}{ $a_1, a_2, \ldots, a_n$ are appropriately chosen numbers related to the joint distribution of n ordered standard normal random variables.  {\tiny Specifically ${\bf a}:= \frac{m^T V^{-1}}{\vert m^T V^{-1}\vert }$ where m, V be the mean and variance of the n ordered standard normal random variables.  }   }\\
+%
+%
+%
+%\end{center}
+%
+%
+%\end{frame}
+%
+
+
+
+
+
+\begin{frame}{  Statistical Test of Normality for Residuals: Shapiro-Wilk test  }
+
+\begin{center}
+\qBrd{blue!30}{
+It tests for whether the errors/residuals are Normally distributed or nor. 
+\vspace{-.2in} \begin{center}
+\qBrd[2in]{slateblue!50}{$H_0: \text{\tiny Residuals are Normaly Distributed}\\ \text{ vs } \\H_1: \text{ \tiny Residuals are not Normaly Distributed } \vspace{-.01in}$}
+\end{center}
+}\\
+\vspace{.1in}
+\qBrd[4.5in]{gray!50}{The test statistic is Denoted as W. $0<W\leq 1$.  $W$ is a fraction.  } \\
+\vspace{.1in}
+
+
+\qBrd[4.5in]{gray!50}{ Decision: We have strong statistical evidence to Reject the Null Hypothesis if the corresponding p-value is less than .05.    }
+ \\
+\vspace{.1in}
+
+\qBrd[4.5in]{green!50}{ If Assumption of normality are true : the  p-value is {\bf  more then  .05} then there is no statistical evidence to believe that the residuals are not Normally distributed.    }
+
+\end{center}
+
+
+\end{frame}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\TransitionFrame[airforceblue]{\Large A Possible Remedy to Deal with Non-Normality of the Residuals.    }
+
+
+
+
+\begin{frame}{  Box-Cox Power  Transformation of the Responses }
+
+The power transformation is parametrized by $\lambda $ (a real value can be positive negative or zero.)
+\begin{center}
+\qBrd{blue!30}{\begin{center}
+\DBX{ \tilde{Y} = 
+\begin{cases}
+\log(Y) & \text{ if } \lambda=0\\
+\frac{Y^{\lambda}-1}{\lambda} &\text{ if } \lambda\neq 0\\
+\end{cases} }\end{center}
+}\\
+\vspace{.1in}
+\qBrd[4.5in]{violet!50}{\sqBullet{violet}Optimal $\lambda$ is often estimated by a cross validation procedure.  Standard Statistical software typically provide a procedure to identify its optimal value. } \\
+\vspace{.1in}
+\qBrd[4.5in]{lime!50}{ \sqBullet{green} Box-Cox Transformation may resolve the issues due to the non normality of the residuals and heteroscedasticity. } \\
+\vspace{.1in}
+
+
+\end{center}
+
+
+\end{frame}
+
+
+\definecolor{armygreen}{rgb}{0.29, 0.33, 0.13}
+
+\TransitionFrame[armygreen]{\Large  Detection of  heteroscedasticity (Non constant $\sigma^2$)}
+
+
+
+\begin{frame}{ Identification of non-constant Error Variance   }
+\qBrd{blue!30}{{\bf Residual Plot:} Graph of Residuals against Predictor variable or
+against the fitted values is helpful to see if the
+variance of error terms are constant. 
+}
+\includegraphics[scale=.3]{figs8/IdealResidual.png} 
+
+
+\end{frame}
+
+
+
+\begin{frame}{ Identification of non-constant Error Variance   }
+\qBrd{blue!30}{{\bf Residual Plot:}  Variability of the residuals appears to be increasing.
+}
+\includegraphics[scale=.3]{figs8/varIncrease.png} 
+
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\qBrd{airforceblue!50}{ \sqBullet{airforceblue} A Possible remedy to deal with non constant variability is to utilize weighted Least Square. }
+
+\qBrd{green!20}{ \sqBullet{airforceblue} Use appropriate transformation on the Responses (Y).}
+\end{frame}
+
+
+
+
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large  Detection of Correlated Model Errors ($\varepsilon_i$): \\ Durbin-Watson Test}
+
+
+
+\begin{frame}{ Identification of Non Linearity  }
+\qBrd{blue!30}{{\bf Residual Plot:}  Violation of the Linearity Assumption. The errors are not statistically independent/uncorrelated.  There seem to be  a seasonality.
+}
+\includegraphics[scale=.28]{figs8/Seasonal.png} 
+
+
+\end{frame}
+
+\begin{frame}{ Darbin Watson Test (DW Test) for identifying Correlated Model Errors }
+\vspace{-.05in}
+\begin{center}
+\qBrd{blue!30}{
+It tests for whether the errors/residuals are auto-correlated or not.  Let $\rho$ denotes the lag 1 auto correlation between the errors.   i.e.  If $\text{corr}( \varepsilon_i,  \varepsilon_{i-1})= \rho$ then it tests for\\
+\vspace{-.2in} \begin{center}
+\qBrd[3in]{slateblue!50}{$$H_0: \rho= 0 \text{ vs } H_1: \rho\neq 0 \vspace{-.1in}$$}
+\end{center}
+}
+
+\qBrd[2in]{olive!50}{ \tiny Define: $e^{*}_{i}:= \hat{Y}_i - Y_i.$ }
+\qbx{violet!40}{ \tiny $Test Statistic= d= \frac{\sum_{i=1}^n\left(e^{*}_{i}- e^{*}_{i-1}\right)^2}{\sum_{i=1}^n{e^{*}}^2}$
+}
+
+\vspace{-.1in}
+\qBrd[4.5in]{gray!50}{ Reject Null Hypothesis if $d$ is large or small.  `significantly large' value of d indicates negative correlation,  `significantly small' values of d is indicative of positive correlation   }
+
+
+
+\qBrd[4.5in]{green!50}{ Assumption are met (errors are not correlated ): If the corresponding p-value of the test is LARGER than .05 }
+
+
+
+\end{center}
+\end{frame}
+
+\begin{frame}
+\qBrd{airforceblue!50}{ \sqBullet{airforceblue} A Possible remedy is to use  utilize Time series models such as AR, ARMA, ARIMA, GARCH model. Uf there is seasonality in the model try to include some periodic function along with the linear functions.  }
+\end{frame}
+
+
+
+\TransitionFrame[antiquebrass]{\Huge Thank You}
+
+
+\end{document}

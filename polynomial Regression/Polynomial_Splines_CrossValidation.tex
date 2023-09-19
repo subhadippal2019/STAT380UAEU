@@ -1,0 +1,744 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Splines and Cross Validation},
+  pdfauthor={STAT 380},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Splines and Cross Validation}
+\author{STAT 380}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{loading-the-bostonhousing-data}{%
+\section{Loading the BostonHousing
+Data}\label{loading-the-bostonhousing-data}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Using the read.csv() command: Read in the R worksopace as the name
+  `Daten' Note that the names are case sensitive. that is `Daten' is not
+  same as `daten'.
+\item
+  Apply the basic functions on the data.frame `Daten' to check its
+  structure.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}
+\CommentTok{\# STAT380: Statistical Machine Learning}
+\CommentTok{\# Content: Dataset Boston housing    }
+\DocumentationTok{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}
+
+\CommentTok{\#Daten\textless{}{-}read.csv("")}
+
+\NormalTok{Daten}\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"}\NormalTok{)}
+\CommentTok{\#Daten}
+
+
+\CommentTok{\# Additional information for a quick check to identify whether the data is loaded appropriately}
+\FunctionTok{head}\NormalTok{(Daten, }\DecValTok{6}\NormalTok{) }\CommentTok{\# shows the first 6 rows from the data.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      CRIM ZN INDUS CHAS   NOX    RM  AGE    DIS RAD TAX PTRATIO LSTAT MEDV
+## 1 0.00632 18  2.31    0 0.538 6.575 65.2 4.0900   1 296    15.3  4.98 24.0
+## 2 0.02731  0  7.07    0 0.469 6.421 78.9 4.9671   2 242    17.8  9.14 21.6
+## 3 0.02729  0  7.07    0 0.469 7.185 61.1 4.9671   2 242    17.8  4.03 34.7
+## 4 0.03237  0  2.18    0 0.458 6.998 45.8 6.0622   3 222    18.7  2.94 33.4
+## 5 0.06905  0  2.18    0 0.458 7.147 54.2 6.0622   3 222    18.7  5.33 36.2
+## 6 0.02985  0  2.18    0 0.458 6.430 58.7 6.0622   3 222    18.7  5.21 28.7
+##   CAT..MEDV
+## 1         0
+## 2         0
+## 3         1
+## 4         1
+## 5         1
+## 6         0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(Daten) }\CommentTok{\# provides structure of an R object in general. In this case it will show the names of the variables inside it. }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    506 obs. of  14 variables:
+##  $ CRIM     : num  0.00632 0.02731 0.02729 0.03237 0.06905 ...
+##  $ ZN       : num  18 0 0 0 0 0 12.5 12.5 12.5 12.5 ...
+##  $ INDUS    : num  2.31 7.07 7.07 2.18 2.18 2.18 7.87 7.87 7.87 7.87 ...
+##  $ CHAS     : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ NOX      : num  0.538 0.469 0.469 0.458 0.458 0.458 0.524 0.524 0.524 0.524 ...
+##  $ RM       : num  6.58 6.42 7.18 7 7.15 ...
+##  $ AGE      : num  65.2 78.9 61.1 45.8 54.2 58.7 66.6 96.1 100 85.9 ...
+##  $ DIS      : num  4.09 4.97 4.97 6.06 6.06 ...
+##  $ RAD      : int  1 2 2 3 3 3 5 5 5 5 ...
+##  $ TAX      : int  296 242 242 222 222 222 311 311 311 311 ...
+##  $ PTRATIO  : num  15.3 17.8 17.8 18.7 18.7 18.7 15.2 15.2 15.2 15.2 ...
+##  $ LSTAT    : num  4.98 9.14 4.03 2.94 5.33 ...
+##  $ MEDV     : num  24 21.6 34.7 33.4 36.2 28.7 22.9 27.1 16.5 18.9 ...
+##  $ CAT..MEDV: int  0 0 1 1 1 0 0 0 0 0 ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(Daten) }\CommentTok{\# This commands provides the summary of all the variables of the dataset.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       CRIM                ZN             INDUS            CHAS        
+##  Min.   : 0.00632   Min.   :  0.00   Min.   : 0.46   Min.   :0.00000  
+##  1st Qu.: 0.08205   1st Qu.:  0.00   1st Qu.: 5.19   1st Qu.:0.00000  
+##  Median : 0.25651   Median :  0.00   Median : 9.69   Median :0.00000  
+##  Mean   : 3.61352   Mean   : 11.36   Mean   :11.14   Mean   :0.06917  
+##  3rd Qu.: 3.67708   3rd Qu.: 12.50   3rd Qu.:18.10   3rd Qu.:0.00000  
+##  Max.   :88.97620   Max.   :100.00   Max.   :27.74   Max.   :1.00000  
+##       NOX               RM             AGE              DIS        
+##  Min.   :0.3850   Min.   :3.561   Min.   :  2.90   Min.   : 1.130  
+##  1st Qu.:0.4490   1st Qu.:5.886   1st Qu.: 45.02   1st Qu.: 2.100  
+##  Median :0.5380   Median :6.208   Median : 77.50   Median : 3.207  
+##  Mean   :0.5547   Mean   :6.285   Mean   : 68.57   Mean   : 3.795  
+##  3rd Qu.:0.6240   3rd Qu.:6.623   3rd Qu.: 94.08   3rd Qu.: 5.188  
+##  Max.   :0.8710   Max.   :8.780   Max.   :100.00   Max.   :12.127  
+##       RAD              TAX           PTRATIO          LSTAT      
+##  Min.   : 1.000   Min.   :187.0   Min.   :12.60   Min.   : 1.73  
+##  1st Qu.: 4.000   1st Qu.:279.0   1st Qu.:17.40   1st Qu.: 6.95  
+##  Median : 5.000   Median :330.0   Median :19.05   Median :11.36  
+##  Mean   : 9.549   Mean   :408.2   Mean   :18.46   Mean   :12.65  
+##  3rd Qu.:24.000   3rd Qu.:666.0   3rd Qu.:20.20   3rd Qu.:16.95  
+##  Max.   :24.000   Max.   :711.0   Max.   :22.00   Max.   :37.97  
+##       MEDV         CAT..MEDV    
+##  Min.   : 5.00   Min.   :0.000  
+##  1st Qu.:17.02   1st Qu.:0.000  
+##  Median :21.20   Median :0.000  
+##  Mean   :22.53   Mean   :0.166  
+##  3rd Qu.:25.00   3rd Qu.:0.000  
+##  Max.   :50.00   Max.   :1.000
+\end{verbatim}
+
+\hypertarget{data-partition}{%
+\section{Data Partition}\label{data-partition}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Split data in two partitions (80\% Training, 20\% Validation)
+\item
+  set.seed(10)
+\item
+  Use the function create Data Partition from `caret' package.
+\item
+  Read the help manual for the function `createDataPartition' The
+  corresponding command is `?createDataPartition' OR
+  `help(createDataPartition)'
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}
+  \CommentTok{\# 2. Data Partitioning                      }
+  \DocumentationTok{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}
+ 
+ \CommentTok{\# Split data in three partitions (80\% Training, 20\% Validation)}
+ 
+  \FunctionTok{library}\NormalTok{(caret)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: lattice
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages(\textquotesingle{}caret\textquotesingle{}) \# Use this command to install the package,  if case the package is not installed and you get an error "rror in library(caret) : there is no package called ‘caret’"}
+  \FunctionTok{set.seed}\NormalTok{(}\DecValTok{10}\NormalTok{) }\CommentTok{\# An optional argument butr sometimes convinient to set the see to reproduce the result. }
+  \CommentTok{\#We are going to use the createDataPartition function. Hence see the documentation on the function}
+ \CommentTok{\# help(createDataPartition)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(caret)}
+
+\NormalTok{createDataPartition\_alt}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(y,}\AttributeTok{p =} \FloatTok{0.5}\NormalTok{, }\AttributeTok{list=}\ConstantTok{FALSE}\NormalTok{)\{}
+\NormalTok{  n}\OtherTok{=}\FunctionTok{length}\NormalTok{(y)}
+\NormalTok{  Train\_size}\OtherTok{=}\FunctionTok{round}\NormalTok{(n}\SpecialCharTok{*}\NormalTok{p)}
+\NormalTok{  sel\_sample}\OtherTok{=}\FunctionTok{sample}\NormalTok{(}\AttributeTok{x =} \DecValTok{1}\SpecialCharTok{:}\NormalTok{n,}\AttributeTok{size =}\NormalTok{Train\_size ,}\AttributeTok{replace =} \ConstantTok{FALSE}\NormalTok{)}
+  \FunctionTok{return}\NormalTok{(sel\_sample)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  Daten}\OtherTok{=}\FunctionTok{na.omit}\NormalTok{(Daten)}
+  \CommentTok{\#inTrain = createDataPartition(Daten$CRIM, p = 0.8, list = FALSE)}
+\NormalTok{  inTrain }\OtherTok{=} \FunctionTok{createDataPartition\_alt}\NormalTok{(Daten}\SpecialCharTok{$}\NormalTok{CRIM, }\AttributeTok{p =} \FloatTok{0.8}\NormalTok{, }\AttributeTok{list =} \ConstantTok{FALSE}\NormalTok{)}
+\NormalTok{  train }\OtherTok{=}\NormalTok{ Daten[inTrain, ]}
+  \FunctionTok{dim}\NormalTok{(train)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 405  14
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{dim}\NormalTok{(Daten)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 506  14
+\end{verbatim}
+
+\hypertarget{creating-the-testing-set}{%
+\subsection{Creating the Testing Set}\label{creating-the-testing-set}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Create the Testing set `test'. Not ethat test set will have all the
+  data rows that are not included in the trainig set.
+\item
+  Plot the variable `MEDV' available in the `train' and `test' dataset
+  and plot the points in a different color
+\item
+  Put the legend command to see what changes does it make to the plot.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  test }\OtherTok{=}\NormalTok{ Daten[}\SpecialCharTok{{-}}\NormalTok{inTrain,]}
+  \FunctionTok{dim}\NormalTok{(test)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 101  14
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{plot}\NormalTok{(train}\SpecialCharTok{$}\NormalTok{LSTAT, train}\SpecialCharTok{$}\NormalTok{MEDV, }\AttributeTok{col=}\StringTok{"orange"}\NormalTok{, }\AttributeTok{pch=}\DecValTok{19}\NormalTok{ , }\AttributeTok{ylab=}\StringTok{"MEDV"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{""}\NormalTok{)}
+  \FunctionTok{points}\NormalTok{(test}\SpecialCharTok{$}\NormalTok{LSTAT, test}\SpecialCharTok{$}\NormalTok{MEDV,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{pch=}\DecValTok{19}\NormalTok{)}
+  \FunctionTok{legend}\NormalTok{(}\DecValTok{280}\NormalTok{, }\DecValTok{47}\NormalTok{, }\AttributeTok{legend=}\FunctionTok{c}\NormalTok{(}\StringTok{"train$MEDV"}\NormalTok{,  }\StringTok{"test$MEDV"}\NormalTok{),}
+         \AttributeTok{col=}\FunctionTok{c}\NormalTok{(}\StringTok{"orange"}\NormalTok{ ,}\StringTok{"blue"}\NormalTok{), }\AttributeTok{lty=}\DecValTok{1}\SpecialCharTok{:}\DecValTok{2}\NormalTok{, }\AttributeTok{cex=}\FloatTok{0.8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\hypertarget{fitting-a-polynomial}{%
+\section{Fitting a Polynomial}\label{fitting-a-polynomial}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  We fit in the training dataset and check its performance from the
+  testing dataset Degree of the polynomial is 2 in the following
+  example. I.e. the function of the type
+  \(\beta_0+\beta_1 X+\beta_2X^2\) will be considered.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model\_polynomial }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(MEDV }\SpecialCharTok{\textasciitilde{}} \FunctionTok{poly}\NormalTok{(LSTAT, }\DecValTok{2}\NormalTok{, }\AttributeTok{raw =} \ConstantTok{TRUE}\NormalTok{), }\AttributeTok{data=}\NormalTok{ train)}
+
+
+\CommentTok{\#model\_linear = lm(MEDV \textasciitilde{} LSTAT, data = train); }
+\FunctionTok{summary}\NormalTok{(model\_polynomial)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = MEDV ~ poly(LSTAT, 2, raw = TRUE), data = train)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -15.0806  -3.8866  -0.3915   2.3088  25.5758 
+## 
+## Coefficients:
+##                              Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)                 42.432448   0.965929   43.93   <2e-16 ***
+## poly(LSTAT, 2, raw = TRUE)1 -2.301207   0.136649  -16.84   <2e-16 ***
+## poly(LSTAT, 2, raw = TRUE)2  0.043186   0.004116   10.49   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 5.445 on 402 degrees of freedom
+## Multiple R-squared:  0.6392, Adjusted R-squared:  0.6374 
+## F-statistic: 356.1 on 2 and 402 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Make predictions}
+\FunctionTok{library}\NormalTok{(forecast)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'forecast' was built under R version 4.0.5
+\end{verbatim}
+
+\begin{verbatim}
+## Registered S3 method overwritten by 'quantmod':
+##   method            from
+##   as.zoo.data.frame zoo
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{predictions\_test }\OtherTok{=}  \FunctionTok{predict}\NormalTok{(}\AttributeTok{object =}\NormalTok{model\_polynomial,}\AttributeTok{newdata=}\NormalTok{ test )}
+
+  \CommentTok{\#MOdel performance on the Testing Data}
+ \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{RMSE =} \FunctionTok{RMSE}\NormalTok{(predictions\_test, test}\SpecialCharTok{$}\NormalTok{MEDV), }\AttributeTok{R2 =} \FunctionTok{R2}\NormalTok{(predictions\_test, test}\SpecialCharTok{$}\NormalTok{MEDV))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       RMSE        R2
+## 1 5.839985 0.6488598
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{accuracy}\NormalTok{(predictions\_test, test}\SpecialCharTok{$}\NormalTok{MEDV)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                 ME     RMSE      MAE       MPE     MAPE
+## Test set 0.5292977 5.839985 4.275274 -4.846819 20.31902
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \CommentTok{\#MOdel performance on the Training Data }
+\NormalTok{ predictions\_train }\OtherTok{=}  \FunctionTok{predict}\NormalTok{(}\AttributeTok{object =}\NormalTok{model\_polynomial,}\AttributeTok{newdata=}\NormalTok{ train )}
+ \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{RMSE =} \FunctionTok{RMSE}\NormalTok{(predictions\_train, train}\SpecialCharTok{$}\NormalTok{MEDV), }\AttributeTok{R2 =} \FunctionTok{R2}\NormalTok{(predictions\_train, train}\SpecialCharTok{$}\NormalTok{MEDV))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       RMSE        R2
+## 1 5.424907 0.6392125
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plt}\OtherTok{\textless{}{-}}\FunctionTok{ggplot}\NormalTok{(train, }\FunctionTok{aes}\NormalTok{(LSTAT, MEDV) ) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}\FunctionTok{stat\_smooth}\NormalTok{(}\AttributeTok{method =}\NormalTok{ lm, }\AttributeTok{formula =}\NormalTok{ y }\SpecialCharTok{\textasciitilde{}} \FunctionTok{poly}\NormalTok{(x, }\DecValTok{2}\NormalTok{, }\AttributeTok{raw =}\ConstantTok{TRUE}\NormalTok{))}
+\NormalTok{plt}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+\hypertarget{checking-the-model-assumptions}{%
+\subsection{Checking the model
+Assumptions:}\label{checking-the-model-assumptions}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(model\_polynomial)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-9-1.pdf}
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-9-2.pdf}
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-9-3.pdf}
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-9-4.pdf}
+
+\# Fitting a Regression Splines
+
+\#\# 1) Consider Fiting a piecewise Line
+
+Step1: Identify the regions to put the knots Step2: Fit a spline Step3:
+plot the results
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("splines")}
+\FunctionTok{library}\NormalTok{(splines)}
+ \CommentTok{\# Build the model}
+\NormalTok{knots }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(train}\SpecialCharTok{$}\NormalTok{LSTAT, }\AttributeTok{p =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.25}\NormalTok{, .}\DecValTok{5}\NormalTok{,  }\FloatTok{0.75}\NormalTok{))}
+\NormalTok{model\_ss1 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{ (MEDV }\SpecialCharTok{\textasciitilde{}} \FunctionTok{bs}\NormalTok{(LSTAT, }\AttributeTok{knots =}\NormalTok{ knots, }\AttributeTok{degree=}\DecValTok{1}\NormalTok{),  }\AttributeTok{data =}\NormalTok{train)}
+\FunctionTok{summary}\NormalTok{(model\_ss1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = MEDV ~ bs(LSTAT, knots = knots, degree = 1), data = train)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -12.2749  -3.1638  -0.8243   2.4137  26.9017 
+## 
+## Coefficients:
+##                                       Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)                             46.159      1.290   35.77   <2e-16 ***
+## bs(LSTAT, knots = knots, degree = 1)1  -21.358      1.686  -12.67   <2e-16 ***
+## bs(LSTAT, knots = knots, degree = 1)2  -24.451      1.385  -17.65   <2e-16 ***
+## bs(LSTAT, knots = knots, degree = 1)3  -29.901      1.449  -20.64   <2e-16 ***
+## bs(LSTAT, knots = knots, degree = 1)4  -37.660      1.996  -18.87   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 5.158 on 400 degrees of freedom
+## Multiple R-squared:  0.6779, Adjusted R-squared:  0.6747 
+## F-statistic: 210.5 on 4 and 400 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(train, }\FunctionTok{aes}\NormalTok{(LSTAT, MEDV) ) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+\FunctionTok{stat\_smooth}\NormalTok{(}\AttributeTok{method =}\NormalTok{ lm, }\AttributeTok{formula =}\NormalTok{ y }\SpecialCharTok{\textasciitilde{}}\NormalTok{ splines}\SpecialCharTok{::}\FunctionTok{bs}\NormalTok{(x, }\AttributeTok{knots =}\NormalTok{ knots, }\AttributeTok{degree=}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\hypertarget{consider-fiting-a-piecewise-polynomial-of-degree-2}{%
+\subsection{1) Consider Fiting a piecewise polynomial of degree
+2}\label{consider-fiting-a-piecewise-polynomial-of-degree-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("splines")}
+ \CommentTok{\# Build the model}
+\NormalTok{knots }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(train}\SpecialCharTok{$}\NormalTok{LSTAT, }\AttributeTok{p =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.25}\NormalTok{, .}\DecValTok{5}\NormalTok{,  }\FloatTok{0.9}\NormalTok{))}
+\NormalTok{model\_ss2 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{ (MEDV }\SpecialCharTok{\textasciitilde{}} \FunctionTok{bs}\NormalTok{(LSTAT, }\AttributeTok{knots =}\NormalTok{ knots, }\AttributeTok{degree=}\DecValTok{2}\NormalTok{),  }\AttributeTok{data =}\NormalTok{train)}
+\FunctionTok{summary}\NormalTok{(model\_ss2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = MEDV ~ bs(LSTAT, knots = knots, degree = 2), data = train)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -14.9561  -3.1347  -0.7419   2.0374  26.7507 
+## 
+## Coefficients:
+##                                       Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)                             51.980      2.123  24.488  < 2e-16 ***
+## bs(LSTAT, knots = knots, degree = 2)1  -22.514      2.928  -7.688 1.17e-13 ***
+## bs(LSTAT, knots = knots, degree = 2)2  -28.709      2.066 -13.898  < 2e-16 ***
+## bs(LSTAT, knots = knots, degree = 2)3  -35.761      2.429 -14.722  < 2e-16 ***
+## bs(LSTAT, knots = knots, degree = 2)4  -43.532      2.681 -16.236  < 2e-16 ***
+## bs(LSTAT, knots = knots, degree = 2)5  -36.677      4.060  -9.034  < 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 5.109 on 399 degrees of freedom
+## Multiple R-squared:  0.6848, Adjusted R-squared:  0.6808 
+## F-statistic: 173.4 on 5 and 399 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(train, }\FunctionTok{aes}\NormalTok{(LSTAT, MEDV) ) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+\FunctionTok{stat\_smooth}\NormalTok{(}\AttributeTok{method =}\NormalTok{ lm, }\AttributeTok{formula =}\NormalTok{ y }\SpecialCharTok{\textasciitilde{}}\NormalTok{ splines}\SpecialCharTok{::}\FunctionTok{bs}\NormalTok{(x, }\AttributeTok{knots =}\NormalTok{ knots, }\AttributeTok{degree=}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+\hypertarget{consider-fiting-a-piecewise-polynomial-of-degree-3-most-popular-choice-also-the-default-option}{%
+\subsection{1) Consider Fiting a piecewise polynomial of degree 3 ( most
+popular choice also the default
+option)}\label{consider-fiting-a-piecewise-polynomial-of-degree-3-most-popular-choice-also-the-default-option}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("splines")}
+\FunctionTok{library}\NormalTok{(splines)}
+ \CommentTok{\# Build the model}
+\NormalTok{knots }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(train}\SpecialCharTok{$}\NormalTok{LSTAT, }\AttributeTok{p =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.25}\NormalTok{, .}\DecValTok{5}\NormalTok{,  }\FloatTok{0.75}\NormalTok{))}
+\NormalTok{model\_ss3 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{ (MEDV }\SpecialCharTok{\textasciitilde{}} \FunctionTok{bs}\NormalTok{(LSTAT, }\AttributeTok{knots =}\NormalTok{ knots),  }\AttributeTok{data =}\NormalTok{train)}
+\FunctionTok{summary}\NormalTok{(model\_ss3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = MEDV ~ bs(LSTAT, knots = knots), data = train)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -12.7884  -3.0077  -0.7195   2.0113  27.3480 
+## 
+## Coefficients:
+##                           Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)                 49.324      2.958  16.677  < 2e-16 ***
+## bs(LSTAT, knots = knots)1  -11.488      4.369  -2.629  0.00889 ** 
+## bs(LSTAT, knots = knots)2  -26.715      2.786  -9.589  < 2e-16 ***
+## bs(LSTAT, knots = knots)3  -26.955      3.316  -8.128 5.58e-15 ***
+## bs(LSTAT, knots = knots)4  -38.776      3.446 -11.251  < 2e-16 ***
+## bs(LSTAT, knots = knots)5  -39.600      4.743  -8.349 1.15e-15 ***
+## bs(LSTAT, knots = knots)6  -34.760      4.759  -7.305 1.53e-12 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 5.125 on 398 degrees of freedom
+## Multiple R-squared:  0.6836, Adjusted R-squared:  0.6788 
+## F-statistic: 143.3 on 6 and 398 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(train, }\FunctionTok{aes}\NormalTok{(LSTAT, MEDV) ) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+\FunctionTok{stat\_smooth}\NormalTok{(}\AttributeTok{method =}\NormalTok{ lm, }\AttributeTok{formula =}\NormalTok{ y }\SpecialCharTok{\textasciitilde{}}\NormalTok{ splines}\SpecialCharTok{::}\FunctionTok{bs}\NormalTok{(x, }\AttributeTok{knots =}\NormalTok{ knots))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+\hypertarget{prediction-based-on-the-3-degree-polynomial-fit.}{%
+\subsection{Prediction Based on the 3 degree polynomial
+Fit.}\label{prediction-based-on-the-3-degree-polynomial-fit.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#predictions \textless{}{-} modelss \%\textgreater{}\% predict(test)}
+\NormalTok{predictions }\OtherTok{\textless{}{-}}  \FunctionTok{predict}\NormalTok{(model\_ss3, test)}
+\FunctionTok{plot}\NormalTok{(test}\SpecialCharTok{$}\NormalTok{MEDV , predictions)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Model performance}
+\FunctionTok{data.frame}\NormalTok{(}
+\AttributeTok{RMSE =} \FunctionTok{RMSE}\NormalTok{(predictions, test}\SpecialCharTok{$}\NormalTok{MEDV),}
+\AttributeTok{R2 =} \FunctionTok{R2}\NormalTok{(predictions, test}\SpecialCharTok{$}\NormalTok{MEDV))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       RMSE        R2
+## 1 5.559719 0.6789511
+\end{verbatim}
+
+\hypertarget{cross-validation}{%
+\section{Cross Validation}\label{cross-validation}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{11}\NormalTok{)}
+\NormalTok{fit}\OtherTok{\textless{}{-}}\FunctionTok{glm}\NormalTok{(MEDV}\SpecialCharTok{\textasciitilde{}}\NormalTok{CRIM}\SpecialCharTok{+}\NormalTok{RM}\SpecialCharTok{+}\NormalTok{PTRATIO,}\AttributeTok{data=}\NormalTok{Daten)}
+
+\FunctionTok{library}\NormalTok{(boot)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'boot'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:lattice':
+## 
+##     melanoma
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Leave{-}one{-}out cross{-}validation}
+\NormalTok{cv\_one\_err}\OtherTok{\textless{}{-}}\FunctionTok{cv.glm}\NormalTok{(Daten,fit)}
+\NormalTok{cv\_one\_err}\SpecialCharTok{$}\NormalTok{delta}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 35.00064 34.99989
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 5 fold Cross Validation}
+\NormalTok{cv\_5\_err}\OtherTok{\textless{}{-}}\FunctionTok{cv.glm}\NormalTok{(Daten,fit,}\AttributeTok{K=}\DecValTok{5}\NormalTok{)}
+\NormalTok{cv\_5\_err}\SpecialCharTok{$}\NormalTok{delta}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 36.09778 35.89034
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cv\_error}\OtherTok{\textless{}{-}}\ConstantTok{NULL}
+
+ \ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\DecValTok{6}\NormalTok{)\{}
+\NormalTok{    fit\_poly}\OtherTok{\textless{}{-}}\FunctionTok{glm}\NormalTok{(MEDV}\SpecialCharTok{\textasciitilde{}}\FunctionTok{poly}\NormalTok{(CRIM,}\AttributeTok{degree=}\NormalTok{i)}\SpecialCharTok{+}\NormalTok{RM}\SpecialCharTok{+}\NormalTok{PTRATIO,}\AttributeTok{data=}\NormalTok{Daten)}
+\NormalTok{    cv\_error[i]}\OtherTok{\textless{}{-}}\FunctionTok{cv.glm}\NormalTok{(Daten,fit\_poly,}\AttributeTok{K=}\DecValTok{5}\NormalTok{)}\SpecialCharTok{$}\NormalTok{delta[}\DecValTok{1}\NormalTok{]}
+\NormalTok{ \}}
+\NormalTok{ cv\_error}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]    36.50394    34.61901    35.16963    34.97346    69.66155 13168.04656
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#[1] 34.708 34.813 35.076 34.423 41.874 51.530}
+
+\FunctionTok{plot}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{6}\NormalTok{, cv\_error)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{6}\NormalTok{, cv\_error, }\AttributeTok{type=}\StringTok{"l"}\NormalTok{, }\AttributeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Polynomial_Splines_CrossValidation_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+\hypertarget{preparation-for-the-next-class}{%
+\subsection{Preparation for the next
+class}\label{preparation-for-the-next-class}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("glmnet"}
+\FunctionTok{library}\NormalTok{(glmnet)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: Matrix
+\end{verbatim}
+
+\begin{verbatim}
+## Loaded glmnet 4.0-2
+\end{verbatim}
+
+\end{document}
