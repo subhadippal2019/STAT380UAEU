@@ -205,56 +205,79 @@
 
 
 
-
-
-
-
-
-\begin{frame}{ }
-\qbx[4.55in]{teal!40}{ \sqBullet{teal} Let $\{y_i , {\bf X}_i \}_{i=1}^{n}$
-be the observed data.  And there is a statistical/machine learning  model that provides a prediction for the responses $y_i$. \\
-\qBrd[4.3in]{blue!30}{  We denoted the predicted value for the responses to be $\HLTY{\hat{y}_i}$}
-}
-
-%\qBox{
-
-%}
-
-\end{frame}
-
-
-
-\TransitionFrame[antiquebrass]{\Large The Boston Housing Dataset }
-
-
-
-
 {
  \setbeamercolor{background canvas}{bg=}
 %\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
-\includepdf[pages={57-61}, scale=1]{../polynomial Regression/STAT380-Unit1.pdf}
+\includepdf[pages={90-95}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
 %\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
 }
 
 
 
 
-\TransitionFrame[antiquebrass]{\Large Polynomial Regression }
-
-{
- \setbeamercolor{background canvas}{bg=}
-%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
-\includepdf[pages={55-58}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
-}
 
 
-\TransitionFrame[antiquebrass]{\Large Regression  Splines}
+
+%
+%\begin{frame}{ }
+%\qbx[4.55in]{teal!40}{ \sqBullet{teal} Let $\{y_i , {\bf X}_i \}_{i=1}^{n}$
+%be the observed data.  And there is a statistical/machine learning  model that provides a prediction for the responses $y_i$. \\
+%\qBrd[4.3in]{blue!30}{  We denoted the predicted value for the responses to be $\HLTY{\hat{y}_i}$}
+%}
+%
+%%\qBox{
+%
+%%}
+%
+%\end{frame}
+
+
+
+\TransitionFrame[antiquebrass]{\Large Geneset MicroArray Data}
+
+
+
+%
+%
+%{
+% \setbeamercolor{background canvas}{bg=}
+%%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+%\includepdf[pages={57-61}, scale=1]{../polynomial Regression/STAT380-Unit1.pdf}
+%%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+%}
+
+
+%
+%
+%\TransitionFrame[antiquebrass]{\Large Polynomial Regression }
+%
+%{
+% \setbeamercolor{background canvas}{bg=}
+%%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+%\includepdf[pages={55-58}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%}
+
+
+%\TransitionFrame[antiquebrass]{\Large A  Dataset}
 
 
 
 
 \begin{frame}{ }
 %\includegraphics[scale=.4]{PP_Fig1.png} 
+\qbx[4.55in]{teal!40}{ \sqBullet{teal}  The covariates are the  allele frequencies of 200 Gene sets for 120 subjects. (Scheetz et al.,
+(2006)
+\begin{center}
+ \qBrd[4.1in]{blue!10}{  It 
+represents the data of 120 rats with 200 gene probes.} \\\vspace{.1in}
+ \qBrd[4.1in]{olive!20}{  Response a 120-dimensional vector of, which
+represents the expression level of `TRIM32' gene. }\\\vspace{.1in}
+\qBrd[4.1in]{orange!20}{ We want to idensity which of the other genes are significantly responsible for the gene counts of the `TRIM32'.  }\\
+ \end{center} }
+ 
+ \qbx[4.55in]{blue!40}{ \sqBullet{blue} 
+ Therefore, In terms of the regression terminology: $n=120$ and $p=200.$
+ }
 
 \end{frame}
 
