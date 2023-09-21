@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  21 SEP 2023 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  21 SEP 2023 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1586,7 +1586,7 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
  []
 
 [6]
-Overfull \hbox (3.45665pt too wide) in paragraph at lines 192--192
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 188--188
 [][] 
  []
 
@@ -1598,8 +1598,17 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
 [7
 
 ]
-Overfull \hbox (3.45665pt too wide) in paragraph at lines 198--198
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 217--217
 [][] 
+ []
+
+
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 217--217
+[][] 
+ []
+
+
+Overfull \vbox (87.24673pt too high) detected at line 217
  []
 
 
@@ -1610,172 +1619,44 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
 [8
 
 ]
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
-put line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+<figs8/RScreen Shot1.png, id=620, 744.28062pt x 152.06813pt>
+File: figs8/RScreen Shot1.png Graphic file (type png)
+<use figs8/RScreen Shot1.png>
+Package pdftex.def Info: figs8/RScreen Shot1.png  used on input line 231.
+(pdftex.def)             Requested size: 461.44922pt x 94.28125pt.
+
+Overfull \hbox (118.93398pt too wide) in paragraph at lines 231--231
+[][]  
+ []
 
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
-put line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
 
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-<../polynomial Regression/STAT380-Unit2.pdf, id=565, page=90, 364.19562pt x 273
-.14648pt>
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 [9
 
- <../polynomial Regression/STAT380-Unit2.pdf>]
+ <./figs8/RScreen Shot1.png>]
+<figs8/Screen Shot5.png, id=650, 787.44188pt x 231.36438pt>
+File: figs8/Screen Shot5.png Graphic file (type png)
+<use figs8/Screen Shot5.png>
+Package pdftex.def Info: figs8/Screen Shot5.png  used on input line 246.
+(pdftex.def)             Requested size: 330.72333pt x 97.17236pt.
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-<../polynomial Regression/STAT380-Unit2.pdf, id=662, page=91, 364.19562pt x 273
-.14648pt>
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 91>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page91 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 91>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page91 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 91>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page91 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-[10 <../polynomial Regression/STAT380-Unit2.pdf>]
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-<../polynomial Regression/STAT380-Unit2.pdf, id=739, page=92, 364.19562pt x 273
-.14648pt>
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 92>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page92 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 92>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page92 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 92>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page92 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-[11 <../polynomial Regression/STAT380-Unit2.pdf>]
+[10
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-<../polynomial Regression/STAT380-Unit2.pdf, id=777, page=93, 364.19562pt x 273
-.14648pt>
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 93>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page93 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 93>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page93 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 93>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page93 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-[12 <../polynomial Regression/STAT380-Unit2.pdf>]
+ <./figs8/Screen Shot5.png>]
+<figs8/RScreen Shot2.png, id=678, 710.655pt x 102.3825pt>
+File: figs8/RScreen Shot2.png Graphic file (type png)
+<use figs8/RScreen Shot2.png>
+Package pdftex.def Info: figs8/RScreen Shot2.png  used on input line 257.
+(pdftex.def)             Requested size: 426.39629pt x 61.42996pt.
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-<../polynomial Regression/STAT380-Unit2.pdf, id=803, page=94, 364.19562pt x 273
-.14648pt>
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 94>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page94 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 94>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page94 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 94>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page94 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-[13 <../polynomial Regression/STAT380-Unit2.pdf>]
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
-T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
-.5> allowed
-<../polynomial Regression/STAT380-Unit2.pdf, id=855, page=95, 364.19562pt x 273
-.14648pt>
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 95>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page95 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 95>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page95 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
-<use ../polynomial Regression/STAT380-Unit2.pdf, page 95>
-Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page95 us
-ed on input line 205.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-[14 <../polynomial Regression/STAT380-Unit2.pdf>]
-Overfull \hbox (3.45665pt too wide) in paragraph at lines 236--236
+Overfull \hbox (83.88104pt too wide) in paragraph at lines 257--257
 [][] 
  []
 
@@ -1784,14 +1665,79 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
  [][][][] []  
  []
 
-[15]
-Overfull \hbox (3.45665pt too wide) in paragraph at lines 282--282
+[11
+
+ <./figs8/RScreen Shot2.png>]
+<figs8/Screen Shot4.png, id=706, 825.0825pt x 295.60437pt>
+File: figs8/Screen Shot4.png Graphic file (type png)
+<use figs8/Screen Shot4.png>
+Package pdftex.def Info: figs8/Screen Shot4.png  used on input line 272.
+(pdftex.def)             Requested size: 346.53229pt x 124.15298pt.
+
+Overfull \hbox (4.01704pt too wide) in paragraph at lines 272--272
+[][]  
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[12
+
+ <./figs8/Screen Shot4.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 286--286
 [][] 
  []
 
 
-Overfull \hbox (3.45665pt too wide) in paragraph at lines 282--282
+Overfull \vbox (8.47928pt too high) detected at line 286
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[13
+
+]
+<figs8/RScreen Shot3.png, id=774, 690.58pt x 360.84813pt>
+File: figs8/RScreen Shot3.png Graphic file (type png)
+<use figs8/RScreen Shot3.png>
+Package pdftex.def Info: figs8/RScreen Shot3.png  used on input line 303.
+(pdftex.def)             Requested size: 428.15517pt x 223.72353pt.
+
+Overfull \hbox (85.63992pt too wide) in paragraph at lines 303--303
+[][]  
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[14
+
+ <./figs8/RScreen Shot3.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 311--311
 [][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[15
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+[][][][]
+ []
+
+
+Overfull \vbox (30.98804pt too high) detected at line 323
  []
 
 
@@ -1802,14 +1748,172 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
 [16
 
 ]
-Overfull \hbox (73.83621pt too wide) has occurred while \output is active
- [][][][] []  
- []
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=870, page=90, 364.19562pt x 273
+.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 90>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page90 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 [17
 
-]
-Overfull \hbox (3.45665pt too wide) in paragraph at lines 292--292
+ <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=966, page=91, 364.19562pt x 273
+.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 91>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page91 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 91>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page91 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 91>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page91 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[18 <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1043, page=92, 364.19562pt x 27
+3.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 92>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page92 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 92>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page92 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 92>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page92 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[19 <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1083, page=93, 364.19562pt x 27
+3.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 93>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page93 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 93>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page93 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 93>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page93 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[20 <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1109, page=94, 364.19562pt x 27
+3.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 94>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page94 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 94>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page94 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 94>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page94 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[21 <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1159, page=95, 364.19562pt x 27
+3.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 95>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page95 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 95>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page95 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 95>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page95 us
+ed on input line 330.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[22 <../polynomial Regression/STAT380-Unit2.pdf>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 337--337
 [][] 
  []
 
@@ -1818,7 +1922,626 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
  [][][][] []  
  []
 
-[18
+[23]
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1230, page=107, 364.19562pt x 2
+73.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 107>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page107 u
+sed on input line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 107>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page107 u
+sed on input line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 107>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page107 u
+sed on input line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 107>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page107 u
+sed on input line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 107>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page107 u
+sed on input line 344.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[24
+
+ <../polynomial Regression/STAT380-Unit2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
+[][][][]
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
+[][][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <7> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 387.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <7> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 387.
+
+Overfull \vbox (4.9027pt too high) detected at line 387
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[26
+
+]
+<figs8/Ridge11.png, id=1363, 628.84938pt x 604.2575pt>
+File: figs8/Ridge11.png Graphic file (type png)
+<use figs8/Ridge11.png>
+Package pdftex.def Info: figs8/Ridge11.png  used on input line 399.
+(pdftex.def)             Requested size: 232.67062pt x 223.57178pt.
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[27
+
+ <./figs8/Ridge11.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 416--416
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[28
+
+]
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1431, page=80, 364.19562pt x 27
+3.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 80>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page80 us
+ed on input line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 80>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page80 us
+ed on input line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 80>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page80 us
+ed on input line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 80>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page80 us
+ed on input line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 80>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page80 us
+ed on input line 423.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[29
+
+ <../polynomial Regression/STAT380-Unit2.pdf>]
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[30]
+<figs8/Screen Shot RidgeCode1.png, id=1491, 873.76437pt x 493.845pt>
+File: figs8/Screen Shot RidgeCode1.png Graphic file (type png)
+<use figs8/Screen Shot RidgeCode1.png>
+Package pdftex.def Info: figs8/Screen Shot RidgeCode1.png  used on input line 4
+44.
+(pdftex.def)             Requested size: 349.49956pt x 197.53448pt.
+
+Overfull \hbox (6.98431pt too wide) in paragraph at lines 444--444
+[][]  
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[31
+
+ <./figs8/Screen Shot RidgeCode1.png>]
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[32
+
+]
+<figs8/Ridge_coef.png, id=1550, 501.875pt x 401.5pt>
+File: figs8/Ridge_coef.png Graphic file (type png)
+<use figs8/Ridge_coef.png>
+Package pdftex.def Info: figs8/Ridge_coef.png  used on input line 472.
+(pdftex.def)             Requested size: 326.21487pt x 260.9719pt.
+
+Overfull \vbox (17.37564pt too high) detected at line 472
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[33
+
+ <./figs8/Ridge_coef.png>]
+<figs8/CVfitRidge.png, id=1578, 501.875pt x 401.5pt>
+File: figs8/CVfitRidge.png Graphic file (type png)
+<use figs8/CVfitRidge.png>
+Package pdftex.def Info: figs8/CVfitRidge.png  used on input line 490.
+(pdftex.def)             Requested size: 326.21487pt x 260.9719pt.
+
+Overfull \vbox (17.37564pt too high) detected at line 490
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[34
+
+ <./figs8/CVfitRidge.png>]
+<figs8/Screen Shot RidgeResult.png, id=1607, 873.76437pt x 414.54875pt>
+File: figs8/Screen Shot RidgeResult.png Graphic file (type png)
+<use figs8/Screen Shot RidgeResult.png>
+Package pdftex.def Info: figs8/Screen Shot RidgeResult.png  used on input line 
+519.
+(pdftex.def)             Requested size: 349.49956pt x 165.81656pt.
+
+Overfull \hbox (6.98431pt too wide) in paragraph at lines 519--519
+[][]  
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[35
+
+ <./figs8/Screen Shot RidgeResult.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 524--524
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[36
+
+]
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1671, page=101, 364.19562pt x 2
+73.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 101>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page101 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 101>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page101 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 101>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page101 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 101>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page101 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 101>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page101 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[37
+
+ <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=1698, page=102, 364.19562pt x 2
+73.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 102>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page102 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 102>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page102 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 102>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page102 u
+sed on input line 531.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[38 <../polynomial Regression/STAT380-Unit2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 558--558
+[][][][]
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+[][][][]
+ []
+
+
+Overfull \vbox (7.2729pt too high) detected at line 573
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[40
+
+]
+<figs8/Lasso11.png, id=1779, 610.78188pt x 599.23875pt>
+File: figs8/Lasso11.png Graphic file (type png)
+<use figs8/Lasso11.png>
+Package pdftex.def Info: figs8/Lasso11.png  used on input line 585.
+(pdftex.def)             Requested size: 225.98575pt x 221.71486pt.
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[41
+
+ <./figs8/Lasso11.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 603--603
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[42
+
+]
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[43
+
+]
+<figs8/LASSO_CODE.png, id=1873, 859.21pt x 507.8975pt>
+File: figs8/LASSO_CODE.png Graphic file (type png)
+<use figs8/LASSO_CODE.png>
+Package pdftex.def Info: figs8/LASSO_CODE.png  used on input line 625.
+(pdftex.def)             Requested size: 343.67792pt x 203.1554pt.
+
+Overfull \hbox (1.16267pt too wide) in paragraph at lines 625--625
+[][]  
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[44
+
+ <./figs8/LASSO_CODE.png>]
+<figs8/Lasso_coef.png, id=1901, 602.25pt x 501.875pt>
+File: figs8/Lasso_coef.png Graphic file (type png)
+<use figs8/Lasso_coef.png>
+Package pdftex.def Info: figs8/Lasso_coef.png  used on input line 646.
+(pdftex.def)             Requested size: 301.12425pt x 250.93687pt.
+
+Overfull \vbox (7.34062pt too high) detected at line 646
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[45
+
+ <./figs8/Lasso_coef.png>]
+<figs8/CVfitLasso.png, id=1930, 602.25pt x 501.875pt>
+File: figs8/CVfitLasso.png Graphic file (type png)
+<use figs8/CVfitLasso.png>
+Package pdftex.def Info: figs8/CVfitLasso.png  used on input line 664.
+(pdftex.def)             Requested size: 331.23851pt x 276.03209pt.
+
+Overfull \vbox (32.43584pt too high) detected at line 664
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[46
+
+ <./figs8/CVfitLasso.png>]
+<figs8/Screen Shot Lasso Results.png, id=1958, 877.77937pt x 422.07687pt>
+File: figs8/Screen Shot Lasso Results.png Graphic file (type png)
+<use figs8/Screen Shot Lasso Results.png>
+Package pdftex.def Info: figs8/Screen Shot Lasso Results.png  used on input lin
+e 677.
+(pdftex.def)             Requested size: 351.10553pt x 168.82774pt.
+
+Overfull \hbox (8.59029pt too wide) in paragraph at lines 677--677
+[][]  
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[47
+
+ <./figs8/Screen Shot Lasso Results.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 683--683
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[48
+
+]
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf  used on in
+put line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=2022, page=114, 364.19562pt x 2
+73.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 114>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page114 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 114>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page114 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 114>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page114 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 114>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page114 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 114>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page114 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[49
+
+ <../polynomial Regression/STAT380-Unit2.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../polynomial Regression/STA
+T380-Unit2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
+.5> allowed
+<../polynomial Regression/STAT380-Unit2.pdf, id=2108, page=115, 364.19562pt x 2
+73.14648pt>
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 115>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page115 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 115>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page115 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: ../polynomial Regression/STAT380-Unit2.pdf Graphic file (type pdf)
+<use ../polynomial Regression/STAT380-Unit2.pdf, page 115>
+Package pdftex.def Info: ../polynomial Regression/STAT380-Unit2.pdf , page115 u
+sed on input line 690.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+[50 <../polynomial Regression/STAT380-Unit2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 709--709
+[][][][]
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[51]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 713--713
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[52
+
+]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 759--759
+[][] 
+ []
+
+
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 759--759
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[53
+
+]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 765--765
+[][] 
+ []
+
+
+Overfull \hbox (73.83621pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[54
 
 ]
 \tf@nav=\write6
@@ -1830,37 +2553,44 @@ Overfull \hbox (73.83621pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `STAT380_Ridge_Lasso.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 768.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 768.
  (./STAT380_Ridge_Lasso.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 768.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 768.
 Package rerunfilecheck Info: File `STAT380_Ridge_Lasso.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27482 strings out of 480608
- 533435 string characters out of 5903631
- 912998 words of memory out of 5000000
- 42629 multiletter control sequences out of 15000+600000
- 580111 words of font info for 88 fonts, out of 8000000 for 9000
+ 27978 strings out of 480608
+ 543522 string characters out of 5903631
+ 919998 words of memory out of 5000000
+ 43024 multiletter control sequences out of 15000+600000
+ 614605 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,19n,79p,805b,1790s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,21n,79p,805b,1798s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on STAT380_Ridge_Lasso.pdf (18 pages, 907475 bytes).
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on STAT380_Ridge_Lasso.pdf (54 pages, 2348069 bytes).
 PDF statistics:
- 1080 PDF objects out of 1200 (max. 8388607)
- 625 compressed objects within 7 object streams
- 37 named destinations out of 1000 (max. 500000)
- 646 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2354 PDF objects out of 2487 (max. 8388607)
+ 1653 compressed objects within 17 object streams
+ 109 named destinations out of 1000 (max. 500000)
+ 1169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

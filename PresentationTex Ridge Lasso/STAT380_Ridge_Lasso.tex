@@ -149,10 +149,10 @@ Minimum AIC: Comparing  all the models adding one more variable
 }\qBrd[4.1in]{olive!10}{  
 Minimum BIC: Comparing  all the models adding one more variable
 } \qBrd[4.1in]{orange!10}{  
-Minimum p- value of the variable when adding all the variables one at a time. 
+Include the variable in the model taht has Minimum p- value of the corresponding regression coefficient when adding it the existing model.. 
 } 
 } \\\vspace{.1in}
-\qbx[4.55in]{purple!30}{\sqBullet{purple}  The Elimination of the variables are stopped when a pre determined p-value/AIC/BIC is achieved. }\\
+\qbx[4.55in]{purple!30}{\sqBullet{purple}  The inclusion of the variables are stopped when a pre determined p-value/AIC/BIC is achieved. }\\
 \end{frame}
 
 
@@ -173,23 +173,136 @@ Minimum AIC: Comparing  all the models removing one more variable
 }\qBrd[4.1in]{olive!10}{  
 Minimum BIC: Comparing  all the models removing one more variable
 } \qBrd[4.1in]{orange!10}{  
-Maximum p- value of a variables
+Each Step remove the variable that has Maximum p- value of the corresponding coefficient.
 } 
 } \\\vspace{.1in}
 \qbx[4.55in]{purple!30}{\sqBullet{purple}  The Elimination of the variables are stopped when a pre determined p-value/AIC/BIC is achieved. }\\
 \end{frame}
 
 
-\begin{frame}
 
-\qbx[4.55in]{purple!30}{
-A
+
+
+
+\TransitionFrame[antiquebrass]{\Large  the data set named `surgical'\\
+{\small Available in the R - package library(olsrr)}}
+
+
+
+
+
+
+
+\begin{frame}{ }
+%\includegraphics[scale=.4]{PP_Fig1.png} 
+\qbx[4.55in]{teal!40}{ \sqBullet{teal}  A dataset containing data about survival of patients undergoing liver operation. 
+{\tiny *Kutner, MH, Nachtscheim CJ, Neter J and Li W., 2004}
+\vspace{-.12in}
+\begin{center}
+ \qBrd[2.1in]{blue!10}{ It is a R data-frame with 54 rows and 8 covariates and response is the 'Survival time' } 
+ \qBrd[2.1in]{olive!20}{ \HLTY{bcs:} blood clotting score     }\\\vspace{.01in}
+\qBrd[2.1in]{orange!20}{ \HLTY{pindex:} prognostic index   }
+ \qBrd[2.1in]{olive!20}{ \HLTY{enzyme\_test:} enzyme function test score}\\\vspace{.01in}
+\qBrd[4.1in]{orange!20}{ \HLTY{liver\_test:}  liver function test score   }\\
+\qBrd[4.1in]{olive!20}{ \HLTY{age:}In years }\\\vspace{.01in}
+\qBrd[4.1in]{orange!20}{ \HLTY{Gender:}  lindicator variable for gender (0 = male, 1 = female)  }\\
+\qBrd[4.1in]{olive!20}{ \HLTY{alc\_mod:}indicator variable for history of alcohol use (0 = None, 1 = Moderate) }\\\vspace{.01in}
+\qBrd[4.1in]{orange!20}{ \HLTY{alc\_heavy:} indicator variable for history of alcohol use (0 = None, 1 = Heavy)  }\\
+ \end{center} }
+ 
+ \qbx[4.55in]{blue!40}{ \sqBullet{blue} 
+ Therefore, In terms of the regression terminology: $n=120$ and $p=200.$
+ }
+
+\end{frame}
+
+
+
+\begin{frame}{Forward Selection: R code}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.62]{figs8/RScreen Shot1.png} \\
 %model <- lm(y ~., data = surgical)
 %step_forward<-ols_step_forward_p(model, details = TRUE)
 %step_forward
 %plot(step_forward)
-}
+%}
+
 \end{frame}
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.42]{figs8/Screen Shot5.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Backward Selection: R code}
+
+
+\vspace{.1in}
+{
+\includegraphics[scale=.6]{figs8/RScreen Shot2.png} }
+\end{frame}
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.42]{figs8/Screen Shot4.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Selection the best combination comparing all the sebsets}
+\qbx[4.55in]{teal!40}{ \sqBullet{teal}  All the $2^p$ models are fitted if there are $p$ variables in total.  \\
+\qBrd[4.1in]{blue!10}{  
+Minimum AIC: Comparing  all the models best model is chosen based on the AIC/BIC/RMSE/$R^2$ criterion.
+}
+}
+\vspace{2in}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.62]{figs8/RScreen Shot3.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
 
 
 
@@ -197,6 +310,18 @@ A
 
 \TransitionFrame[antiquebrass]{\Large Penalized Regression }
 %
+
+\begin{frame}
+\newcommand{\bRdg}{\hat{\beta}_{\text{ridge}, \lambda}}
+\DefBoxOne{Penalized Regression: Matrix Notation}{\color{black}
+Let $(y_i, \bx_i)\in \R\times \R^{p}$ for $i=1, \ldots n $ are observed data.  A Penalized Regression estimator  is via following minimization (with respect to $\bbeta$) problem:
+$$ \DBX{\Vert {\bf y}-\bX\bbeta\Vert^2 +\HLTEQ{\HLTEQ[yellow]{\lambda}  \text{Penalty Function }}}.$$
+}\\
+\vspace{2in}
+
+
+\end{frame}
+
 
 
 {
@@ -209,9 +334,160 @@ A
 
 
 
+\TransitionFrame[antiquebrass]{\Large Ridge Regression }
+%
+
+
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={107}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+}
 
 
 
+
+
+\newcommand{\bRdg}{\hat{\beta}_{\text{ridge}, \lambda}}
+\begin{frame}
+
+
+
+
+\DefBoxOne{Ridge Regression: Matrix Notation}{\color{black}
+Let $(y_i, \bx_i)\in \R\times \R^{p}$ for $i=1, \ldots n $ are observed data. A Ridge Regression estimator $\bRdg$ is via following minimization problem:
+
+$$\bRdg=\text{Argmin}_{\beta}  \DBX{\Vert {\bf y}-\bX\bbeta\Vert^2 +\HLTEQ{\HLTEQ[yellow]{\lambda} \Vert \beta\Vert^2}}.$$, 
+$\lambda>0.$
+}\\
+
+\vspace{.1in}
+\qBrd[4.5in]{teal!40}{  
+\begin{center}
+\HLTEQ{\bRdg= (\bX^T\bX+\lambda I_p)^{-1}\bX^T{\bf y},}
+\end{center}
+}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{The role of $\lambda$}
+
+
+
+
+\DefBoxOne{Ridge Regression: The objective function}{\color{black}
+$$ \DBX{\Vert {\bf y}-\bX\bbeta\Vert^2 +\HLTEQ{\HLTEQ[yellow]{\lambda} \Vert \beta\Vert^2}}.$$
+$\lambda>0.$
+}\\
+\vspace{2in}
+
+\end{frame}
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.37]{figs8/Ridge11.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+\end{frame}
+
+
+
+\begin{frame}
+
+\qbx[4.55in]{teal!40}{ \sqBullet{teal} 
+Ridge regression does not exclude variables, but reduces effect
+estimates to near zero.  It is therefore not suited for finding
+parsimonious models.\\
+\qBrd[3.5in]{olive!20}{  
+W use the \HLTEQ{\text{glmnet}} r package to fit it. 
+}
+}
+\vspace{2in}
+
+
+\end{frame}
+
+
+
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={80}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+}
+
+\begin{frame}{Selection of $\lambda$}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.4]{figs8/Screen Shot RidgeCode1.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+\begin{frame}\frametitle{Shrinkage Effect}
+
+\vspace{.1in}
+\qBrd[4.5in]{teal!40}{  
+\begin{center}
+\HLTEQ{\bRdg= (\bX^T\bX+\lambda I_p)^{-1}\bX^T{\bf y},}
+\end{center}
+}
+\vspace{2in}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.65]{figs8/Ridge_coef.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.65]{figs8/CVfitRidge.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
 
 
 
@@ -229,7 +505,208 @@ A
 %\end{frame}
 
 
+\begin{frame}
 
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.4]{figs8/Screen Shot RidgeResult.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large LASSO Regression }
+%
+
+
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={101-102}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+}
+
+
+
+
+
+%\newcommand{\bRdg}{\hat{\beta}_{\text{ridge}, \lambda}}
+\begin{frame}
+
+
+
+
+\newcommand{\bLso}{\hat{\beta}_{\text{lasso}, \lambda}}
+
+
+\DefBoxOne{LASSO Regression: Matrix Notation}{\color{black}
+Let $(y_i, \bx_i)\in \R\times \R^{p}$ for $i=1, \ldots n $ are observed data.  A LASSO Regression estimator $\bLso$ is via following minimization problem:
+$$\bLso=\text{Argmin}_{\bbeta}  {\bf y}-\bX\bbeta\Vert^2+\HLTEQ{\HLTY{\lambda}\sum_{j=1}^{p}\vert \beta_j \vert}$$ ,
+Or 
+$$\bLso=\text{Argmin}_{\bbeta}  \DBX{\Vert {\bf y}-\bX\bbeta\Vert^2 +\HLTEQ{\HLTEQ[yellow]{\lambda} \Vert \bbeta\Vert_{_{L_1}}   }}.$$
+$\lambda>0$
+}\\
+
+
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{The role of $\lambda$}
+
+
+
+
+\DefBoxOne{Ridge Regression: The objective function}{\color{black}
+$$  \DBX{\Vert {\bf y}-\bX\bbeta\Vert^2 +\HLTEQ{\HLTEQ[yellow]{\lambda} \Vert \bbeta\Vert_{_{L_1}}   }}. $$
+$\lambda>0$
+}\\
+\vspace{2in}
+
+\end{frame}
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.37]{figs8/Lasso11.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+
+\qbx[4.55in]{teal!40}{ \sqBullet{teal} 
+Lasso regression can estimate a regression coefficient to be Exactly zero,. Therefore it has the ability to perform variable selection.  It is often used to find parsimonious models.\\
+\qBrd[3.5in]{olive!20}{  
+W use the \HLTEQ{\text{glmnet}} r package to fit it.  
+}
+}
+\vspace{2in}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Selection of $\lambda$}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.4]{figs8/LASSO_CODE.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.5]{figs8/Lasso_coef.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.55]{figs8/CVfitLasso.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+\begin{frame}
+
+%\qbx[4.55in]{purple!30}{
+\includegraphics[scale=.4]{figs8/Screen Shot Lasso Results.png} \\
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+%}
+
+
+\end{frame}
+
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large Regression with Elastic Net Penalty  }
+%
+
+
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={114-115}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+}
+
+
+
+\begin{frame}
+
+\newcommand{\bEN}{\hat{\beta}_{\text{EN}, \lambda}}
+
+
+\DefBoxOne{ Regression with Elsatic Net Penalty: Matrix Notation}{\color{black}
+Let $(y_i, \bx_i)\in \R\times \R^{p}$ for $i=1, \ldots n $ are observed data.  A Elsatic Net Regression estimator $\bEN$ is via following minimization problem:
+$$\bEN=\text{Argmin}_{\bbeta}  \DBX{\Vert {\bf y}-\bX\bbeta\Vert^2 +\HLTEQ{\HLTEQ[yellow]{\lambda}   \left[ \HLTEQ[green]{(\alpha)}     \Vert \bbeta\Vert_{_{L_1}} +   \HLTEQ[green]{(1-\alpha)} \Vert\bbeta\Vert^2      \right] }}.$$
+$\lambda>0,  \text{ and } 0\leq \alpha\leq 1.$
+}\\
+
+
+
+\end{frame}
 
 
 
@@ -281,10 +758,6 @@ represents the expression level of `TRIM32' gene. }\\\vspace{.1in}
 
 \end{frame}
 
-\begin{frame}{ }
-%\includegraphics[scale=.4]{PP_Fig2.png} 
-
-\end{frame}
 
 
 

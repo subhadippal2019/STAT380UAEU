@@ -1,0 +1,94 @@
+---
+title: "VariableSelection"
+author: "Subhadip Pal"
+date: '2023-09-21'
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Variable Selection is an important inferential technique to identify the important variables for a regression. In the traditional set up we often make use of the Stepwise Forward and Backword procedures. 
+
+#Stepwise Forward Regression
+We develop regression model from a set of candidate covariates by including them in the model according to the corresponding p-values in a stepwise manner. We stop the process of including more variable until there is no variable left to enter any more based on certain criteria.  If details is set to TRUE in the R function , each step is displayed. We make use of the R package library(olsrr)
+
+## Loading the Package and the Dataset
+```{r }
+library(olsrr)
+data("surgical")
+summary(surgical)
+```
+
+
+## Conductiing the Stepwise forward procedure based on p-values 
+```{r }
+
+## Stepwise forward model
+model <- lm(y ~ ., data = surgical, details=FALSE)
+step_for_pvalue<-ols_step_forward_p(model)
+step_for_pvalue
+plot(step_for_pvalue)
+```
+
+
+
+## Conductiing the Stepwise forward procedure based on AIC
+```{r }
+
+## Stepwise forward model
+model <- lm(y ~ ., data = surgical, details=FALSE)
+step_for_aic<-ols_step_forward_aic(model)
+step_for_aic
+plot(step_for_aic)
+```
+
+## Conductiing the Stepwise forward procedure based on AIC  (and similarly based on p-values)
+
+
+```{r }
+
+## Stepwise forward model
+model <- lm(y ~ ., data = surgical, details=FALSE)
+step_back_aic<-ols_step_backward_aic(model)
+step_back_aic
+plot(step_back_aic)
+```
+
+
+# For detailsed out put of the procedure: 
+
+## Conductiing the Stepwise forward procedure based on AIC
+```{r }
+
+## Stepwise forward model
+model <- lm(y ~ ., data = surgical)
+step_for_aic<-ols_step_forward_aic(model,details=TRUE)
+step_for_aic
+```
+
+
+## Conductiing the Stepwise forward and backward in a optimal combination procedure based on AIC
+```{r }
+
+## Stepwise forward model
+model <- lm(y ~ ., data = surgical)
+step_for_aic<-ols_step_both_aic(model, details=FALSE)
+step_for_aic
+plot(step_for_aic)
+```
+
+
+
+# For consider all the $2^p$ models and identifying the best
+```{r }
+model <- lm(y ~ ., data = surgical)
+# This takes time as it will consider all 2^p-1 models
+all_models <- ols_step_all_possible(model)
+all_models
+plot(all_models)
+
+```
