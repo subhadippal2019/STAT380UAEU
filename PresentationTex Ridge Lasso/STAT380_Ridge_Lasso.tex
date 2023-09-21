@@ -66,6 +66,9 @@
 \end{tikzpicture}}
 \usepackage{calligra}
 
+%\usepackage{listings}
+
+
 \DeclareMathOperator*{\argmax}{Arg\,max}
 \DeclareMathOperator*{\argmin}{Arg\,min}
 \newcommand{\norm}[1]{\left\Vert #1 \right\Vert }
@@ -124,85 +127,76 @@
 \begin{document}
 \maketitle
 
-%\begin{frame}{Outline}
-%%\begin{multicols}{}
-%  \tableofcontents
-%%\end{multicols}
-%\end{frame}
 
-%\section{Introduction to DSBA 2023}
-%
-%
-%\begin{frame}
-%\qBoxCol{blue!30}{
-%\begin{center} Course  Website \end{center}
-%\qbx[4.2in]{teal!40}{\sqBullet{teal} \color{blue} $ \href{https://sites.google.com/iimu.ac.in/dsba2023e/home}{https://sites.google.com/iimu.ac.in/dsba2023e/home}$
-%}\\
-%\qbx[3.0in]{green!40}{ \sqBullet{green} Regular Announcements.
-%}\\
-%\qbx[3.0in]{olive!40}{\sqBullet{olive}  Slides and other materials.
-%}
-%}
-%
-%\pause
-%\qBoxCol{blue!30}{
-%\sqBullet{blue}
-%You can contact the instructor at {\it subhadip.pal@iimu.ac.in} and schedule for office hours.  
-%}
-%\pause
-%\qBoxCol{olive!30}{
-%\sqBullet{olive}
-%Mr. Praveen Kumar has been assigned as Teaching Assistant (TA) for this course.  His email I'd is:  {\it praveen.kumar@iimu.ac. }
-%}
-%
-%
-%\end{frame}
+
+
+\TransitionFrame[antiquebrass]{\Large Variable Selection in Regression  }
 %
 
 
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={29}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+}
+
+
+\begin{frame}{Forward Selection}
+\qbx[4.55in]{teal!40}{ \sqBullet{teal}  Only intercept is considered in the very first model. Thereafter, one variable is {\bf added } to  the model at a time.  Based on the slected model selection criteria. \\
+\qBrd[4.1in]{blue!10}{  
+Minimum AIC: Comparing  all the models adding one more variable
+}\qBrd[4.1in]{olive!10}{  
+Minimum BIC: Comparing  all the models adding one more variable
+} \qBrd[4.1in]{orange!10}{  
+Minimum p- value of the variable when adding all the variables one at a time. 
+} 
+} \\\vspace{.1in}
+\qbx[4.55in]{purple!30}{\sqBullet{purple}  The Elimination of the variables are stopped when a pre determined p-value/AIC/BIC is achieved. }\\
+\end{frame}
+
+
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={28}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
+%\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
+}
+
+
+
+
+\begin{frame}{Backward Selection}
+\qbx[4.55in]{teal!40}{ \sqBullet{teal}  All the variables are considered in the very first model. Thereafter, one variable is removed from the model at a time.  Based on the slected model selection criteria. \\
+\qBrd[4.1in]{blue!10}{  
+Minimum AIC: Comparing  all the models removing one more variable
+}\qBrd[4.1in]{olive!10}{  
+Minimum BIC: Comparing  all the models removing one more variable
+} \qBrd[4.1in]{orange!10}{  
+Maximum p- value of a variables
+} 
+} \\\vspace{.1in}
+\qbx[4.55in]{purple!30}{\sqBullet{purple}  The Elimination of the variables are stopped when a pre determined p-value/AIC/BIC is achieved. }\\
+\end{frame}
+
+
+\begin{frame}
+
+\qbx[4.55in]{purple!30}{
+A
+%model <- lm(y ~., data = surgical)
+%step_forward<-ols_step_forward_p(model, details = TRUE)
+%step_forward
+%plot(step_forward)
+}
+\end{frame}
+
+
+
+
+
+\TransitionFrame[antiquebrass]{\Large Penalized Regression }
 %
-%\begin{frame}{Course Outline}
-%\hspace{-.1in}\qBoxCol{blue!35}{
-%% Please add the following required packages to your document preamble:
-%% \usepackage{booktabs}
-%\begin{table}[]
-%\begin{tabular}{@{}lll@{}}
-%\toprule
-%         & Topics                                                & Dataset or Case                                    \\ \midrule \midrule
-%\rowcolor{blue!20}     \multicolumn{1}{|l|}{1-2}   & \multicolumn{1}{l|}{Overview of Data Science}        & \multicolumn{1}{l|}{Household Data}                \\ \midrule
-%\rowcolor{purple!20} 
-%\multicolumn{1}{|l|}{3-5}   & \multicolumn{1}{l|}{Data Visualization}              & \multicolumn{1}{l|}{Global Super Store }       \\ \midrule
-%\rowcolor{blue!20} 
-%\multicolumn{1}{|l|}{6}     & \multicolumn{1}{l|}{Introduction to R/ JMP}          & \multicolumn{1}{l|}{}                              \\ \midrule
-%\rowcolor{purple!20} 
-%\multicolumn{1}{|l|}{7}     & \multicolumn{1}{l|}{Regression Analysis}             & \multicolumn{1}{l|}{Display \& Liquor Sales} \\ \midrule
-%\rowcolor{blue!20} 
-%\multicolumn{1}{|l|}{8}     & \multicolumn{1}{l|}{Multiple Regression}             & \multicolumn{1}{l|}{}                              \\ \midrule
-%\rowcolor{purple!20} 
-%\multicolumn{1}{|l|}{9}     & \multicolumn{1}{l|}{Dealing with Nominal Covariates} & \multicolumn{1}{l|}{Gender Divide}                 \\ \midrule
-%\rowcolor{blue!20} 
-%\multicolumn{1}{|l|}{10}    & \multicolumn{1}{l|}{Regression Diagonistics}         & \multicolumn{1}{l|}{}                              \\ \midrule
-%\rowcolor{purple!20} 
-%\multicolumn{1}{|l|}{11-12} & \multicolumn{1}{l|}{Project Presentations}            &\multicolumn{1}{l|}{}          \\\midrule \bottomrule
-%\end{tabular}
-%\end{table}
-%}
-%\end{frame}
-
-
-%\begin{frame}{Case Study }
-%\qBoxCol{teal!40}{\vspace{1in}\begin{center}\sqBullet{teal} \Large Case: Liquor sales and display space \end{center}
-%\vspace{1in}
-%}\\
-%\end{frame}
-
-
-%\TransitionFrame[antiquebrass]{\Large Simple Linear Regression: \\Model Selection Criterion }
-%
-
-
-
-
 
 
 {
@@ -211,6 +205,9 @@
 \includepdf[pages={90-95}, scale=1]{../polynomial Regression/STAT380-Unit2.pdf}
 %\includegraphics[scale=1]{../polynomial Regression/STAT380-Unit1.pdf} 
 }
+
+
+
 
 
 
@@ -230,6 +227,9 @@
 %%}
 %
 %\end{frame}
+
+
+
 
 
 
