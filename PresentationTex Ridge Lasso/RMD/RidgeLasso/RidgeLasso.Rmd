@@ -1,0 +1,123 @@
+---
+title: "Conducting Ridge and Lasso regression with a dataset"
+author: "Subhadip Pal"
+date: '2023-09-21'
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading the Package and the Dataset
+```{r }
+library(olsrr)
+data("surgical")
+head(surgical,2)
+```
+
+
+## Ridge Regression
+
+## Fitting a Ridge Regression using ($glmnet(x, y, \alpha=0)$ function ) in library(glmnet)
+```{r }
+library(glmnet) 
+data("surgical") # from the package library(olsrr)
+names(surgical[,1:8])
+# alpha=0 for fitting a Ridge Regression model
+fit_ridge<-glmnet(x =as.matrix(surgical[,1:8]) , y =surgical$y, alpha = 0 )
+fit_ridge
+
+plot(fit_ridge, xvar = "lambda", label = TRUE)
+
+# Cross validation to Choose the optimal \Lambda Parameter
+cvfit <- cv.glmnet(x =as.matrix(surgical[,1:8]) , y =surgical$y, alpha=0, nfolds = 10)
+plot(cvfit)
+# the optimal value for lambda for which minimum MSE is achieved is cvfit$lambda.min
+paste0("Optimum Lambda=", cvfit$lambda.min)
+# Fitting the model with optimum value of Lambda
+Ridge_opt_Lambda.model <- glmnet(x=as.matrix(surgical[,1:8]), y=surgical$y,
+                      alpha  = 0, 
+                      lambda = cvfit$lambda.min)
+# Printing the model output
+Ridge_opt_Lambda.model
+
+
+#Alternatively
+coef(cvfit, s = "lambda.min")
+
+
+
+```
+
+
+
+
+
+# Fitting A Lasso model 
+
+## Fitting a Lasso Regression using ($glmnet(x, y, \alpha=1)$ function ) in library(glmnet)
+
+
+
+
+```{r }
+library(glmnet)
+data("surgical") # from the package library(olsrr)
+names(surgical[,1:8])
+# alpha=0 for fitting a Ridge Regression model
+fit_lasso<-glmnet(x =as.matrix(surgical[,1:8]) , y =surgical$y, alpha = 1 )
+fit_lasso
+
+plot(fit_lasso, xvar = "lambda", label = TRUE)
+
+# Cross validation to Choose the optimal \Lambda Parameter
+cvfit <- cv.glmnet(x =as.matrix(surgical[,1:8]) , y =surgical$y,alpha=1, nfolds = 10)
+
+# the optimal value for lambda for which minimum MSE is achieved is cvfit$lambda.min
+paste0("Optimum Lambda=", cvfit$lambda.min)
+# Fitting the model with optimum value of Lambda
+plot(cvfit)
+Lasso_opt_Lambda.model <- glmnet(x=as.matrix(surgical[,1:8]), y=surgical$y,
+                      alpha  = 1, 
+                      lambda = cvfit$lambda.min)
+#Printing the model Parameters.
+Lasso_opt_Lambda.model
+#Alternatively
+coef(cvfit, s = "lambda.min")
+
+```
+
+
+# A Geneset Microarray Data (High)
+
+```{r }
+#library(flare)# for the eyedata
+load(url("https://github.com/subhadippal2019/STAT380UAEU/raw/main/eyedata.Rdata"))
+```
+
+
+```{r }
+fit_lasso_Gene<-glmnet(x =eyeData$X , y =eyeData$y, alpha = 1 )
+fit_lasso_Gene
+
+plot(fit_lasso_Gene, xvar = "lambda", label = TRUE)
+# Cross validation to Choose the optimal \Lambda Parameter
+cvfit <- cv.glmnet(x =eyeData$X , y =eyeData$y,alpha=1, nfolds = 10)
+
+# the optimal value for lambda for which minimum MSE is achieved is cvfit$lambda.min
+paste0("Optimum Lambda=", cvfit$lambda.min)
+# Fitting the model with optimum value of Lambda
+
+plot(cvfit)
+Lasso_opt_Lambda.model <- glmnet(x =eyeData$X , y =eyeData$y,
+                      alpha  = 1, lambda = cvfit$lambda.min)
+#Printing the model Parameters.
+Lasso_opt_Lambda.model$beta
+#Alternatively
+coef(cvfit, s = "lambda.min")
+```
+
+
