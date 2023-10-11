@@ -1,0 +1,371 @@
+\documentclass[compress]{beamer}
+\mode<presentation>
+\setbeamercovered{transparent}
+\usetheme{Warsaw}
+%\useoutertheme{smoothtree}
+\usepackage{multirow}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{xmpmulti}
+\usepackage{multicol}
+\usepackage{colortbl}
+
+%\setbeamersize{text margin left=.25 in,text margin right=.25 in}
+\setbeamersize{text margin left=.15 in,text margin right=.15 in}
+\usepackage[authoryear]{natbib}
+
+
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{latexcolors}
+%\usepackage[dvipsnames]{xcolor}
+\definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{bistre}{rgb}{0.24, 0.17, 0.12}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
+\definecolor{slateblue}{rgb}{0.56, 0.74, 0.56}
+\definecolor{cordovan}{rgb}{0.54, 0.25, 0.27}
+\definecolor{darkbyzantium}{rgb}{0.36, 0.22, 0.33}
+
+\setbeamercolor{structure}{fg=camouflagegreen!90, bg= black!60}
+
+
+
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+%%%%%%%%% shaddow image %%%%%
+% some parameters for customization
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+% this draws a shadow under a rectangle node
+\newcommand\drawshadow[1]{
+\begin{pgfonlayer}{shadow}
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=innercolor] ($(#1.north west)+(-\shadowradius/12,\shadowradius/12)$) rectangle ($(#1.south east)+(\shadowradius/12,-\shadowradius/12)$);%Frame
+    \filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+\end{pgfonlayer}
+}
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow} 
+\pgfsetlayers{shadow,main}
+% Define image shadow command
+\newcommand\shadowimage[2][]{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+\drawshadow{image}
+\end{tikzpicture}}
+\usepackage{calligra}
+
+\DeclareMathOperator*{\argmax}{Arg\,max}
+\DeclareMathOperator*{\argmin}{Arg\,min}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert }
+\newcommand{\bbetaHat}{ \widehat{\bbeta}}
+\newcommand{\bbetaLSE}{ \widehat{\bbeta}_{_{\text{LSE}}}}
+\newcommand{\bbetaMLE}{ \widehat{\bbeta}_{_{\text{MLE}}}}
+\newcommand{\sqBullet}[1]{  {\tiny \tiny \tiny \qBoxCol{#1!60}{ }} }
+%***************
+%\newtheorem{thm}{Theorem}
+\input{definition_include.tex}
+\input{BoxDef}
+\input{MatrixDef}
+
+
+
+
+
+
+
+
+
+
+
+\title{  STAT 380:\\ {\color{black} Classification Technique:   Evaluating  Performance of a Classification Technique}}
+
+\author[UAEU]
+{UAEU}
+\institute[IIM] % (optional, but mostly needed)
+{
+  \inst{}%
+  %Indian Institute of Management,  Udaipur\\
+  \vspace{0.1in}
+
+  
+}
+
+\date{}
+
+
+\newcommand{\Xnew}{ \HLTEQ[orange]{X_{_{\text{i}}}} }
+\newcommand{\Ynew}{ \HLTEQ[orange]{Y_{_{\text{i}}}} }
+
+%\date{\today}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Inhalt}
+ % \begin{multicols}{1}
+	\frametitle{Outline}
+    \tableofcontents[currentsection]
+  %  \end{multicols}
+  \end{frame}
+}
+
+\begin{document}
+\maketitle
+
+
+
+
+
+\begin{frame}{Outlook of the unit}
+	
+	\begin{itemize}
+		\item \textbf{Prediction and Classification Approaches}
+		\vspace{0.2cm}
+	\begin{itemize}
+
+		\item Classification Techniques
+			\begin{itemize}
+			\item Logistic regression
+				\vspace{0.2cm}
+			\item Discriminant analysis
+					\end{itemize}
+			\vspace{0.2cm}
+			\item {\bf \color{airforceblue}  Evaluating  Performance of a Classification Technique}
+				\vspace{0.2cm}
+			\item Tree-based methods: Decision trees
+				\vspace{0.2cm}
+				\begin{itemize}
+				\item Classification trees
+				\vspace{0.2cm}
+				\item
+				Regression trees
+	\end{itemize}
+		\end{itemize}
+		\end{itemize}		
+\end{frame}
+
+
+\TransitionFrame[antiquebrass]{\Large  Evaluating  Performance of a Classification Technique}
+
+\begin{frame}
+	\frametitle{ }
+	\begin{itemize}
+\item[ ] \qbx[4.1in]{purple!40}{\sqBullet{purple}A natural criterion for judging the performance of a classifier is the probability
+of making a \textbf{misclassification} error.}
+			\vspace{0.2cm}
+		\item[]  \qbx[4.1in]{teal!40}{ \sqBullet{teal}Misclassification means that the record
+belongs to one class but the model classifies it as a member of a different class..}
+			\vspace{0.2cm}
+		\item[ ] \qbx[4.1in]{apricot!40}{\sqBullet{brown} Is there a minimal
+probability of misclassification that we should require of a classifier?}
+	
+			\vspace{0.2cm}
+		\item[ ] \qbx[4.1in]{amber!40}{\sqBullet{amber} A classifier that makes no errors would be perfect - unrealistic.}
+	
+		
+	\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+	\frametitle{}
+	\begin{itemize}
+  \item Classification matrix summarizes the correct and incorrect classifications
+that a classifier produced.
+  \item Rows and columns
+of the confusion matrix correspond to the predicted and true (actual) classes.
+\item Example:\\[-2mm]
+\begin{tabular}{cccc}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ &  & \multicolumn{2}{|l}{Actual class} \\
+  & & \multicolumn{1}{|c}{0} & 1 \\\hline
+\multirow{2}{*}{Predicted class} & 0 & \multicolumn{1}{|c}{2600} & 100 \\
+ & 1 & \multicolumn{1}{|c}{100} & 200 \\
+\end{tabular}
+\item Diagonal cells give the number of
+correct classifications.
+\item Off-diagonal cells give counts of misclassification.
+\item Classification matrix gives estimates of the true classification and misclassification
+rates.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+	\frametitle{}
+	\begin{itemize}
+  \item Classification matrix summarizes the correct and incorrect classifications
+that a classifier produced.
+  \item Rows and columns
+of the confusion matrix correspond to the predicted and true (actual) classes.
+\item Example:\\[-2mm]
+\begin{tabular}{cccc}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ &  & \multicolumn{2}{|l}{Actual class} \\
+  & & \multicolumn{1}{|c}{0} & 1 \\\hline
+\multirow{2}{*}{Predicted class} & 0 & \multicolumn{1}{|c}{2600} & 100 \\
+ & 1 & \multicolumn{1}{|c}{100} & 200 \\
+\end{tabular}
+\item Diagonal cells give the number of
+correct classifications.
+\item Off-diagonal cells give counts of misclassification.
+\item Classification matrix gives estimates of the true classification and misclassification
+rates.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Accuracy measures - the classification matrix}
+\begin{itemize}
+\item We summarize the classification for the validation data as follows.
+\item \textbf{Classification matrix}:\\[-2mm]
+\begin{center}
+\begin{tabular}{cccc}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ &  & \multicolumn{2}{|l}{Actual class} \\
+  & & \multicolumn{1}{|c}{$C_1$} & $C_2$ \\\hline
+\multirow{1}{*}{Predicted} & $C_1$ & \multicolumn{1}{|c}{$n_{1,1}$} & $n_{2,1}$\\
+class & $C_2$ & \multicolumn{1}{|c}{$n_{1,2}$} & $n_{2,2}$ \\
+\end{tabular}
+\end{center}
+\item Estimated \textbf{misclassification rate}: $$err=\frac{n_{1,2}+n_{2,1}}{n_v},$$ where $n_v$ is the total number of units in the validation data.
+\item \textbf{Estimated accuracy}: $$accuarcy = 1- err=\frac{n_{1,1}+n_{1,1}}{n_v}.$$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Propensities and cut-off for classification}
+\begin{itemize}
+  \item First step in most classification algorithms is to estimate the probability $\pi$ (propensity) that
+a unit belongs to each of the classes.
+  \item If overall classification accuracy is of interest, the
+unit can be assigned to the class with the highest probability.
+  \item In many records,
+a single class is of special interest, so we will focus on that particular class.
+  \item It may make sense in such cases to consolidate classes so that you end up
+with two: the class of interest and all other classes.
+\item The default \textbf{cutoff} value in two-class classifiers is 0.5.
+\item It is possible, however, to use a cutoff that is either higher or
+lower than 0.5. Two examples:
+\begin{itemize}\item[-] unequal misclassification costs \item[-] unequal importance of classes.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+
+ \qbx[4.1in]{amber!40}{ \sqBullet{amber}Misclassification means that the record
+belongs to one class but the model classifies it as a member of a different class..}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Evaluation Metrics (1)}
+	General form of a $2\times2$ confusion matrix
+	
+	\vspace{0.3cm} 
+	
+	\noindent
+	\renewcommand\arraystretch{1.5}
+	\setlength\tabcolsep{0pt}
+	\begin{tabular}{|c >{}r| @{\hspace{0.7em}}|c |@{\hspace{0.4em}}c 
+			|@{\hspace{0.7em}}l}
+		\multirow{8}{*}{\parbox{1.7cm}{\bfseries\raggedleft Predicted\\ value}} & 
+		& \multicolumn{2}{c}{\bfseries Actual value} & \\
+		& & $C_1$ &  $C_2$ &   Row total \\
+		& $C_1^{'}$ & \bf{True}{Positive} & \bf{False}{Positive} & P$'$ 
+		\\[2.4em]
+		& $C_2^{'}$ & \bf{False}{Negative} & \bf{True}{Negative} & N$'$ \\
+		& Column total & P & N &
+	\end{tabular}
+	
+	\vspace{0.5cm}
+	
+	\small{Note: $C_1$ is assumed to correspond to a positive class}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Evaluation Metrics (2)}
+	
+	A variety of predictive measures can be derived from a confusion matrix: 
+	
+	\vspace{0.5cm}
+	
+	\begin{tabular}{ l p{8.5cm}}
+	\textbf{	Accuracy} & $\frac{TP + TN}{TP + TN + FP + FN}$  \\[0.5cm]
+		\textbf{Error rate} & $ 1 - Accuracy$  \\ [0.5cm]
+		\textbf{Sensitivity} \\ (TP rate) &  $\frac{TP}{TP + FN}$ \\[0.5cm]
+		\textbf{Specificity} \\ (TN rate) &  $\frac{TN}{TN + FP}$ \\ [0.5cm]
+		%		(Cohen's) Kappa &  $\frac{O - E}{1 - E}$,   \small{where O is the 
+		%		observed accuracy and E is the expected accuracy based on the marginal 
+		%		totals of 
+		%		the confusion matrix} \\
+		
+	\end{tabular}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{ROC Curve}
+	
+	The \textbf{R}eceiver \textbf{O}perating \textbf{C}haracteristic (ROC) curve is a way to visualize 
+	interrelationship between sensitivity and specificity
+	
+		\begin{figure}
+			\centering
+			%\includegraphics[width=0.47\textwidth]{Grafiken/ROC}
+			%\caption{}
+			\label{fig:ROC}
+		\end{figure}
+	
+	AUC (area under curve) indicates model goodness, 1 being a perfect model 
+	and below 0.5 (yellow line) a useless model (worse then a coin flip).
+	
+	
+\end{frame}
+
+
+
+\end{document}
