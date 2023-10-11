@@ -292,10 +292,12 @@ lower than 0.5. Two examples:
 
 
 
-\begin{frame}
+\begin{frame}	\frametitle{Evaluation Metrics}
 
- \qbx[4.1in]{amber!40}{ \sqBullet{amber}Misclassification means that the record
-belongs to one class but the model classifies it as a member of a different class..}
+ \qbx[4.5in]{amber!40}{ 
+ \includegraphics[scale=.35]{ClassificationMatrix.png}
+ }
+ \vspace{.5in}
 \end{frame}
 
 
@@ -327,45 +329,144 @@ belongs to one class but the model classifies it as a member of a different clas
 
 
 \begin{frame}
-	\frametitle{Evaluation Metrics (2)}
+	\frametitle{Predictive measures derived from a confusion matrix:}
 	
-	A variety of predictive measures can be derived from a confusion matrix: 
-	
-	\vspace{0.5cm}
-	
-	\begin{tabular}{ l p{8.5cm}}
-	\textbf{	Accuracy} & $\frac{TP + TN}{TP + TN + FP + FN}$  \\[0.5cm]
-		\textbf{Error rate} & $ 1 - Accuracy$  \\ [0.5cm]
-		\textbf{Sensitivity} \\ (TP rate) &  $\frac{TP}{TP + FN}$ \\[0.5cm]
-		\textbf{Specificity} \\ (TN rate) &  $\frac{TN}{TN + FP}$ \\ [0.5cm]
-		%		(Cohen's) Kappa &  $\frac{O - E}{1 - E}$,   \small{where O is the 
-		%		observed accuracy and E is the expected accuracy based on the marginal 
-		%		totals of 
-		%		the confusion matrix} \\
-		
-	\end{tabular}
+
+	% \qbx[4.5in]{purple!40}{ 
+	\qBrd[3in]{blue!30}{
+	  $$   \text{\bf{	Accuracy:}}\frac{TP + TN}{TP + TN + FP + FN}$$
+	  } \\\vspace{0.1in}
+	 % }
+	   \qBrd[3in]{asparagus!30}{
+	  $$ \textbf{Error rate} : 1 - Accuracy$$
+	  } \\\vspace{0.1in}
+	    \qBrd[3in]{wisteria!40}{
+	  $$\textbf{Sensitivity}:    \frac{TP}{TP + FN}$$
+	  } 
+	  \\\vspace{0.1in}
+	    \qBrd[3in]{wheat!40}{
+	  $$\textbf{Specificity}:   \frac{TN}{TN + FP}$$
+	  } 
+
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Specificity and Sensitivity }
+ \qBrd[4.5in]{purple!40}{ \sqBullet{purple}
+Sensitivity and specificity are statistical measures of the performance of a binary classification test. }\\
+\vspace{0.1in}
+ \qBrd[4.5in]{apricot!40}{ \sqBullet{apricot}
+Sensitivity(true positive rate) measures the proportion of actual positives which are correctly identified.}
+\\
+\vspace{0.1in}
+ \qBrd[4.5in]{brass!40}{ \sqBullet{brass}
+Specificity (true negative rate) measures the proportion of negatives that are correctly identified.}
+
+
+
+
+\end{frame}
+
+
+
+
+\begin{frame}\frametitle{Specificity and Sensitivity }
+ \qbx[4.5in]{wisteria!40}{ \sqBullet{wisteria}
+{\bf Sensitivity: } Ability of a test to identify those who have disease
+The sensitivity of a test is the probability of a positive test result given the presence of the disease, $P(Test=+\mid Diseased)=\frac{a}{a+c}$
+}\\\vspace{.1in}
+ \qbx[4.5in]{apricot!70}{ \sqBullet{brown}
+{\bf Specificity:}  Ability of a test to exclude those who don't have   the   disease The specificity of a test is the probability of a negative test result given the absence of the disease,$P(Test=-\mid Not Diseased)=\frac{d}{b+d}$
+}
+
+
+
+
+
+\end{frame}
+
+
+
+
+\begin{frame}	\frametitle{Sensitivity and Specificity }
+
+ \qbx[4.5in]{wisteria!40}{ 
+  \begin{center}
+ \includegraphics[scale=.32]{SensitivitySpecificity.png}
+ \end{center}
+ }
+ \vspace{.5in}
+\end{frame}
+
+\begin{frame}\frametitle{Receiver Operating Characteristic (ROC)}
+\qBrd[4.5in]{uclablue!30}{The \textbf{R}eceiver \textbf{O}perating \textbf{C}haracteristic (ROC) curve is a way to visualize 
+	interrelationship between sensitivity and specificity
+	}\\\vspace{.1in}
+ \qbx[4.5in]{antiquefuchsia!40}{ \sqBullet{antiquefuchsia}
+In a ROC curve the true positive rate (Sensitivity) is plotted as function of the false positive rate (100-Specificity) for different cut-off points.
+ Each point on the ROC curve represents a (sensitivity, specificity) pair corresponding to a specific decision threshold. }\\
+ \vspace{.1in}
+ \qbx[4.5in]{armygreen!40}{ \sqBullet{armygreen}
+A test with perfect discrimination (no overlap in the two distributions) has a ROC curve that passes through the upper left corner (100\% sensitivity, 100\% specificity). }\\
+ \vspace{.1in}
+ \qbx[4.5in]{amethyst!40}{ \sqBullet{amethyst}
+Therefore, the closer the ROC curve is to the upper left corner, the higher the overall accuracy of the test.}
+
+\end{frame}
+
+\begin{frame}\frametitle{ROC}
+ \qbx[4.5in]{amethyst!40}{
+ \begin{center}
+\includegraphics[scale=.3]{ROC.png}
+\end{center}
+}
+
 \end{frame}
 
 
 \begin{frame}
-	\frametitle{ROC Curve}
-	
-	The \textbf{R}eceiver \textbf{O}perating \textbf{C}haracteristic (ROC) curve is a way to visualize 
-	interrelationship between sensitivity and specificity
-	
-		\begin{figure}
-			\centering
-			%\includegraphics[width=0.47\textwidth]{Grafiken/ROC}
-			%\caption{}
-			\label{fig:ROC}
-		\end{figure}
-	
-	AUC (area under curve) indicates model goodness, 1 being a perfect model 
+ \qBrd[4.5in]{armygreen!40}{ \sqBullet{armygreen}
+If $0.7 \leq  AUC < 0.8$, this is considered acceptable discrimination. }\\
+\vspace{.1in}
+ \qBrd[4.5in]{amethyst!40}{ \sqBullet{amethyst}
+If $0.8 \leq AUC < 0.9$, this is considered excellent discrimination. }\\
+\vspace{.1in}
+ \qBrd[4.5in]{purple!40}{ \sqBullet{purple}
+If $0.9 \leq  AUC$, this is considered outstanding discrimination. }
+
+\vspace{.3in}
+\qbx[4.5in]{olive!50}{\sqBullet{olive}AUC (area under curve) indicates model goodness, 1 being a perfect model 
 	and below 0.5 (yellow line) a useless model (worse then a coin flip).
-	
-	
+	}
 \end{frame}
 
 
+%\begin{frame}
+%	\frametitle{ROC Curve}
+%	
+%	The \textbf{R}eceiver \textbf{O}perating \textbf{C}haracteristic (ROC) curve is a way to visualize 
+%	interrelationship between sensitivity and specificity
+%	
+%		\begin{figure}
+%			\centering
+%			%\includegraphics[width=0.47\textwidth]{Grafiken/ROC}
+%			%\caption{}
+%			\label{fig:ROC}
+%		\end{figure}
+%	
+%	AUC (area under curve) indicates model goodness, 1 being a perfect model 
+%	and below 0.5 (yellow line) a useless model (worse then a coin flip).
+%	
+%	
+%\end{frame}
+
+
+
+\begin{frame}\frametitle{Youden Index}
+
+
+\end{frame}
 
 \end{document}
