@@ -1,0 +1,322 @@
+---
+title: "AppleOrange"
+author: "STAT380"
+date: '2023-10-05'
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# We consider logistric regression for the binary classification. 
+
+
+```{r }
+#### Horea Muresan, Mihai Oltean, Fruit recognition from images using deep learning, Acta Univ. Sapientiae, Informatica Vol. 10, Issue 1, pp. 26-42, 2018.
+#install.packages("OpenImageR")
+library(OpenImageR)
+```
+
+## Functions Used in the Exercise
+
+```{r }
+Extract_col_feature<-function(img){
+    Clr1<-summary(c(img[,, 1]))[-c(1,6)]
+    Clr2<-summary(c(img[,, 2]))[-c(1,6)]
+    Clr3<-summary(c(img[,, 3]))[-c(1,6)]
+    val<-c(Clr1,Clr2,  Clr3)  
+    #browser()
+    names(val)=paste0("Feature",1:length(val) )
+return(val)
+}
+
+
+```
+
+
+
+
+```{r }
+ExtractFeature<-function(FolderName,
+                      img_path_dir="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/",
+                      details=TRUE){
+  #browser()
+  #img_path1="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/Orange/0_100.jpg"
+  files_names<-list.files(paste0(img_path_dir,FolderName))
+  val_color_feature=NULL
+  
+  for(FileIndex in 1:length(files_names)){
+  img_path<-paste0(img_path_dir,FolderName,"/" , files_names[FileIndex])
+  #print(img_path)
+  img <- tryCatch(expr = {readImage(img_path)},
+                  error = function(e){ 
+                    # (Optional)
+                    # Do this if an error is caught...
+                    return(NULL)
+                  }
+                  )
+  #browser()
+  if(!is.null(img)){
+  val_color_feature<-rbind(val_color_feature, c(Extract_col_feature(img)))
+  }
+  if(details){
+  print(paste0("ImageData='",img_path, "' Loaded Succesfully. Feature Extraction complete"))}
+  }
+  Y=rep(x = FolderName, dim(val_color_feature)[1])
+  #val_color_feature
+  return(data.frame(Y,val_color_feature))
+}
+
+```
+
+
+Function to Create the Training Dataset 
+
+```{r }
+
+Create_Training_Data<-function(Category1="Apple Braeburn", Category2="Apple Crimson Snow", rand_err=20, details=TRUE){
+#browser()
+Train_cate1<-ExtractFeature(FolderName=Category1, details=details)
+Train_cate2<-ExtractFeature(FolderName=Category2, details=details)
+data=rbind(Train_cate1, Train_cate2)
+Y_var<-ifelse(data$Y==Category1, 1, 0)
+
+vv<-round(runif(rand_err, 1,length(Y_var) ))
+Y_var[vv]= 1- Y_var[vv]
+data$Y= Y_var
+return(data)
+}
+```
+
+
+
+### Function to Extract the fearture from testing set. 
+```{r }
+ExtractFeature_test<-function(FolderNameLoc){
+  #img_path_dir="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/"
+  #img_path1="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/Orange/0_100.jpg"
+
+  #img_path_dir
+  img_path<-paste0(FolderNameLoc)
+  #print(img_path)
+  img <- tryCatch(expr = {readImage(img_path)},
+                  error = function(e){ 
+                    # (Optional)
+                    # Do this if an error is caught...
+                    return(NULL)
+                  }
+                  )
+  #browser()
+  if(!is.null(img)){
+  val_color_feature<- (c(Extract_col_feature(img)))
+  val_color_feature=rbind(val_color_feature,val_color_feature)
+  }
+  
+  #Y=rep(x = FolderName, dim(val_color_feature)[1])
+  #val_color_feature
+  return(data.frame(val_color_feature)[1,])
+}
+
+```
+
+
+
+### Sample Images of the objects that we are considering 
+```{r }
+CategoryLabels=data.frame(Category=c("Apple Braeburn","Apple Crimson Snow" ), ResponseInd=c(1,0)) # Means Apple Braeburn===1, Apple Crimson Snow===0
+img_path=paste0("/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/",CategoryLabels$Category[1],"/1_100.jpg")
+img<-readImage(img_path)
+imageShow(img)
+```
+
+```{r }
+img_path=paste0("/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/",CategoryLabels$Category[2],"/1_100.jpg")
+img<-readImage(img_path)
+imageShow(img)
+
+```
+
+
+
+### Creating the Traininig Dataset by extracting the features by reading all the samples/images from the Data folder
+```{r  }
+
+#CategoryLabels=data.frame(Category=c("Apple Braeburn","Apple Crimson Snow" ), ResponseInd=c(1,0)) # Means Apple Braeburn===1, Apple Crimson Snow===0
+
+data<-Create_Training_Data(Category1 = CategoryLabels$Category[1], Category2 =CategoryLabels$Category[2], details = FALSE)
+dim(data)
+
+#data<-Create_Train_Data(rand_err = 15, details = FALSE)
+#dim(data)
+```
+
+### Fit a logistic regression with Y=Response
+
+```{r }
+fit<-glm(Y~., data=data, family="binomial")
+#cbind(fit$fitted.values, data$Y)
+```
+
+
+
+
+
+### Prediction on a data from the testing set: Predict the category of the follwoing object
+```{r }
+FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Crimson Snow/80_100.jpg"
+
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Braeburn/80_100.jpg"
+img<-readImage(FolderNameLoc);imageShow(img)
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Golden 1/63_100.jpg"
+
+newData_feature=ExtractFeature_test(FolderNameLoc)
+predictedProb<-predict.glm(fit, newdata=newData_feature, type="response")
+paste0("The predicted probability that the selected image is:",CategoryLabels$Category[1],"( comparing between ", paste0(CategoryLabels$Category, collapse=" and "), ") is ", predictedProb )
+predictedProb_1=data.frame(predictedProb, 1-predictedProb)
+colnames(predictedProb_1)=CategoryLabels$Category
+rownames(predictedProb_1)="Predicted Group Probability"
+predictedProb_1
+```
+
+
+
+## APPLE AND ORNAGE Dataset
+
+### Sample Images of the objects that we are considering 
+```{r }
+CategoryLabels=data.frame(Category=c("Orange","Apple Braeburn" ), ResponseInd=c(1, 0))
+#Orange===1, and Apple Braeburn===0
+img_path=paste0("/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/",CategoryLabels$Category[1],"/1_100.jpg")
+img<-readImage(img_path)
+imageShow(img)
+```
+
+
+```{r }
+img_path=paste0("/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Training/",CategoryLabels$Category[2],"/1_100.jpg")
+img<-readImage(img_path)
+imageShow(img)
+
+```
+
+
+### Creating the Traininig Dataset by extracting the features by reading all the samples/images from the Data folder
+```{r  }
+#CategoryLabels=data.frame(Category=c("Orange","Apple Braeburn" ), ResponseInd=c(1, 0))
+#Orange===1, and Apple Braeburn===0
+data_o<-Create_Training_Data(Category1 = CategoryLabels$Category[1], Category2 =CategoryLabels$Category[2], details = FALSE)
+dim(data)
+```
+
+```{r }
+fit_o<-glm(Y~., data=data_o, family="binomial")
+#Estimated_prob<-cbind(fit$fitted.values, data$Y)
+```
+
+### Predict the category of the following object
+```{r }
+FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Braeburn/80_100.jpg"
+img<-readImage(FolderNameLoc);imageShow(img)
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Orange/6_100.jpg"
+#img<-readImage(FolderNameLoc);imageShow(img)
+
+newData_feature=ExtractFeature_test(FolderNameLoc)
+predictedProb<-predict.glm(fit_o, newdata=newData_feature, type="response")
+paste0("The predicted probability that the selected image is:",CategoryLabels$Category[1],"( comparing between ", paste0(CategoryLabels$Category, collapse=" and "), ") is ", predictedProb )
+predictedProb_1=data.frame(predictedProb, 1-predictedProb)
+colnames(predictedProb_1)=CategoryLabels$Category
+rownames(predictedProb_1)="Precicted Group Probability"
+predictedProb_1
+```
+
+
+# LDA
+
+```{r }
+library(MASS)
+
+linearLDA_AO <- lda(Y~., data=data_o)
+plot(linearLDA_AO)
+```
+
+```{r }
+linearLDA_AO$means
+```
+
+
+### Predict the category of the following object
+```{r }
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Crimson Snow/80_100.jpg"
+
+FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Braeburn/80_100.jpg"
+
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Golden 1/63_100.jpg"
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Orange/6_100.jpg"
+img<-readImage(FolderNameLoc)
+imageShow(img)
+
+
+newData_feature=ExtractFeature_test(FolderNameLoc)
+pred_LDA_AO<-predict(linearLDA_AO, newdata=newData_feature)
+Pred_prob<-pred_LDA_AO$posterior
+colnames(Pred_prob)=CategoryLabels$Category[c(2,1)]
+rownames(Pred_prob)="Predicted Posterior Probability"
+Pred_prob
+```
+
+
+
+
+
+
+# QDA
+
+```{r }
+#library(MASS)
+Quadratic_QDA_AO <- qda(Y~., data=data_o)
+```
+
+```{r }
+Quadratic_QDA_AO$means
+```
+
+
+
+
+### Precict the Category of the Following Object
+```{r }
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Crimson Snow/80_100.jpg"
+
+FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Braeburn/80_100.jpg"
+
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Golden 1/63_100.jpg"
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Orange/6_100.jpg"
+img<-readImage(FolderNameLoc)
+imageShow(img)
+
+newData_feature=ExtractFeature_test(FolderNameLoc)
+pred_LDA_AO<-predict(Quadratic_QDA_AO, newdata=newData_feature)
+Pred_prob<-pred_LDA_AO$posterior
+colnames(Pred_prob)=CategoryLabels$Category[c(2,1)]
+rownames(Pred_prob)="Predicted Posterior Probability"
+Pred_prob
+```
+
+```{r }
+
+#FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Apple Braeburn/80_100.jpg"
+
+
+FolderNameLoc="/Users/subhadippal/Downloads/Fruit-Images-Dataset-master/Test/Orange/6_100.jpg"
+img<-readImage(FolderNameLoc);imageShow(img)
+newData_feature=ExtractFeature_test(FolderNameLoc)
+pred_LDA_AO<-predict(Quadratic_QDA_AO, newdata=newData_feature)
+Pred_prob<-pred_LDA_AO$posterior
+colnames(Pred_prob)=CategoryLabels$Category[c(2,1)]
+rownames(Pred_prob)="Predicted Posterior Probability"
+Pred_prob
+```
+

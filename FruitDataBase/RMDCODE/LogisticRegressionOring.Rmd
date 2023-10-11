@@ -1,0 +1,60 @@
+---
+title: "LogisticRegressionOlingFailure"
+author: "STAT380"
+date: '2023-10-05'
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# O-Ring Failure Data
+
+## The context
+ The Space Shuttle Challenger crashed 73 seconds after
+liftoff on January 28th, 1986. The disaster claimed the lives
+of all seven astronauts on board. The details surrounding this
+disaster were very involved.
+
+"The engineers who manufactured the large boosters that
+launched the rocket had data on the possible failures that could
+happen during cold temperatures. They tried to prevent the
+launch, but were ultimately ignored and disaster ensued."
+
+It was known that there is an association between the ORing
+seal failure and the low atmosphere temparature temperature.
+
+ The “fail" column in the data set below records how many
+O-rings experienced failures during that particular launch. The
+“temp" column lists the outside temperature at the time of launch.
+
+### The data is available at: "https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/oring1.csv"
+
+```{r }
+oring1<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/oring1.csv"))
+summary(oring1)
+
+```
+
+
+## Fit the logistic regression model:
+```{r }
+fit_oring<-glm(oringFail~temperature, data=oring1, family="binomial")
+summary(fit_oring)
+```
+
+
+
+
+### predict the probability of Failure at a given atmosphere temperature
+
+```{r }
+#predict(fit_oring)
+predict(fit_oring,newdata = data.frame(temperature=31))
+predict(fit_oring,newdata = data.frame(temperature=31), type="response")
+
+
+```

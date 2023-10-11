@@ -1,0 +1,19 @@
+\frametitle{Classification trees in R: Boston housing data}
+Compare the performance of the pruned tree with the full tree on the validation data.
+\begin{lstlisting}
+# Predictions for the validation data
+> pred_v_tree<-predict(fit,newdata=vali,type="class")
+> pred_v_ptree<-predict(pfit,newdata=vali,type="class")
+
+# Evaluate performance
+> confusionMatrix(pred_v_tree, vali$MEDV_Fac)
+Prediction Below Above
+     Below   120     6
+     Above     8    16
+               Accuracy : 0.9067
+> confusionMatrix(pred_v_ptree, vali$MEDV_Fac)
+Prediction Below Above
+     Below   122     3
+     Above     6    19
+               Accuracy : 0.94
+\end{lstlisting}

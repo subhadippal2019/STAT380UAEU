@@ -1,0 +1,12 @@
+\beamer@sectionintoc {1}{Introduction}{1}{0}{1}
+\beamer@subsubsectionintoc {1}{0}{1}{Choose Classifier}{11}{0}{1}
+\beamer@subsubsectionintoc {1}{0}{2}{Evaluate Performance}{13}{0}{1}
+\beamer@subsectionintoc {1}{1}{Logistic regression}{13}{0}{1}
+\beamer@subsectionintoc {1}{2}{Linear discriminant analysis}{27}{0}{1}
+\beamer@subsectionintoc {1}{3}{Classifier performance}{36}{0}{1}
+\beamer@subsectionintoc {1}{4}{Cross-validation}{53}{0}{1}
+\beamer@subsectionintoc {1}{5}{Tree-based methods: Decision trees}{64}{0}{1}
+\beamer@subsectionintoc {1}{6}{An introductory example}{68}{0}{1}
+\beamer@subsubsectionintoc {1}{6}{1}{Regression trees}{75}{0}{1}
+\beamer@subsubsectionintoc {1}{6}{2}{Prediction and classification trees}{83}{0}{1}
+\beamer@subsectionintoc {1}{7}{Classification trees}{89}{0}{1}
