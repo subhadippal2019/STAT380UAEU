@@ -195,104 +195,61 @@ probability of misclassification that we should require of a classifier?}
 
 
 
-\begin{frame}
-	\frametitle{}
-	\begin{itemize}
-  \item Classification matrix summarizes the correct and incorrect classifications
-that a classifier produced.
-  \item Rows and columns
-of the confusion matrix correspond to the predicted and true (actual) classes.
-\item Example:\\[-2mm]
-\begin{tabular}{cccc}
-
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
- &  & \multicolumn{2}{|l}{Actual class} \\
-  & & \multicolumn{1}{|c}{0} & 1 \\\hline
-\multirow{2}{*}{Predicted class} & 0 & \multicolumn{1}{|c}{2600} & 100 \\
- & 1 & \multicolumn{1}{|c}{100} & 200 \\
-\end{tabular}
-\item Diagonal cells give the number of
-correct classifications.
-\item Off-diagonal cells give counts of misclassification.
-\item Classification matrix gives estimates of the true classification and misclassification
-rates.
-\end{itemize}
-\end{frame}
 
 
 
-
-
-
-\begin{frame}
-	\frametitle{}
-	\begin{itemize}
-  \item Classification matrix summarizes the correct and incorrect classifications
-that a classifier produced.
-  \item Rows and columns
-of the confusion matrix correspond to the predicted and true (actual) classes.
-\item Example:\\[-2mm]
-\begin{tabular}{cccc}
-
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
- &  & \multicolumn{2}{|l}{Actual class} \\
-  & & \multicolumn{1}{|c}{0} & 1 \\\hline
-\multirow{2}{*}{Predicted class} & 0 & \multicolumn{1}{|c}{2600} & 100 \\
- & 1 & \multicolumn{1}{|c}{100} & 200 \\
-\end{tabular}
-\item Diagonal cells give the number of
-correct classifications.
-\item Off-diagonal cells give counts of misclassification.
-\item Classification matrix gives estimates of the true classification and misclassification
-rates.
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Accuracy measures - the classification matrix}
-\begin{itemize}
-\item We summarize the classification for the validation data as follows.
-\item \textbf{Classification matrix}:\\[-2mm]
-\begin{center}
-\begin{tabular}{cccc}
-
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
- &  & \multicolumn{2}{|l}{Actual class} \\
-  & & \multicolumn{1}{|c}{$C_1$} & $C_2$ \\\hline
-\multirow{1}{*}{Predicted} & $C_1$ & \multicolumn{1}{|c}{$n_{1,1}$} & $n_{2,1}$\\
-class & $C_2$ & \multicolumn{1}{|c}{$n_{1,2}$} & $n_{2,2}$ \\
-\end{tabular}
-\end{center}
-\item Estimated \textbf{misclassification rate}: $$err=\frac{n_{1,2}+n_{2,1}}{n_v},$$ where $n_v$ is the total number of units in the validation data.
-\item \textbf{Estimated accuracy}: $$accuarcy = 1- err=\frac{n_{1,1}+n_{1,1}}{n_v}.$$
-\end{itemize}
-\end{frame}
+%
+%
+%\begin{frame}
+%\frametitle{Accuracy measures - the classification matrix}
+%\begin{itemize}
+%\item We summarize the classification for the validation data as follows.
+%\item \textbf{Classification matrix}:\\[-2mm]
+%\begin{center}
+%\begin{tabular}{cccc}
+%
+%  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+% &  & \multicolumn{2}{|l}{Actual class} \\
+%  & & \multicolumn{1}{|c}{$C_1$} & $C_2$ \\\hline
+%\multirow{1}{*}{Predicted} & $C_1$ & \multicolumn{1}{|c}{$n_{1,1}$} & $n_{2,1}$\\
+%class & $C_2$ & \multicolumn{1}{|c}{$n_{1,2}$} & $n_{2,2}$ \\
+%\end{tabular}
+%\end{center}
+%\item Estimated \textbf{misclassification rate}: $$err=\frac{n_{1,2}+n_{2,1}}{n_v},$$ where $n_v$ is the total number of units in the validation data.
+%\item \textbf{Estimated accuracy}: $$accuarcy = 1- err=\frac{n_{1,1}+n_{1,1}}{n_v}.$$
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}
 \frametitle{Propensities and cut-off for classification}
-\begin{itemize}
-  \item First step in most classification algorithms is to estimate the probability $\pi$ (propensity) that
-a unit belongs to each of the classes.
-  \item If overall classification accuracy is of interest, the
-unit can be assigned to the class with the highest probability.
-  \item In many records,
-a single class is of special interest, so we will focus on that particular class.
-  \item It may make sense in such cases to consolidate classes so that you end up
-with two: the class of interest and all other classes.
-\item The default \textbf{cutoff} value in two-class classifiers is 0.5.
+ \qBrd[4.5in]{green!30}{\sqBullet{green}First step in most classification algorithms is to estimate the probability $\pi$ (propensity) that
+a unit belongs to each of the classes.}\\
+\vspace{.02in}
+   \qBrd[4.5in]{wisteria!40}{\sqBullet{wisteria}If overall classification accuracy is of interest, the
+unit can be assigned to the class with the highest probability.}
+ \begin{itemize}
 \item It is possible, however, to use a cutoff that is either higher or
 lower than 0.5. Two examples:
 \begin{itemize}\item[-] unequal misclassification costs \item[-] unequal importance of classes.
 \end{itemize}
 \end{itemize}
+\vspace{.01in}
+ \qBrd[4.5in]{rose!40}{ \sqBullet{rose} The default \textbf{cutoff} value in two-class classifiers is 0.5.}\\
+\vspace{.1in}
+\qBrd[4.5in]{wheat!60}{\sqBullet{brown} In many records,
+a single class is of special interest, so we will focus on that particular class. It may make sense in such cases to consolidate classes so that you end up with two: the class of interest and all other classes.}
 \end{frame}
 
 
 
 
-\begin{frame}	\frametitle{Evaluation Metrics}
+\TransitionFrame[antiquebrass]{Confusion Table, Accuracy and and Error Rate}
+
+\begin{frame}
+\includepdf[pages={42}]{../../../../../Desktop/STAT380-Linear Regression/Slides/STAT 380 - Statistical Machine Learning/Fall 2022/Chafik Bouhaddioui/ePortfolio_FA22/2 Teaching Materials/STAT380-Unit3.pdf}
+\end{frame}
+
+\begin{frame}	\frametitle{Classification Matrix/Confusion Table }
 
  \qbx[4.5in]{amber!40}{ 
  \includegraphics[scale=.35]{ClassificationMatrix.png}
@@ -301,57 +258,82 @@ lower than 0.5. Two examples:
 \end{frame}
 
 
+%\begin{frame}
+%	\frametitle{Evaluation Metrics (1)}
+%	General form of a $2\times2$ confusion matrix
+%	
+%	\vspace{0.3cm} 
+%	
+%	\noindent
+%	\renewcommand\arraystretch{1.5}
+%	\setlength\tabcolsep{0pt}
+%	\begin{tabular}{|c >{}r| @{\hspace{0.7em}}|c |@{\hspace{0.4em}}c 
+%			|@{\hspace{0.7em}}l}
+%		\multirow{8}{*}{\parbox{1.7cm}{\bfseries\raggedleft Predicted\\ value}} & 
+%		& \multicolumn{2}{c}{\bfseries Actual value} & \\
+%		& & $C_1$ &  $C_2$ &   Row total \\
+%		& $C_1^{'}$ & \bf{True}{Positive} & \bf{False}{Positive} & P$'$ 
+%		\\[2.4em]
+%		& $C_2^{'}$ & \bf{False}{Negative} & \bf{True}{Negative} & N$'$ \\
+%		& Column total & P & N &
+%	\end{tabular}
+%	
+%	\vspace{0.5cm}
+%	
+%	\small{Note: $C_1$ is assumed to correspond to a positive class}
+%\end{frame}
+
+
+
 \begin{frame}
-	\frametitle{Evaluation Metrics (1)}
-	General form of a $2\times2$ confusion matrix
-	
-	\vspace{0.3cm} 
-	
-	\noindent
-	\renewcommand\arraystretch{1.5}
-	\setlength\tabcolsep{0pt}
-	\begin{tabular}{|c >{}r| @{\hspace{0.7em}}|c |@{\hspace{0.4em}}c 
-			|@{\hspace{0.7em}}l}
-		\multirow{8}{*}{\parbox{1.7cm}{\bfseries\raggedleft Predicted\\ value}} & 
-		& \multicolumn{2}{c}{\bfseries Actual value} & \\
-		& & $C_1$ &  $C_2$ &   Row total \\
-		& $C_1^{'}$ & \bf{True}{Positive} & \bf{False}{Positive} & P$'$ 
-		\\[2.4em]
-		& $C_2^{'}$ & \bf{False}{Negative} & \bf{True}{Negative} & N$'$ \\
-		& Column total & P & N &
-	\end{tabular}
-	
-	\vspace{0.5cm}
-	
-	\small{Note: $C_1$ is assumed to correspond to a positive class}
+	\frametitle{}
+	\begin{itemize}
+  \item Classification matrix summarizes the correct and incorrect classifications
+that a classifier produced.
+  \item Rows and columns
+of the confusion matrix correspond to the predicted and true (actual) classes.
+\item Example:\\[-2mm]
+\begin{tabular}{cccc}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ &  & \multicolumn{2}{|l}{Actual class} \\
+  & & \multicolumn{1}{|c}{0} & 1 \\\hline
+\multirow{2}{*}{Predicted class} & 0 & \multicolumn{1}{|c}{2600} & 100 \\
+ & 1 & \multicolumn{1}{|c}{100} & 200 \\
+\end{tabular}
+\item Diagonal cells give the number of
+correct classifications.
+\item Off-diagonal cells give counts of misclassification.
+\item Classification matrix gives estimates of the true classification and misclassification
+rates.
+\end{itemize}
 \end{frame}
 
 
 
 \begin{frame}
 	\frametitle{Predictive measures derived from a confusion matrix:}
-	
-
+	\vspace{-.1in}
+	\begin{center}
+\qBrd[1.6in]{green!30}{TN= TRUE Negative}\qBrd[1.6in]{green!30}{TP= TRUE Positive}\\
+\qBrd[1.6in]{red!30}{FN= FALSE Negative}\qBrd[1.6in]{red!30}{FP= FALSE Positive}\\
+\vspace{.2in}
 	% \qbx[4.5in]{purple!40}{ 
-	\qBrd[3in]{blue!30}{
+	\qBrd[4in]{blue!30}{
 	  $$   \text{\bf{	Accuracy:}}\frac{TP + TN}{TP + TN + FP + FN}$$
 	  } \\\vspace{0.1in}
 	 % }
-	   \qBrd[3in]{asparagus!30}{
-	  $$ \textbf{Error rate} : 1 - Accuracy$$
+	   \qBrd[4in]{asparagus!30}{
+	  $$\textbf{Error rate} : 1 - Accuracy$$
 	  } \\\vspace{0.1in}
-	    \qBrd[3in]{wisteria!40}{
-	  $$\textbf{Sensitivity}:    \frac{TP}{TP + FN}$$
-	  } 
-	  \\\vspace{0.1in}
-	    \qBrd[3in]{wheat!40}{
-	  $$\textbf{Specificity}:   \frac{TN}{TN + FP}$$
-	  } 
+	   
 
-
+\end{center}
 \end{frame}
 
 
+
+\TransitionFrame[antiquebrass]{Specificity and Sensitivity}
 
 \begin{frame}\frametitle{Specificity and Sensitivity }
  \qBrd[4.5in]{purple!40}{ \sqBullet{purple}
@@ -373,12 +355,46 @@ Specificity (true negative rate) measures the proportion of negatives that are c
 
 
 \begin{frame}\frametitle{Specificity and Sensitivity }
- \qbx[4.5in]{wisteria!40}{ \sqBullet{wisteria}
-{\bf Sensitivity: } Ability of a test to identify those who have disease
-The sensitivity of a test is the probability of a positive test result given the presence of the disease, $P(Test=+\mid Diseased)=\frac{a}{a+c}$
+\begin{center}
+\qBrd[1.6in]{green!30}{TN= TRUE Negative}\qBrd[1.6in]{green!30}{TP= TRUE Positive}\\
+\qBrd[1.6in]{red!30}{FN= FALSE Negative}\qBrd[1.6in]{red!30}{FP= FALSE Positive}
+\vspace{.2in}
+
+ \qBrd[4in]{wisteria!40}{
+	  $$\textbf{Sensitivity}:    \frac{TP}{TP + FN}$$
+	  } 
+	  \\\vspace{0.1in}
+	    \qBrd[4in]{wheat!40}{
+	  $$\textbf{Specificity}:   \frac{TN}{TN + FP}$$
+	  } 
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}	\frametitle{Sensitivity and Specificity  }
+
+ \qbx[4.5in]{wisteria!40}{ 
+  \begin{center}
+ \includegraphics[scale=.32]{SensitivitySpecificity.png}
+ \end{center}
+ }
+ \vspace{.5in}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}\frametitle{Specificity and Sensitivity: An Example from Health Science  }
+ \qbx[4.5in]{wisteria!80}{ \sqBullet{purple}
+{\bf Sensitivity: } Ability of a Testing Procedure to identify those who have disease. The sensitivity of a test is the probability of a positive test result given the presence of the disease, 
+$$\HLTW{P(\text{Test Result}=\HLTY{Positive}\mid \text{Diseased})}$$
 }\\\vspace{.1in}
  \qbx[4.5in]{apricot!70}{ \sqBullet{brown}
-{\bf Specificity:}  Ability of a test to exclude those who don't have   the   disease The specificity of a test is the probability of a negative test result given the absence of the disease,$P(Test=-\mid Not Diseased)=\frac{d}{b+d}$
+{\bf Specificity:}  Ability of a test to exclude those who don't have   the   disease The specificity of a test is the probability of a negative test result given the absence of the disease,$$\HLTW{P(\text{Test Result}=\HLTY{Negative}\mid \text{Not Diseased})}$$
 }
 
 
@@ -390,15 +406,45 @@ The sensitivity of a test is the probability of a positive test result given the
 
 
 
-\begin{frame}	\frametitle{Sensitivity and Specificity }
+\begin{frame}\frametitle{Example}
+ \qbx[4.5in]{apricot!70}{
+\HLTW{Scenario 1:} Imagine we have a sample of 100 points, 50 from `Class 0' ( For example: healthy)  and the others `Class 1 ( For Example: Not Healthy).  Let us asume ans extreme case where  a classification technique (Medical Testing) can identify all the `Class 0' correctly (positive for all Diseased)  and also correctly idensifies all 'Class1' objects ( negative for all the healthy).
+}
+\vspace{2in}
 
- \qbx[4.5in]{wisteria!40}{ 
-  \begin{center}
- \includegraphics[scale=.32]{SensitivitySpecificity.png}
- \end{center}
- }
- \vspace{.5in}
+
 \end{frame}
+
+
+\begin{frame}
+
+\vspace{2.8in}
+ \qbx[4.5in]{brown!30}{
+Sensitivity=$100\% $
+Specificity=$100\%$
+$\HLTW{\text{Prevalence}}=\frac{50}{100}=50\%$}
+\end{frame}
+
+
+
+
+
+
+%\begin{frame}
+%	\frametitle{Predictive measures derived from a confusion matrix:}
+%	
+%
+%	    \qBrd[3in]{wisteria!40}{
+%	  $$\textbf{Sensitivity}:    \frac{TP}{TP + FN}$$
+%	  } 
+%	  \\\vspace{0.1in}
+%	    \qBrd[3in]{wheat!40}{
+%	  $$\textbf{Specificity}:   \frac{TN}{TN + FP}$$
+%	  } 
+%
+%
+%\end{frame}
+\TransitionFrame{Receiver Operating Characteristic (ROC)}
 
 \begin{frame}\frametitle{Receiver Operating Characteristic (ROC)}
 \qBrd[4.5in]{uclablue!30}{The \textbf{R}eceiver \textbf{O}perating \textbf{C}haracteristic (ROC) curve is a way to visualize 
@@ -424,6 +470,9 @@ Therefore, the closer the ROC curve is to the upper left corner, the higher the 
 }
 
 \end{frame}
+
+
+
 
 
 \begin{frame}

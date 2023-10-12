@@ -1,0 +1,112 @@
+---
+title: "LDA_QDA_Example"
+author: "STAT380"
+date: '2023-10-12'
+output:
+  word_document: default
+  html_document: default
+  pdf_document:
+    keep_tex: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loading the Iris Data
+
+```{r cars}
+### Example 1: Iris data
+library(MASS)
+library(ggplot2)
+data("iris")
+str(iris)
+head(iris)
+
+```
+
+# Basic plots to see the interrelation between the variables
+
+```{r }
+pairs(iris[1:4],
+             gap = 0,
+             bg = c("red", "green", "blue")[iris$Species],
+             pch = 21)
+
+```
+
+# Splitting the Data in Training and Testing Set
+
+```{r }
+set.seed(134)
+ind = sample(2, nrow(iris), replace = TRUE, prob = c(0.6, 0.4))
+training = iris[ind==1,]
+testing = iris[ind==2,]
+```
+
+# Fitting a Linear Discriminant Analysis
+
+```{r }
+iris_lda = lda(Species~., training)
+iris_lda
+attributes(iris_lda); ##or 
+names(iris_lda)
+```
+
+# Predicting the classes (In Training Set) based on the LDA fit
+
+```{r }
+p = predict(iris_lda, training)
+library(klaR) # for the function `partimat'
+partimat(Species~., data = training, method = "lda")
+
+
+### Confusion matrix and accuracy – training data
+p1 = predict(iris_lda, training)$class
+tab = table(Predicted = p1, Actual = training$Species)
+tab
+
+```
+
+# Predicting the classes (In Testing Set) based on the LDA fit
+
+```{r }
+p2 = predict(iris_lda, testing)$class
+tab1 = table(Predicted = p2, Actual = testing$Species)
+tab1
+
+```
+
+# QDA (Quadratic discriminant analysis on the IRIS Data)
+
+```{r }
+##Everything is not linear – quadratic discriminant analysis
+
+iris_qda=qda(Species~.,data=training)
+iris_qda
+summary(iris_qda)
+#library(klaR)
+partimat(Species~.,data=training,method="lda")
+partimat(Species~.,data=training,method="qda")
+
+```
+
+## Check the accuracy of our analysis of QDA in Training Set
+
+```{r }
+
+#Check the accuracy of our analysis of qda
+Predictions_qda=predict(iris_qda,training)
+table(Predictions_qda$class, training$Species)
+
+```
+
+## \## Check the accuracy of our analysis of QDA in Testing Set
+
+```{r }
+
+#Check the accuracy of our analysis of qda
+Predictions_qda=predict(iris_qda,testing)
+table(Predictions_qda$class, testing$Species)
+
+```
