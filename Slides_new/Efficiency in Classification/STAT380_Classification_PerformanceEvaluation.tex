@@ -298,9 +298,9 @@ of the confusion matrix correspond to the predicted and true (actual) classes.
 
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
  &  & \multicolumn{2}{|l}{Actual class} \\
-  & & \multicolumn{1}{|c}{0} & 1 \\\hline
-\multirow{2}{*}{Predicted class} & 0 & \multicolumn{1}{|c}{2600} & 100 \\
- & 1 & \multicolumn{1}{|c}{100} & 200 \\
+  & & \multicolumn{1}{|c}{Y= 1} &Y= 0 \\\hline
+\multirow{2}{*}{Predicted class} & Y=1 & \multicolumn{1}{|c}{2600} & 100 \\
+ &Y= 0 & \multicolumn{1}{|c}{100} & 200 \\
 \end{tabular}
 \item Diagonal cells give the number of
 correct classifications.
@@ -318,14 +318,14 @@ rates.
 	\begin{center}
 \qBrd[1.6in]{green!30}{TN= TRUE Negative}\qBrd[1.6in]{green!30}{TP= TRUE Positive}\\
 \qBrd[1.6in]{red!30}{FN= FALSE Negative}\qBrd[1.6in]{red!30}{FP= FALSE Positive}\\
-\vspace{.2in}
+\vspace{1.3in}
 	% \qbx[4.5in]{purple!40}{ 
 	\qBrd[4in]{blue!30}{
-	  $$   \text{\bf{	Accuracy:}}\frac{TP + TN}{TP + TN + FP + FN}$$
+	  $$   \text{\bf{	Accuracy:=}}\frac{TP + TN}{TP + TN + FP + FN}$$
 	  } \\\vspace{0.1in}
 	 % }
 	   \qBrd[4in]{asparagus!30}{
-	  $$\textbf{Error rate} : 1 - Accuracy$$
+	  $$\textbf{Error Rate:=}  1 - Accuracy$$
 	  } \\\vspace{0.1in}
 	   
 
@@ -362,11 +362,11 @@ Specificity (true negative rate) measures the proportion of negatives that are c
 \vspace{.2in}
 
  \qBrd[4in]{wisteria!40}{
-	  $$\textbf{Sensitivity}:    \frac{TP}{TP + FN}$$
+	  $$\textbf{Sensitivity:=}    \frac{TP}{TP + FN}$$
 	  } 
 	  \\\vspace{0.1in}
 	    \qBrd[4in]{wheat!40}{
-	  $$\textbf{Specificity}:   \frac{TN}{TN + FP}$$
+	  $$\textbf{Specificity:=}   \frac{TN}{TN + FP}$$
 	  } 
 \end{center}
 \end{frame}
@@ -417,14 +417,36 @@ $$\HLTW{P(\text{Test Result}=\HLTY{Positive}\mid \text{Diseased})}$$
 \end{frame}
 
 
-\begin{frame}
 
+
+\begin{frame}
 \vspace{2.8in}
  \qbx[4.5in]{brown!30}{
-Sensitivity=$100\% $
+Sensitivity=$ $
 Specificity=$100\%$
 $\HLTW{\text{Prevalence}}=\frac{50}{100}=50\%$}
 \end{frame}
+
+
+
+\begin{frame}\frametitle{Example}
+ \qbx[4.5in]{rose!40}{
+\HLTW{Scenario 2:} Imagine we have a sample of 150 points, 70 from `Class 0' ( For example: healthy)  and the others from `Class 1 ( For Example: Not Healthy).  Let us asume that a classification technique (Medical Testing) can correctly identify 65 out of the 70 belongs to the `Class 0'  (positive for all Diseased)  while it can  correctly detect 77 of objects that belongs to  the 'Class1'(Not Healthy). 
+}
+\qBrd[4.68in]{purple!40}{\sqBullet{purple}Construct the classification table and calculate the Sensitivity, Specificity,  Accuracy and misclassification rate of the testing procedure based on the classification table that you obtained. }
+\vspace{2in}
+
+
+\end{frame}
+
+
+\begin{frame}
+%\vspace{2.8in}
+% \qbx[4.5in]{brown!30}{
+%Sensitivity=
+%Specificity=}
+\end{frame}
+
 
 
 
@@ -446,6 +468,115 @@ $\HLTW{\text{Prevalence}}=\frac{50}{100}=50\%$}
 %
 %\end{frame}
 \TransitionFrame{Receiver Operating Characteristic (ROC)}
+
+\begin{frame}{Example from Logistic Regression}
+
+\qBrd[4.7in]{olive!30}{\small A logistic regression is fitted based on a training data set of a ranodm sample of 50  individuals aged more than 40.  The objective of the study is to model whether a randomly selected individual from the population of study is Diabetes based on their Age and Gender.  A logistic regression is fitted with the response, $Y$ indicative of the presence of Diabetes.  The covariates considered are Age and Gender.  The predicted probabilities for a test sample of size 10 along with their corresponding covariates are provided below. 
+}
+\end{frame}
+
+\begin{frame}{Example from Logistic Regression}
+\begin{table}[]
+\begin{tabular}{|l|l|
+>{\columncolor[HTML]{C6E0B4}}l |
+>{\columncolor[HTML]{B4C6E7}}l |}
+\hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFF00}Age} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFF00}Gender} & \multicolumn{1}{c|}{\cellcolor[HTML]{548235}True Y} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFF00}Predicted   Probability} \\ \hline
+49                                                & 1                                                   & 0                                                   & 0.572                                                                \\ \hline
+40                                                & 0                                                   & 0                                                   & 0.447                                                                \\ \hline
+48                                                & 1                                                   & 0                                                   & 0.559                                                                \\ \hline
+48                                                & 1                                                   & 1                                                   & 0.559                                                                \\ \hline
+49                                                & 1                                                   & 1                                                   & 0.572                                                                \\ \hline
+53                                                & 0                                                   & 1                                                   & 0.793                                                                \\ \hline
+48                                                & 0                                                   & 1                                                   & 0.559                                                                \\ \hline
+45                                                & 1                                                   & 1                                                   & 0.518                                                                \\ \hline
+51                                                & 0                                                   & 0                                                   & 0.597                                                                \\ \hline
+51                                                & 1                                                   & 1                                                   & 0.597                                                                \\ \hline
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[]
+\begin{tabular}{|
+>{\columncolor[HTML]{C6E0B4}}l |
+>{\columncolor[HTML]{B4C6E7}}l |
+>{\columncolor[HTML]{FFF2CC}}l |
+>{\columncolor[HTML]{FFE699}}l |
+>{\columncolor[HTML]{FFD966}}l |}
+\hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{548235}True Y} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFF00}\begin{tabular}[c]{@{}c@{}}Predicted   \\ Probability\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE4D6}y\_hat\_5}                                                                 & \multicolumn{1}{c|}{\cellcolor[HTML]{F8CBAD}y\_hat\_55}                                                                 & \multicolumn{1}{c|}{\cellcolor[HTML]{F4B084}y\_hat\_6}                                                                 \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{548235}}       & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFF00}}                                                                   & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE4D6}\begin{tabular}[c]{@{}c@{}}whether   \\ Prob\textgreater{}.5\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{F8CBAD}\begin{tabular}[c]{@{}c@{}}whether   \\ Prob\textgreater{}.55\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{F4B084}\begin{tabular}[c]{@{}c@{}}whether   \\ Prob\textgreater{}.6\end{tabular}} \\ \hline
+0                                                    & 0.572                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+0                                                    & 0.447                                                                                                           & 0                                                                                                                      & 0                                                                                                                       & 0                                                                                                                      \\ \hline
+0                                                    & 0.559                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+1                                                    & 0.559                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+1                                                    & 0.572                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+1                                                    & 0.793                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 1                                                                                                                      \\ \hline
+1                                                    & 0.559                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+1                                                    & 0.518                                                                                                           & 1                                                                                                                      & 0                                                                                                                       & 0                                                                                                                      \\ \hline
+0                                                    & 0.597                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+1                                                    & 0.597                                                                                                           & 1                                                                                                                      & 1                                                                                                                       & 0                                                                                                                      \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+
+
+\begin{frame}
+\qBrd[3.9in]{apricot!30}{
+\begin{table}[]
+\begin{tabular}{
+>{\columncolor[HTML]{FFF2CC}}l 
+>{\columncolor[HTML]{FFF2CC}}l ll}
+                                                                              & \multicolumn{3}{c}{\cellcolor[HTML]{FFF2CC}Prob Cutoff 0.5}                                                                                                 \\ \cline{3-4} 
+                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFF2CC}}         & \multicolumn{2}{c|}{\cellcolor[HTML]{FFF2CC}True Y}                                                 \\ \cline{3-4} 
+                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFF2CC}}         & \multicolumn{1}{l|}{\cellcolor[HTML]{9BC2E6}Y=1} & \multicolumn{1}{l|}{\cellcolor[HTML]{DDEBF7}Y=0} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFF2CC}}                                & \multicolumn{1}{l|}{\cellcolor[HTML]{8EA9DB}Y\_hat=1} & \multicolumn{1}{l|}{\cellcolor[HTML]{A9D08E}1}   & \multicolumn{1}{l|}{\cellcolor[HTML]{F8CBAD}0}   \\ \cline{2-4} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFF2CC}Predicted   Y}} & \multicolumn{1}{l|}{\cellcolor[HTML]{D9E1F2}Y\_hat=0} & \multicolumn{1}{l|}{\cellcolor[HTML]{F8CBAD}3}   & \multicolumn{1}{l|}{\cellcolor[HTML]{A9D08E}6}   \\ \hline
+\end{tabular}
+\end{table}}
+
+\qBrd[3.9in]{apricot!50}{
+\begin{table}[]
+\begin{tabular}{
+>{\columncolor[HTML]{FFE699}}l 
+>{\columncolor[HTML]{FFE699}}l ll}
+                                                                              & \multicolumn{3}{c}{\cellcolor[HTML]{FFE699}Prob Cutoff 0.55}                                                                                                \\ \cline{3-4} 
+                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFE699}}         & \multicolumn{2}{c|}{\cellcolor[HTML]{FFE699}True Y}                                                 \\ \cline{3-4} 
+                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFE699}}         & \multicolumn{1}{l|}{\cellcolor[HTML]{9BC2E6}Y=1} & \multicolumn{1}{l|}{\cellcolor[HTML]{DDEBF7}Y=0} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFE699}}                                & \multicolumn{1}{l|}{\cellcolor[HTML]{8EA9DB}Y\_hat=1} & \multicolumn{1}{l|}{\cellcolor[HTML]{A9D08E}1}   & \multicolumn{1}{l|}{\cellcolor[HTML]{F8CBAD}1}   \\ \cline{2-4} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFE699}Predicted   Y}} & \multicolumn{1}{l|}{\cellcolor[HTML]{D9E1F2}Y\_hat=0} & \multicolumn{1}{l|}{\cellcolor[HTML]{F8CBAD}3}   & \multicolumn{1}{l|}{\cellcolor[HTML]{A9D08E}5}   \\ \hline
+\end{tabular}
+\end{table}
+}
+
+\qBrd[3.9in]{apricot!50}{
+\begin{table}[]
+\begin{tabular}{
+>{\columncolor[HTML]{FFD966}}l 
+>{\columncolor[HTML]{FFD966}}l ll|}
+\cline{2-4}
+\multicolumn{1}{l|}{\cellcolor[HTML]{FFD966}}                                 & \multicolumn{3}{c|}{\cellcolor[HTML]{FFD966}Prob Cutoff 0.57}                                                                          \\ \cline{2-4} 
+                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFD966}}         & \multicolumn{2}{c|}{\cellcolor[HTML]{FFD966}True Y}                            \\ \cline{3-4} 
+                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFD966}}         & \multicolumn{1}{l|}{\cellcolor[HTML]{9BC2E6}Y=1} & \cellcolor[HTML]{DDEBF7}Y=0 \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFD966}}                                & \multicolumn{1}{l|}{\cellcolor[HTML]{8EA9DB}Y\_hat=1} & \multicolumn{1}{l|}{\cellcolor[HTML]{A9D08E}2}   & \cellcolor[HTML]{F8CBAD}3   \\ \cline{2-4} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFD966}Predicted   Y}} & \multicolumn{1}{l|}{\cellcolor[HTML]{D9E1F2}Y\_hat=0} & \multicolumn{1}{l|}{\cellcolor[HTML]{F8CBAD}2}   & \cellcolor[HTML]{A9D08E}3   \\ \hline
+\end{tabular}
+\end{table}
+}
+
+
+
+
+
+\end{frame}
+
 
 \begin{frame}\frametitle{Receiver Operating Characteristic (ROC)}
 \qBrd[4.5in]{uclablue!30}{The \textbf{R}eceiver \textbf{O}perating \textbf{C}haracteristic (ROC) curve is a way to visualize 
