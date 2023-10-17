@@ -1,0 +1,216 @@
+\documentclass[compress]{beamer}
+\mode<presentation>
+\setbeamercovered{transparent}
+\usetheme{Warsaw}
+%\useoutertheme{smoothtree}
+\usepackage{multirow}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{xmpmulti}
+\usepackage{multicol}
+\usepackage{colortbl}
+
+%\setbeamersize{text margin left=.25 in,text margin right=.25 in}
+\setbeamersize{text margin left=.15 in,text margin right=.15 in}
+\usepackage[authoryear]{natbib}
+
+
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{latexcolors}
+%\usepackage[dvipsnames]{xcolor}
+\definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{bistre}{rgb}{0.24, 0.17, 0.12}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
+\definecolor{slateblue}{rgb}{0.56, 0.74, 0.56}
+\definecolor{cordovan}{rgb}{0.54, 0.25, 0.27}
+\definecolor{darkbyzantium}{rgb}{0.36, 0.22, 0.33}
+
+\setbeamercolor{structure}{fg=bluebell!90, bg= black!60}
+
+
+
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+%%%%%%%%% shaddow image %%%%%
+% some parameters for customization
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+% this draws a shadow under a rectangle node
+\newcommand\drawshadow[1]{
+\begin{pgfonlayer}{shadow}
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=innercolor] ($(#1.north west)+(-\shadowradius/12,\shadowradius/12)$) rectangle ($(#1.south east)+(\shadowradius/12,-\shadowradius/12)$);%Frame
+    \filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+\end{pgfonlayer}
+}
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow} 
+\pgfsetlayers{shadow,main}
+% Define image shadow command
+\newcommand\shadowimage[2][]{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+\drawshadow{image}
+\end{tikzpicture}}
+\usepackage{calligra}
+
+\DeclareMathOperator*{\argmax}{Arg\,max}
+\DeclareMathOperator*{\argmin}{Arg\,min}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert }
+\newcommand{\bbetaHat}{ \widehat{\bbeta}}
+\newcommand{\bbetaLSE}{ \widehat{\bbeta}_{_{\text{LSE}}}}
+\newcommand{\bbetaMLE}{ \widehat{\bbeta}_{_{\text{MLE}}}}
+\newcommand{\sqBullet}[1]{  {\tiny \tiny \tiny \qBoxCol{#1!60}{ }} }
+%***************
+%\newtheorem{thm}{Theorem}
+\input{definition_include.tex}
+\input{BoxDef}
+\input{MatrixDef}
+
+
+
+
+
+
+
+
+
+
+
+\title{  STAT 380:\\ {\color{black} Classification Technique:   Tree Based Methods}}
+
+\author[UAEU]
+{UAEU}
+\institute[IIM] % (optional, but mostly needed)
+{
+  \inst{}%
+  %Indian Institute of Management,  Udaipur\\
+  \vspace{0.1in}
+
+  
+}
+
+\date{}
+
+
+\newcommand{\Xnew}{ \HLTEQ[orange]{X_{_{\text{i}}}} }
+\newcommand{\Ynew}{ \HLTEQ[orange]{Y_{_{\text{i}}}} }
+
+%\date{\today}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Inhalt}
+ % \begin{multicols}{1}
+	\frametitle{Outline}
+    \tableofcontents[currentsection]
+  %  \end{multicols}
+  \end{frame}
+}
+
+\begin{document}
+\maketitle
+
+
+
+
+
+\begin{frame}{Outlook of the unit}
+	
+	\begin{itemize}
+		\item \textbf{Prediction and Classification Approaches}
+		\vspace{0.2cm}
+	\begin{itemize}
+
+		\item Classification Techniques
+			\begin{itemize}
+			\item Logistic regression
+				\vspace{0.2cm}
+			\item Discriminant analysis
+					\end{itemize}
+			\vspace{0.2cm}
+			\item { Evaluating  Performance of a Classification Technique}
+				\vspace{0.2cm}
+			\item {\bf  \color{airforceblue} Tree-based methods: Decision trees}
+				\vspace{0.2cm}
+				\begin{itemize}
+				\item Classification trees
+				\vspace{0.2cm}
+				\item
+				Regression trees
+	\end{itemize}
+		\end{itemize}
+		\end{itemize}		
+\end{frame}
+
+
+\TransitionFrame[antiquebrass]{\Large  Evaluating  Performance of a Classification Technique}
+%
+%\begin{frame}
+%	\frametitle{ }
+%	\begin{itemize}
+%\item[ ] \qbx[4.1in]{purple!40}{\sqBullet{purple}A natural criterion for judging the performance of a classifier is the probability
+%of making a \textbf{misclassification} error.}
+%			\vspace{0.2cm}
+%		\item[]  \qbx[4.1in]{teal!40}{ \sqBullet{teal}Misclassification means that the record
+%belongs to one class but the model classifies it as a member of a different class.}
+%			\vspace{0.2cm}
+%		\item[ ] \qbx[4.1in]{apricot!40}{\sqBullet{brown} Is there a minimal
+%probability of misclassification that we should require of a classifier?}
+%	
+%			\vspace{0.2cm}
+%		\item[ ] \qbx[4.1in]{amber!40}{\sqBullet{amber} A classifier that makes no errors would be perfect - unrealistic.}
+%	
+%		
+%	\end{itemize}
+%\end{frame}
+
+
+%
+%
+%\begin{frame}
+%\qBrd[4.5in]{olive!30}{\sqBullet{olive}
+%Let's consider a simple example to un derstand the working mechanism of  the regression trees. \\
+%\qBrd[4.2in]{teal!30}{Suppose that we want to
+%predict a baseball player's (log-scale) salary based on the following predictor
+%variables: years (number of years in MLB) and hits (number of hits in previous
+%year). }
+%}
+%\end{frame}
+
+{
+ \setbeamercolor{background canvas}{bg=}
+%\includepdf[pages={1}, scale=1, trim=1mm 5mm 11mm 5mm]{STAT380-Unit2.pdf}
+\includepdf[pages={68-101}, scale=1]{STAT380-Unit3.pdf}
+}
+
+
+
+
+
+\end{document}
