@@ -2,8 +2,10 @@
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\beamer@partpages {1}{36}}
-\headcommand {\beamer@subsectionpages {1}{36}}
-\headcommand {\beamer@sectionpages {1}{36}}
-\headcommand {\beamer@documentpages {36}}
-\headcommand {\gdef \inserttotalframenumber {2}}
+\headcommand {\slideentry {0}{0}{3}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@partpages {1}{37}}
+\headcommand {\beamer@subsectionpages {1}{37}}
+\headcommand {\beamer@sectionpages {1}{37}}
+\headcommand {\beamer@documentpages {37}}
+\headcommand {\gdef \inserttotalframenumber {3}}
