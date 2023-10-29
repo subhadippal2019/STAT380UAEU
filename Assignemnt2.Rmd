@@ -1,0 +1,151 @@
+---
+title: "Assignment2_Ans"
+author: "STAT380"
+date: '2023-10-29'
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r }
+###
+library(tree)
+###
+library(ISLR)
+data(Carseats)
+attach(Carseats)
+```
+The data set `Carseats' is a simulated data set containing sales of child car seats at 400 different stores of a specific departmental store over a period of a few months.  For the different activities in this assignment, we consider a categorical binary variable, that we call 'High_Sells'.  We consider the sales amount is high, i.e., High_sell=1,  if the number of  car sets that are sold is greater then 8 in the particular store. 
+
+# Problem A
+### A1.  Create a new binary categorical variable called `High_Sells' which is defined as follows: 
+$ \text{High_Sales}=1 \text{ if } `Sales'>8 $ and $ \text{High_Sales}=0 \text{ if } `Sales'\leq 8 $
+
+### A2. Add the new variable to the dataset `Carseats'.
+```{r }
+### A1.
+
+
+### A2.
+
+```
+
+
+### A3. Build a classification tree where the response is 'High_Sells' and the predictors are all the other variables except 'Sales' and 'High-Sales'.
+```{r }
+### A3.
+
+```
+###
+
+### A4. Plot the fitted tree and describe the different classification region. 
+```{r }
+### A4.
+
+```
+
+
+### A5.1. Now, for the cross-validation, use a training   and a validating set (200 observations in training set and the rest in the validation set). 
+### A5.2. Comment on the validation part. 
+
+```{r }
+#### A5.1:
+
+
+
+### A5.2.
+
+
+
+```
+
+### A6.1: Use the `cv.tree' function for the cross-validation. 
+####A6.2.: Compare the obtained results with that of the  A5.2
+
+###
+```{r }
+### A6.1: 
+
+### A6.2: 
+
+```
+
+### A7. Plot the error rate from the cross-validation as a function of both size and k.
+```{r }
+### A7.
+
+```
+###
+
+### A8. Prune the tree the best size (number of nodes) found in question 7. 
+
+###
+
+### A9. Predict with the pruned tree. Write a Conslusion of your finding
+```{r }
+### A9.
+
+## Write a Conslusion of your finding
+
+```
+
+###
+
+### A10. Compare the classification performance of the tree and the pruned tree.
+```{r }
+#
+
+```
+
+
+
+# Problem B (Fitting Regression Trees)
+
+### We will use the regression trees for the Boston Housing data
+
+
+## B1. Train a regression tree on the half of the observations of the Boston housing data. Comment no the Result.
+
+
+```{r }
+##
+
+```
+
+## B2. Plot the tree.
+
+```{r }
+##
+
+```
+###
+
+## B3. Run the cross-validation for the tree and plot the errors.
+
+```{r }
+##
+
+```
+###
+
+## B4. Prune the regression tree to find the optimal number of nodes.
+
+```{r }
+##
+
+```
+###
+
+## B5. Plot the predicted values vs the test values and calculate the MSE. Comment on the obtained results.
+
+
+```{r }
+##
+
+```
