@@ -1,10 +1,10 @@
 ---
-title: "Assignment2_Ans"
+title: "Assignment2 Answerts"
 author: "STAT380"
 date: '2023-10-29'
 output:
-  html_document: default
   word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -84,7 +84,7 @@ set.seed(234)
 
 ```{r }
 ### A5.2.
-fit_train = rpart(High_Sales~CompPrice+Income+Advertising+Population+Price+ShelveLoc+Age+Education+Urban+US,data=Training_Set,method="class",minsplit=20,cp=-1)
+fit_train = rpart(High_Sales~CompPrice+Income+Advertising+Population+Price+ShelveLoc+Age+Education+Urban+US,data=Training_Set,method="class",minsplit=10,cp=-1)
 
 
 
@@ -143,44 +143,87 @@ table(pred_test.full_tree,Testing_Set$High_Sales )
 
 
 ### We will use the regression trees for the Boston Housing data
+Load the data from the github course page using: 
+BostonH<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
+```{r }
+BostonH<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
+```
 
 
-## B1. Train a regression tree on the half of the observations of the Boston housing data. Comment no the Result.
+### B1 Split the data in Training and Testing Set. use a 60%/40% split fopr the trainig and Testing
+
+```{r }
+#### A5.1:
+set.seed(234)
+ #inTrain = createDataPartition(Carseats$Sales, p = 0.6, list = FALSE)
+  Total_data_size=as.integer(nrow(BostonH))
+  inTrain = sample(1:Total_data_size, round(Total_data_size*.60))
+  Training_Set = BostonH[inTrain, ]
+  dim(Training_Set)
+  Testing_Set<-BostonH[-inTrain, ]
+  dim(Testing_Set)
+  names(BostonH)
+```
+
+
+
+### B2.
+Fit a regression tree on the Training Set using the `MEDV', the median price of houses in a region, as the response variable while all the other variables EXCEPT  the `CAT..MEDV' as the covariates. Display/plot the fitted tree. 
 
 
 ```{r }
-##
+reg_fit_train = rpart(MEDV~CRIM+ZN+INDUS+CHAS+NOX+RM+AGE+DIS+RAD+TAX+PTRATIO+LSTAT,data=Training_Set,method="anova",minsplit=10,cp=-1)
 
+# plot fitted tree
+fancyRpartPlot(reg_fit_train, caption = NULL)
 ```
 
-## B2. Plot the tree.
+
+### B3. Comment on the Error Rate in the validation part.
+Identify an optimal value for complexiety parameter `cp'.
 
 ```{r }
-##
-
+summary(reg_fit_train)
+printcp(reg_fit_train)
+plotcp(reg_fit_train) 
 ```
-###
 
-## B3. Run the cross-validation for the tree and plot the errors.
-
-```{r }
-##
-
-```
 ###
 
 ## B4. Prune the regression tree to find the optimal number of nodes.
-
 ```{r }
-##
+
+bestcp <-fit_train$cptable[which.min(fit_train$cptable[,"xerror"]),"CP"]
+reg_pruned.tree <- prune(reg_fit_train, cp = bestcp)
+rpart.plot(reg_pruned.tree)
 
 ```
 ###
 
-## B5. Plot the predicted values vs the test values and calculate the MSE. Comment on the obtained results.
+## B5.1 Predict on the Testing set with the pruned tree. Plot the predicted values vs the response values in the test set.
+
+
+## B5.2 Predict on the Testing set with the Entire tree fitted to the training set. Plot the predicted values vs the response values in the test set.
+
+```{r }
+### B5.1
+# Alternate specification 
+reg_pred_test.prune = predict(reg_pruned.tree, Testing_Set)
+plot(reg_pred_test.prune,Testing_Set$MEDV, main="Pruned Tree" )
+### B5.2
+reg_pred_test.full_tree=predict(reg_fit_train, Testing_Set, main="Entire Tree on Trainig Set")
+plot(reg_pred_test.full_tree,Testing_Set$MEDV )
+```
+### 
+
+
+
+### B6  calculate the MSE for both the prediction and compare their MSE. Comment on your finding. 
+
 
 
 ```{r }
 ##
-
+mean((reg_pred_test.prune  -Testing_Set$MEDV )^2)
+mean((reg_pred_test.full_tree-Testing_Set$MEDV )^2)
 ```
