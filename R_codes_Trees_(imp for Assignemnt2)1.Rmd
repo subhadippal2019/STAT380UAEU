@@ -1,10 +1,11 @@
 ---
-title: "Class Activity "
+title: 'Class Activity '
 author: "STAT380"
 date: ' '
 output:
-  html_document: default
   word_document: default
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +25,7 @@ library(partykit)
 ```
 
 
-#(Fitting Regression Trees)
+
 
 ### We will use the classification trees for the Boston Housing data
 
@@ -32,7 +33,7 @@ Load the data from the github course page using:
 
 ```{r }
 BostonHousing<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
-names(BostonH)
+names(BostonHousing)
 ```
 
 ##Some notations
@@ -147,5 +148,7 @@ cls_pred_test.full_tree=predict(cls_fit_train, Testing_Set, main="Entire Tree on
 table(cls_pred_test.prune ,Testing_Set$MEDV_Fac )
 #A9.2
 table(cls_pred_test.full_tree,Testing_Set$MEDV_Fac )
-
 ```
+
+
+

@@ -1,0 +1,48 @@
+---
+title: "Class Activity Trees"
+author: "STAT380"
+date: '2023-11-01'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r }
+###
+library(tree)
+###
+library(ISLR)
+#attach(Carseats)
+library(rattle)
+library(rpart.plot)
+library(RColorBrewer)
+library(partykit)
+```
+
+
+#(Fitting Regression Trees)
+
+### We will use the classification trees for the Boston Housing data
+
+Load the data from the github course page using: 
+
+```{r }
+BostonHousing<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
+names(BostonHousing)
+```
+
+##Some notations
+Some notations on the response variable and additional information on Data. Also remove the continuous response, `MEDV' as objective of this activity is to construct a Classification tree on the categorical covariate `CAT..MEDV' 
+```{r }
+## Classification tree using Boston Housing data: 
+# Some notation and additional information on Data
+head(BostonHousing)
+str(BostonHousing)
+BostonHousing$MEDV_Fac = factor(BostonHousing$CAT..MEDV,labels=c("Below","Above"))
+BostonHousing$MEDV_Fac
+# As we will be using the MEDV_Fac as categorical response, we will remove both, `CAT..MEDV' and `MEDV' to keep on the required of the data. 
+BostonH=BostonHousing[,-c(13,14)] 
+#We will work on the BostonH for rest of the activity
+```
