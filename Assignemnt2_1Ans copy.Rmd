@@ -1,0 +1,229 @@
+---
+title: "Assignment2 Answerts"
+author: "STAT380"
+date: '2023-10-29'
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r }
+###
+library(tree)
+###
+library(ISLR)
+#attach(Carseats)
+library(rattle)
+library(rpart.plot)
+library(RColorBrewer)
+library(partykit)
+```
+The data set `Carseats' is a simulated data set containing sales of child car seats at 400 different stores of a specific departmental store over a period of a few months.  For the different activities in this assignment, we consider a categorical binary variable, that we call 'High_Sales'.  We consider the sales amount is high, i.e., High_Sales=1,  if the number of  car sets that are sold is greater than 8 in the particular store. 
+
+# Problem A
+### A1.  Create a new binary categorical variable called `High_Sales' which is defined as follows: 
+$ \text{High_Sales}='High' \text{ if } `Sales'>8 $ and $ \text{High_Sales}=0'Low'\text{ if } `Sales'\leq 8 $
+
+### A2. Add the new variable to the dataset `Carseats'.
+```{r }
+data(Carseats)
+### A1.
+High_Sales<-ifelse(Carseats$Sales>8, 'High', 'Low')
+
+### A2.
+Carseats$High_Sales=as.factor(High_Sales)
+```
+
+
+### A3. Build a classification tree where the response is 'High_Sales' and the predictors are all the other variables except 'Sales' and 'High_Sales'.
+```{r }
+names(Carseats)
+### A3.
+fit = rpart(High_Sales~CompPrice+Income+Advertising+Population+Price+ShelveLoc+Age+Education+Urban+US,data=Carseats,method="class",minsplit=20,cp=-1)
+
+```
+###
+
+### A4.1 Plot the fitted tree and 
+#### A4.2 describe the different classification region. 
+```{r }
+
+# A4.1 Plot the regression tree
+plot(fit)
+plot(as.party(fit)) # Basic Plot 
+fancyRpartPlot(fit, caption = NULL) # More Nicer plot but need libraries `RColorBrewer', `rattle' and `rpart.plot'
+
+
+
+#A4.2 describe the different classification region.
+
+```
+
+## Training and Testing Set
+### A5.1. Now, Create a training set and a testing set , use a training set (70% in the training Set and 30% in test set). 
+
+```{r }
+#### A5.1:
+set.seed(234)
+ #inTrain = createDataPartition(Carseats$Sales, p = 0.75, list = FALSE)
+  Total_data_size=as.integer(nrow(Carseats))
+  inTrain = sample(1:Total_data_size, round(Total_data_size*.70))
+  Training_Set = Carseats[inTrain, ]
+  dim(Training_Set)
+  Testing_Set<-Carseats[-inTrain, ]
+  dim(Testing_Set)
+```
+
+### A5.2. Fit the Classification Tree  in the Training set and Plot the tree
+
+```{r }
+### A5.2.
+fit_train = rpart(High_Sales~CompPrice+Income+Advertising+Population+Price+ShelveLoc+Age+Education+Urban+US,data=Training_Set,method="class",minsplit=10,cp=-1)
+
+
+
+# plot mytree
+fancyRpartPlot(fit_train, caption = NULL)
+```
+
+
+
+### A6. Comment on the Error Rate in the validation part.
+Identify an optimal value for complexiety parameter `cp'.
+Note: cp = “value” is an assigned numeric value that will determine how tall a tree is to be  growen. The smaller value (closer to 0) leads to  the larger the trees. The default value is 0.01.
+```{r }
+summary(fit_train)
+printcp(fit_train)
+plotcp(fit_train) 
+```
+
+### A7. Prune the tree According to the optimal value of cp that you have obtainied in A6. 
+```{r }
+### A8.
+
+bestcp <-fit_train$cptable[which.min(fit_train$cptable[,"xerror"]),"CP"]
+pruned.tree <- prune(fit_train, cp = bestcp)
+rpart.plot(pruned.tree)
+
+```
+###
+
+### A8.1 Predict on the Testing set with the pruned tree and
+### A8.2 Predict on the Testing set with the pruned tree andPredict on the Testing set with the entire tree fitted using the training set
+```{r }
+### A8.1
+# Alternate specification 
+pred_test.prune = predict(pruned.tree, Testing_Set, type="class")
+
+### A8.1
+pred_test.full_tree=predict(fit_train, Testing_Set, type="class")
+```
+### A9.1 Create A classification Tables of the errors  using the Predicted values from the pruned tree
+### A9.2 Create A classification Tables of the errors  using the Predicted values from entire tree fitted using the training set
+###
+
+### A10. Compare the classification performance of the tree and the pruned tree. 
+```{r }
+#A9.1
+table(pred_test.prune,Testing_Set$High_Sales )
+#A9.2
+table(pred_test.full_tree,Testing_Set$High_Sales )
+## Write a Conslusion of your finding
+```
+
+
+
+# Problem B (Fitting Regression Trees)
+
+
+### We will use the regression trees for the Boston Housing data
+Load the data from the github course page using: 
+BostonH<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
+```{r }
+BostonH<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
+```
+
+
+### B1 Split the data in Training and Testing Set. use a 60%/40% split fopr the trainig and Testing
+
+```{r }
+#### A5.1:
+set.seed(234)
+ #inTrain = createDataPartition(Carseats$Sales, p = 0.6, list = FALSE)
+  Total_data_size=as.integer(nrow(BostonH))
+  inTrain = sample(1:Total_data_size, round(Total_data_size*.60))
+  Training_Set = BostonH[inTrain, ]
+  dim(Training_Set)
+  Testing_Set<-BostonH[-inTrain, ]
+  dim(Testing_Set)
+  names(BostonH)
+```
+
+
+
+### B2.
+Fit a regression tree on the Training Set using the `MEDV', the median price of houses in a region, as the response variable while all the other variables EXCEPT  the `CAT..MEDV' as the covariates. Display/plot the fitted tree. 
+
+
+```{r }
+reg_fit_train = rpart(MEDV~CRIM+ZN+INDUS+CHAS+NOX+RM+AGE+DIS+RAD+TAX+PTRATIO+LSTAT,data=Training_Set,method="anova",minsplit=10,cp=-1)
+
+# plot fitted tree
+fancyRpartPlot(reg_fit_train, caption = NULL)
+```
+
+
+### B3. Comment on the Error Rate in the validation part.
+Identify an optimal value for complexiety parameter `cp'.
+
+```{r }
+summary(reg_fit_train)
+printcp(reg_fit_train)
+plotcp(reg_fit_train) 
+```
+
+###
+
+## B4. Prune the regression tree to find the optimal number of nodes.
+```{r }
+
+bestcp <-fit_train$cptable[which.min(fit_train$cptable[,"xerror"]),"CP"]
+reg_pruned.tree <- prune(reg_fit_train, cp = bestcp)
+rpart.plot(reg_pruned.tree)
+
+```
+###
+
+## B5.1 Predict on the Testing set with the pruned tree. Plot the predicted values vs the response values in the test set.
+
+
+## B5.2 Predict on the Testing set with the Entire tree fitted to the training set. Plot the predicted values vs the response values in the test set.
+
+```{r }
+### B5.1
+# Alternate specification 
+reg_pred_test.prune = predict(reg_pruned.tree, Testing_Set)
+plot(reg_pred_test.prune,Testing_Set$MEDV, main="Pruned Tree" )
+### B5.2
+reg_pred_test.full_tree=predict(reg_fit_train, Testing_Set, main="Entire Tree on Trainig Set")
+plot(reg_pred_test.full_tree,Testing_Set$MEDV )
+```
+### 
+
+
+
+### B6  calculate the MSE for both the prediction and compare their MSE. Comment on your finding. 
+
+
+
+```{r }
+##
+mean((reg_pred_test.prune  -Testing_Set$MEDV )^2)
+mean((reg_pred_test.full_tree-Testing_Set$MEDV )^2)
+```
