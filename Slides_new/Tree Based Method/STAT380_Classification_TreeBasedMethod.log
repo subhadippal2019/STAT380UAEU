@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  19 OCT 2023 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  31 OCT 2024 07:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1395,532 +1395,1327 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <5> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 137.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <5> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 137.
- [1
+ [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+] [2
 
 ]
-<STAT380-Unit3.pdf, id=109, 364.19562pt x 273.14648pt>
+(./STAT380_Classification_TreeBasedMethod.toc) [3
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 208.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 208.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 208.
+
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 208--208
+[][] 
+ []
+
+[4
+
+]
+<STAT380-Unit3.pdf, id=214, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf>
-Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf>
-Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-<STAT380-Unit3.pdf, id=112, page=68, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=217, page=68, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 68>
-Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 68>
-Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 68>
-Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 68>
-Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 68>
-Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [3
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 68>
+Package pdftex.def Info: STAT380-Unit3.pdf , page68 used on input line 214.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [5
 
  <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=249, page=69, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=354, page=69, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 69>
-Package pdftex.def Info: STAT380-Unit3.pdf , page69 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 69>
-Package pdftex.def Info: STAT380-Unit3.pdf , page69 used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf , page69 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 69>
-Package pdftex.def Info: STAT380-Unit3.pdf , page69 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [4 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=372, page=70, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 70>
-Package pdftex.def Info: STAT380-Unit3.pdf , page70 used on input line 209.
+Package pdftex.def Info: STAT380-Unit3.pdf , page69 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 70>
-Package pdftex.def Info: STAT380-Unit3.pdf , page70 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 70>
-Package pdftex.def Info: STAT380-Unit3.pdf , page70 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [5 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=398, page=71, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 71>
-Package pdftex.def Info: STAT380-Unit3.pdf , page71 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 71>
-Package pdftex.def Info: STAT380-Unit3.pdf , page71 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 71>
-Package pdftex.def Info: STAT380-Unit3.pdf , page71 used on input line 209.
+<use STAT380-Unit3.pdf, page 69>
+Package pdftex.def Info: STAT380-Unit3.pdf , page69 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [6 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=424, page=72, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=477, page=70, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 72>
-Package pdftex.def Info: STAT380-Unit3.pdf , page72 used on input line 209.
+<use STAT380-Unit3.pdf, page 70>
+Package pdftex.def Info: STAT380-Unit3.pdf , page70 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 72>
-Package pdftex.def Info: STAT380-Unit3.pdf , page72 used on input line 209.
+<use STAT380-Unit3.pdf, page 70>
+Package pdftex.def Info: STAT380-Unit3.pdf , page70 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 72>
-Package pdftex.def Info: STAT380-Unit3.pdf , page72 used on input line 209.
+<use STAT380-Unit3.pdf, page 70>
+Package pdftex.def Info: STAT380-Unit3.pdf , page70 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [7 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=482, page=73, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=504, page=71, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 73>
-Package pdftex.def Info: STAT380-Unit3.pdf , page73 used on input line 209.
+<use STAT380-Unit3.pdf, page 71>
+Package pdftex.def Info: STAT380-Unit3.pdf , page71 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 73>
-Package pdftex.def Info: STAT380-Unit3.pdf , page73 used on input line 209.
+<use STAT380-Unit3.pdf, page 71>
+Package pdftex.def Info: STAT380-Unit3.pdf , page71 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 73>
-Package pdftex.def Info: STAT380-Unit3.pdf , page73 used on input line 209.
+<use STAT380-Unit3.pdf, page 71>
+Package pdftex.def Info: STAT380-Unit3.pdf , page71 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [8 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=543, page=74, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=530, page=72, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 74>
-Package pdftex.def Info: STAT380-Unit3.pdf , page74 used on input line 209.
+<use STAT380-Unit3.pdf, page 72>
+Package pdftex.def Info: STAT380-Unit3.pdf , page72 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 74>
-Package pdftex.def Info: STAT380-Unit3.pdf , page74 used on input line 209.
+<use STAT380-Unit3.pdf, page 72>
+Package pdftex.def Info: STAT380-Unit3.pdf , page72 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 74>
-Package pdftex.def Info: STAT380-Unit3.pdf , page74 used on input line 209.
+<use STAT380-Unit3.pdf, page 72>
+Package pdftex.def Info: STAT380-Unit3.pdf , page72 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [9 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=593, page=75, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=586, page=73, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 75>
-Package pdftex.def Info: STAT380-Unit3.pdf , page75 used on input line 209.
+<use STAT380-Unit3.pdf, page 73>
+Package pdftex.def Info: STAT380-Unit3.pdf , page73 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 75>
-Package pdftex.def Info: STAT380-Unit3.pdf , page75 used on input line 209.
+<use STAT380-Unit3.pdf, page 73>
+Package pdftex.def Info: STAT380-Unit3.pdf , page73 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 75>
-Package pdftex.def Info: STAT380-Unit3.pdf , page75 used on input line 209.
+<use STAT380-Unit3.pdf, page 73>
+Package pdftex.def Info: STAT380-Unit3.pdf , page73 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [10 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=632, page=76, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=648, page=74, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 76>
-Package pdftex.def Info: STAT380-Unit3.pdf , page76 used on input line 209.
+<use STAT380-Unit3.pdf, page 74>
+Package pdftex.def Info: STAT380-Unit3.pdf , page74 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 76>
-Package pdftex.def Info: STAT380-Unit3.pdf , page76 used on input line 209.
+<use STAT380-Unit3.pdf, page 74>
+Package pdftex.def Info: STAT380-Unit3.pdf , page74 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 76>
-Package pdftex.def Info: STAT380-Unit3.pdf , page76 used on input line 209.
+<use STAT380-Unit3.pdf, page 74>
+Package pdftex.def Info: STAT380-Unit3.pdf , page74 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [11 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=679, page=77, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=698, page=75, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 77>
-Package pdftex.def Info: STAT380-Unit3.pdf , page77 used on input line 209.
+<use STAT380-Unit3.pdf, page 75>
+Package pdftex.def Info: STAT380-Unit3.pdf , page75 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 77>
-Package pdftex.def Info: STAT380-Unit3.pdf , page77 used on input line 209.
+<use STAT380-Unit3.pdf, page 75>
+Package pdftex.def Info: STAT380-Unit3.pdf , page75 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 77>
-Package pdftex.def Info: STAT380-Unit3.pdf , page77 used on input line 209.
+<use STAT380-Unit3.pdf, page 75>
+Package pdftex.def Info: STAT380-Unit3.pdf , page75 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [12 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=705, page=78, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=737, page=76, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 78>
-Package pdftex.def Info: STAT380-Unit3.pdf , page78 used on input line 209.
+<use STAT380-Unit3.pdf, page 76>
+Package pdftex.def Info: STAT380-Unit3.pdf , page76 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 78>
-Package pdftex.def Info: STAT380-Unit3.pdf , page78 used on input line 209.
+<use STAT380-Unit3.pdf, page 76>
+Package pdftex.def Info: STAT380-Unit3.pdf , page76 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 78>
-Package pdftex.def Info: STAT380-Unit3.pdf , page78 used on input line 209.
+<use STAT380-Unit3.pdf, page 76>
+Package pdftex.def Info: STAT380-Unit3.pdf , page76 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [13 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=733, page=79, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=785, page=77, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 79>
-Package pdftex.def Info: STAT380-Unit3.pdf , page79 used on input line 209.
+<use STAT380-Unit3.pdf, page 77>
+Package pdftex.def Info: STAT380-Unit3.pdf , page77 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 79>
-Package pdftex.def Info: STAT380-Unit3.pdf , page79 used on input line 209.
+<use STAT380-Unit3.pdf, page 77>
+Package pdftex.def Info: STAT380-Unit3.pdf , page77 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 79>
-Package pdftex.def Info: STAT380-Unit3.pdf , page79 used on input line 209.
+<use STAT380-Unit3.pdf, page 77>
+Package pdftex.def Info: STAT380-Unit3.pdf , page77 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [14 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=759, page=80, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=811, page=78, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 80>
-Package pdftex.def Info: STAT380-Unit3.pdf , page80 used on input line 209.
+<use STAT380-Unit3.pdf, page 78>
+Package pdftex.def Info: STAT380-Unit3.pdf , page78 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 80>
-Package pdftex.def Info: STAT380-Unit3.pdf , page80 used on input line 209.
+<use STAT380-Unit3.pdf, page 78>
+Package pdftex.def Info: STAT380-Unit3.pdf , page78 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 80>
-Package pdftex.def Info: STAT380-Unit3.pdf , page80 used on input line 209.
+<use STAT380-Unit3.pdf, page 78>
+Package pdftex.def Info: STAT380-Unit3.pdf , page78 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [15 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=785, page=81, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=837, page=79, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 81>
-Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 209.
+<use STAT380-Unit3.pdf, page 79>
+Package pdftex.def Info: STAT380-Unit3.pdf , page79 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 81>
-Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 209.
+<use STAT380-Unit3.pdf, page 79>
+Package pdftex.def Info: STAT380-Unit3.pdf , page79 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 81>
-Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 209.
+<use STAT380-Unit3.pdf, page 79>
+Package pdftex.def Info: STAT380-Unit3.pdf , page79 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [16 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=829, page=82, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=864, page=80, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 82>
-Package pdftex.def Info: STAT380-Unit3.pdf , page82 used on input line 209.
+<use STAT380-Unit3.pdf, page 80>
+Package pdftex.def Info: STAT380-Unit3.pdf , page80 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 82>
-Package pdftex.def Info: STAT380-Unit3.pdf , page82 used on input line 209.
+<use STAT380-Unit3.pdf, page 80>
+Package pdftex.def Info: STAT380-Unit3.pdf , page80 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 82>
-Package pdftex.def Info: STAT380-Unit3.pdf , page82 used on input line 209.
+<use STAT380-Unit3.pdf, page 80>
+Package pdftex.def Info: STAT380-Unit3.pdf , page80 used on input line 214.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [17 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=862, page=83, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 83>
-Package pdftex.def Info: STAT380-Unit3.pdf , page83 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 83>
-Package pdftex.def Info: STAT380-Unit3.pdf , page83 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 83>
-Package pdftex.def Info: STAT380-Unit3.pdf , page83 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [18 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=943, page=84, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 84>
-Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 84>
-Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 84>
-Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [19 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=970, page=85, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 85>
-Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 85>
-Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 85>
-Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [20 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=996, page=86, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 86>
-Package pdftex.def Info: STAT380-Unit3.pdf , page86 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 86>
-Package pdftex.def Info: STAT380-Unit3.pdf , page86 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 86>
-Package pdftex.def Info: STAT380-Unit3.pdf , page86 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [21 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1068, page=87, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 87>
-Package pdftex.def Info: STAT380-Unit3.pdf , page87 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 87>
-Package pdftex.def Info: STAT380-Unit3.pdf , page87 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 87>
-Package pdftex.def Info: STAT380-Unit3.pdf , page87 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [22 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1094, page=88, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 88>
-Package pdftex.def Info: STAT380-Unit3.pdf , page88 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 88>
-Package pdftex.def Info: STAT380-Unit3.pdf , page88 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 88>
-Package pdftex.def Info: STAT380-Unit3.pdf , page88 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [23 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1138, page=89, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 89>
-Package pdftex.def Info: STAT380-Unit3.pdf , page89 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 89>
-Package pdftex.def Info: STAT380-Unit3.pdf , page89 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 89>
-Package pdftex.def Info: STAT380-Unit3.pdf , page89 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [24 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1165, page=90, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 90>
-Package pdftex.def Info: STAT380-Unit3.pdf , page90 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 90>
-Package pdftex.def Info: STAT380-Unit3.pdf , page90 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 90>
-Package pdftex.def Info: STAT380-Unit3.pdf , page90 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [25 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1192, page=91, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 91>
-Package pdftex.def Info: STAT380-Unit3.pdf , page91 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 91>
-Package pdftex.def Info: STAT380-Unit3.pdf , page91 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 91>
-Package pdftex.def Info: STAT380-Unit3.pdf , page91 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [26 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1226, page=92, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 92>
-Package pdftex.def Info: STAT380-Unit3.pdf , page92 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 92>
-Package pdftex.def Info: STAT380-Unit3.pdf , page92 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 92>
-Package pdftex.def Info: STAT380-Unit3.pdf , page92 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
+[][][][]
+ []
 
-[27 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1252, page=93, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 93>
-Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 93>
-Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 93>
-Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [28 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1279, page=94, 364.19562pt x 273.14648pt>
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 94>
-Package pdftex.def Info: STAT380-Unit3.pdf , page94 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 94>
-Package pdftex.def Info: STAT380-Unit3.pdf , page94 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 94>
-Package pdftex.def Info: STAT380-Unit3.pdf , page94 used on input line 209.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [29 <./STAT380-Unit3.pdf>]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 219.
-LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 219.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 219.
- [30]
+[18]
+<figs/RegressionTreeDiagram1.png, id=931, 760.8425pt x 517.935pt>
+File: figs/RegressionTreeDiagram1.png Graphic file (type png)
+<use figs/RegressionTreeDiagram1.png>
+Package pdftex.def Info: figs/RegressionTreeDiagram1.png  used on input line 24
+7.
+(pdftex.def)             Requested size: 228.2545pt x 155.38168pt.
+
+Overfull \vbox (13.6438pt too high) detected at line 247
+ []
+
+[19
+
+ <./figs/RegressionTreeDiagram1.png>] [20
+
+]
+<figs/RegressionTreeDiagram.png, id=1011, 794.97pt x 495.8525pt>
+File: figs/RegressionTreeDiagram.png Graphic file (type png)
+<use figs/RegressionTreeDiagram.png>
+Package pdftex.def Info: figs/RegressionTreeDiagram.png  used on input line 278
+.
+(pdftex.def)             Requested size: 254.3956pt x 158.67604pt.
+
+Overfull \vbox (11.22989pt too high) detected at line 278
+ []
+
+[21
+
+ <./figs/RegressionTreeDiagram.png>]
+<figs/R1_R2.png, id=1063, 926.46124pt x 455.7025pt>
+File: figs/R1_R2.png Graphic file (type png)
+<use figs/R1_R2.png>
+Package pdftex.def Info: figs/R1_R2.png  used on input line 298.
+(pdftex.def)             Requested size: 277.9405pt x 136.71179pt.
+File: figs/RegressionTreeDiagram1.png Graphic file (type png)
+<use figs/RegressionTreeDiagram1.png>
+Package pdftex.def Info: figs/RegressionTreeDiagram1.png  used on input line 29
+8.
+(pdftex.def)             Requested size: 167.38586pt x 113.94604pt.
+ [22
+
+ <./figs/R1_R2.png>]
+<figs/R1_R2_s.png, id=1097, 914.41624pt x 449.68pt>
+File: figs/R1_R2_s.png Graphic file (type png)
+<use figs/R1_R2_s.png>
+Package pdftex.def Info: figs/R1_R2_s.png  used on input line 312.
+(pdftex.def)             Requested size: 320.05048pt x 157.39035pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 312--312
+[][]  
+ []
+
+
+Overfull \hbox (6.73607pt too wide) detected at line 312
+[] \OT1/cmss/m/n/10.95 := []
+ []
+
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 312--312
+[][] 
+ []
+
+
+Overfull \vbox (23.29593pt too high) detected at line 312
+ []
+
+[23
+
+ <./figs/R1_R2_s.png>]
+<figs/R1_R2_table.png, id=1136, 959.585pt x 505.89pt>
+File: figs/R1_R2_table.png Graphic file (type png)
+<use figs/R1_R2_table.png>
+Package pdftex.def Info: figs/R1_R2_table.png  used on input line 336.
+(pdftex.def)             Requested size: 335.85977pt x 177.06415pt.
+
+Overfull \hbox (3.41734pt too wide) in paragraph at lines 336--336
+ [] 
+ []
+
+[24
+
+ <./figs/R1_R2_table.png>]
+<figs/R1_R2_table1.png, id=1170, 961.5925pt x 503.8825pt>
+File: figs/R1_R2_table1.png Graphic file (type png)
+<use figs/R1_R2_table1.png>
+Package pdftex.def Info: figs/R1_R2_table1.png  used on input line 358.
+(pdftex.def)             Requested size: 336.56241pt x 176.36151pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 358--358
+[][]  
+ []
+
+[25
+
+ <./figs/R1_R2_table1.png>]
+<figs/R1_R2_table_Example.png, id=1205, 875.27pt x 828.09375pt>
+File: figs/R1_R2_table_Example.png Graphic file (type png)
+<use figs/R1_R2_table_Example.png>
+Package pdftex.def Info: figs/R1_R2_table_Example.png  used on input line 380.
+(pdftex.def)             Requested size: 245.07393pt x 231.86467pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 380--380
+[][]  
+ []
+
+
+Overfull \vbox (53.3838pt too high) detected at line 380
+ []
+
+[26
+
+ <./figs/R1_R2_table_Example.png>]
+<figs/TREE_CONSTRUCTION0.png, id=1241, 634.37pt x 555.07375pt>
+File: figs/TREE_CONSTRUCTION0.png Graphic file (type png)
+<use figs/TREE_CONSTRUCTION0.png>
+Package pdftex.def Info: figs/TREE_CONSTRUCTION0.png  used on input line 392.
+(pdftex.def)             Requested size: 253.7435pt x 222.02556pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 392--392
+[][]  
+ []
+
+
+Overfull \vbox (0.18225pt too high) detected at line 392
+ []
+
+[27
+
+ <./figs/TREE_CONSTRUCTION0.png>]
+<figs/TREE_CONSTRUCTION01.png, id=1275, 636.3775pt x 552.0625pt>
+File: figs/TREE_CONSTRUCTION01.png Graphic file (type png)
+<use figs/TREE_CONSTRUCTION01.png>
+Package pdftex.def Info: figs/TREE_CONSTRUCTION01.png  used on input line 405.
+(pdftex.def)             Requested size: 254.5465pt x 220.82108pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 405--405
+[][]  
+ []
+
+[28
+
+ <./figs/TREE_CONSTRUCTION01.png>]
+<figs/TREE_CONSTRUCTION.png, id=1309, 636.3775pt x 551.05875pt>
+File: figs/TREE_CONSTRUCTION.png Graphic file (type png)
+<use figs/TREE_CONSTRUCTION.png>
+Package pdftex.def Info: figs/TREE_CONSTRUCTION.png  used on input line 425.
+(pdftex.def)             Requested size: 254.5465pt x 220.41959pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 425--425
+[][]  
+ []
+
+[29
+
+ <./figs/TREE_CONSTRUCTION.png>]
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf>
-Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf>
-Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-<STAT380-Unit3.pdf, id=1353, page=95, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=1346, page=81, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 95>
-Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 226.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 95>
-Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 226.
+<use STAT380-Unit3.pdf, page 81>
+Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 95>
-Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 226.
+<use STAT380-Unit3.pdf, page 81>
+Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 95>
-Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 226.
+<use STAT380-Unit3.pdf, page 81>
+Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 95>
-Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 226.
+<use STAT380-Unit3.pdf, page 81>
+Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [31
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 81>
+Package pdftex.def Info: STAT380-Unit3.pdf , page81 used on input line 432.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [30
 
  <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1380, page=96, 364.19562pt x 273.14648pt>
+<STAT380-Unit3.pdf, id=1390, page=82, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 96>
-Package pdftex.def Info: STAT380-Unit3.pdf , page96 used on input line 226.
+<use STAT380-Unit3.pdf, page 82>
+Package pdftex.def Info: STAT380-Unit3.pdf , page82 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 96>
-Package pdftex.def Info: STAT380-Unit3.pdf , page96 used on input line 226.
+<use STAT380-Unit3.pdf, page 82>
+Package pdftex.def Info: STAT380-Unit3.pdf , page82 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 96>
-Package pdftex.def Info: STAT380-Unit3.pdf , page96 used on input line 226.
+<use STAT380-Unit3.pdf, page 82>
+Package pdftex.def Info: STAT380-Unit3.pdf , page82 used on input line 432.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [31 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=1423, page=83, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 83>
+Package pdftex.def Info: STAT380-Unit3.pdf , page83 used on input line 432.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 83>
+Package pdftex.def Info: STAT380-Unit3.pdf , page83 used on input line 432.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 83>
+Package pdftex.def Info: STAT380-Unit3.pdf , page83 used on input line 432.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
  [32 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1407, page=97, 364.19562pt x 273.14648pt>
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 441--441
+[][] 
+ []
+
+[33]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 448--448
+[][] 
+ []
+
+[34
+
+]
+<figs/T0.png, id=1585, 996.72375pt x 632.3625pt>
+File: figs/T0.png Graphic file (type png)
+<use figs/T0.png>
+Package pdftex.def Info: figs/T0.png  used on input line 462.
+(pdftex.def)             Requested size: 318.95811pt x 202.36014pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 462--462
+[][]  
+ []
+
+[35
+
+ <./figs/T0.png>]
+File: figs/T0.png Graphic file (type png)
+<use figs/T0.png>
+Package pdftex.def Info: figs/T0.png  used on input line 474.
+(pdftex.def)             Requested size: 149.5021pt x 94.85028pt.
+<figs/T1.png, id=1619, 793.96625pt x 502.87875pt>
+File: figs/T1.png Graphic file (type png)
+<use figs/T1.png>
+Package pdftex.def Info: figs/T1.png  used on input line 474.
+(pdftex.def)             Requested size: 222.30904pt x 140.80508pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 474--474
+[][]  
+ []
+
+
+Overfull \vbox (7.51837pt too high) detected at line 474
+ []
+
+[36
+
+ <./figs/T1.png>]
+File: figs/T0.png Graphic file (type png)
+<use figs/T0.png>
+Package pdftex.def Info: figs/T0.png  used on input line 489.
+(pdftex.def)             Requested size: 149.5021pt x 94.85028pt.
+<figs/T3.png, id=1654, 794.97pt x 504.88625pt>
+File: figs/T3.png Graphic file (type png)
+<use figs/T3.png>
+Package pdftex.def Info: figs/T3.png  used on input line 489.
+(pdftex.def)             Requested size: 222.59007pt x 141.36717pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 489--489
+[][]  
+ []
+
+
+Overfull \vbox (8.08044pt too high) detected at line 489
+ []
+
+[37
+
+ <./figs/T3.png>]
+File: figs/T0.png Graphic file (type png)
+<use figs/T0.png>
+Package pdftex.def Info: figs/T0.png  used on input line 501.
+(pdftex.def)             Requested size: 149.5021pt x 94.85028pt.
+<figs/T2.png, id=1689, 793.96625pt x 504.88625pt>
+File: figs/T2.png Graphic file (type png)
+<use figs/T2.png>
+Package pdftex.def Info: figs/T2.png  used on input line 501.
+(pdftex.def)             Requested size: 222.30904pt x 141.36717pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 501--501
+[][]  
+ []
+
+
+Overfull \vbox (8.08044pt too high) detected at line 501
+ []
+
+[38
+
+ <./figs/T2.png>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <7> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 503.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <7> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 503.
+
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 503--503
+[][] 
+ []
+
+[39
+
+]
+<figs/T11_Q.png, id=1760, 794.97pt x 504.88625pt>
+File: figs/T11_Q.png Graphic file (type png)
+<use figs/T11_Q.png>
+Package pdftex.def Info: figs/T11_Q.png  used on input line 512.
+(pdftex.def)             Requested size: 317.98236pt x 201.95091pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 512--512
+[][]  
+ []
+
+[40
+
+ <./figs/T11_Q.png>]
+<figs/T11_A.png, id=1794, 794.97pt x 503.8825pt>
+File: figs/T11_A.png Graphic file (type png)
+<use figs/T11_A.png>
+Package pdftex.def Info: figs/T11_A.png  used on input line 521.
+(pdftex.def)             Requested size: 317.98236pt x 201.54942pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 521--521
+[][]  
+ []
+
+[41
+
+ <./figs/T11_A.png>]
+<figs/T12_Q.png, id=1828, 793.96625pt x 503.8825pt>
+File: figs/T12_Q.png Graphic file (type png)
+<use figs/T12_Q.png>
+Package pdftex.def Info: figs/T12_Q.png  used on input line 534.
+(pdftex.def)             Requested size: 317.58087pt x 201.54942pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 534--534
+[][]  
+ []
+
+[42
+
+ <./figs/T12_Q.png>]
+<figs/T12_A.png, id=1862, 793.96625pt x 503.8825pt>
+File: figs/T12_A.png Graphic file (type png)
+<use figs/T12_A.png>
+Package pdftex.def Info: figs/T12_A.png  used on input line 543.
+(pdftex.def)             Requested size: 317.58087pt x 201.54942pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 543--543
+[][]  
+ []
+
+[43
+
+ <./figs/T12_A.png>]
+<figs/T13_Q.png, id=1898, 795.97375pt x 505.89pt>
+File: figs/T13_Q.png Graphic file (type png)
+<use figs/T13_Q.png>
+Package pdftex.def Info: figs/T13_Q.png  used on input line 555.
+(pdftex.def)             Requested size: 318.38387pt x 202.3524pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 555--555
+[][]  
+ []
+
+[44
+
+ <./figs/T13_Q.png>]
+<figs/T13_A.png, id=1932, 793.96625pt x 502.87875pt>
+File: figs/T13_A.png Graphic file (type png)
+<use figs/T13_A.png>
+Package pdftex.def Info: figs/T13_A.png  used on input line 564.
+(pdftex.def)             Requested size: 317.58087pt x 201.14793pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 564--564
+[][]  
+ []
+
+[45
+
+ <./figs/T13_A.png>]
+<figs/T14_Q.png, id=1966, 797.98125pt x 505.89pt>
+File: figs/T14_Q.png Graphic file (type png)
+<use figs/T14_Q.png>
+Package pdftex.def Info: figs/T14_Q.png  used on input line 574.
+(pdftex.def)             Requested size: 319.18684pt x 202.3524pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 574--574
+[][]  
+ []
+
+[46
+
+ <./figs/T14_Q.png>]
+<figs/T14_A.png, id=2001, 794.97pt x 504.88625pt>
+File: figs/T14_A.png Graphic file (type png)
+<use figs/T14_A.png>
+Package pdftex.def Info: figs/T14_A.png  used on input line 583.
+(pdftex.def)             Requested size: 317.98236pt x 201.95091pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 583--583
+[][]  
+ []
+
+[47
+
+ <./figs/T14_A.png>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 588--588
+[][] 
+ []
+
+[48
+
+]
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+<STAT380-Unit3.pdf, id=2073, page=84, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 84>
+Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 84>
+Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 84>
+Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 84>
+Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 84>
+Package pdftex.def Info: STAT380-Unit3.pdf , page84 used on input line 593.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [49
+
+ <./STAT380-Unit3.pdf>]
+Overfull \hbox (42.66049pt too wide) detected at line 613
+[] \OT1/cmss/m/n/10.95 = [][][]
+ []
+
+[50]
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+<STAT380-Unit3.pdf, id=2144, page=85, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 85>
+Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 85>
+Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 85>
+Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 85>
+Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 85>
+Package pdftex.def Info: STAT380-Unit3.pdf , page85 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [51
+
+ <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2170, page=86, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 86>
+Package pdftex.def Info: STAT380-Unit3.pdf , page86 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 86>
+Package pdftex.def Info: STAT380-Unit3.pdf , page86 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 86>
+Package pdftex.def Info: STAT380-Unit3.pdf , page86 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [52 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2241, page=87, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 87>
+Package pdftex.def Info: STAT380-Unit3.pdf , page87 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 87>
+Package pdftex.def Info: STAT380-Unit3.pdf , page87 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 87>
+Package pdftex.def Info: STAT380-Unit3.pdf , page87 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [53 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2267, page=88, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 88>
+Package pdftex.def Info: STAT380-Unit3.pdf , page88 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 88>
+Package pdftex.def Info: STAT380-Unit3.pdf , page88 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 88>
+Package pdftex.def Info: STAT380-Unit3.pdf , page88 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [54 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2312, page=89, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 89>
+Package pdftex.def Info: STAT380-Unit3.pdf , page89 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 89>
+Package pdftex.def Info: STAT380-Unit3.pdf , page89 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 89>
+Package pdftex.def Info: STAT380-Unit3.pdf , page89 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [55 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2339, page=90, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 90>
+Package pdftex.def Info: STAT380-Unit3.pdf , page90 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 90>
+Package pdftex.def Info: STAT380-Unit3.pdf , page90 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 90>
+Package pdftex.def Info: STAT380-Unit3.pdf , page90 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [56 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2365, page=91, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 91>
+Package pdftex.def Info: STAT380-Unit3.pdf , page91 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 91>
+Package pdftex.def Info: STAT380-Unit3.pdf , page91 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 91>
+Package pdftex.def Info: STAT380-Unit3.pdf , page91 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [57 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2399, page=92, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 92>
+Package pdftex.def Info: STAT380-Unit3.pdf , page92 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 92>
+Package pdftex.def Info: STAT380-Unit3.pdf , page92 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 92>
+Package pdftex.def Info: STAT380-Unit3.pdf , page92 used on input line 617.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [58 <./STAT380-Unit3.pdf>]
+(./STAT380_Classification_TreeBasedMethod.toc) [59]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 625--625
+[][] 
+ []
+
+[60
+
+]
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+<STAT380-Unit3.pdf, id=2502, page=93, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 93>
+Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 93>
+Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 93>
+Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 93>
+Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 93>
+Package pdftex.def Info: STAT380-Unit3.pdf , page93 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [61
+
+ <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=2529, page=94, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 94>
+Package pdftex.def Info: STAT380-Unit3.pdf , page94 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 94>
+Package pdftex.def Info: STAT380-Unit3.pdf , page94 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 94>
+Package pdftex.def Info: STAT380-Unit3.pdf , page94 used on input line 628.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [62 <./STAT380-Unit3.pdf>]
+<figs/Lemon Orange.png, id=2555, 798.985pt x 572.63937pt>
+File: figs/Lemon Orange.png Graphic file (type png)
+<use figs/Lemon Orange.png>
+Package pdftex.def Info: figs/Lemon Orange.png  used on input line 641.
+(pdftex.def)             Requested size: 239.69734pt x 171.79314pt.
+
+Overfull \vbox (23.52863pt too high) detected at line 641
+ []
+
+[63 <./figs/Lemon Orange.png>]
+<figs/Lemon_Orange_mock_Data.png, id=2587, 1182.4175pt x 745.28438pt>
+File: figs/Lemon_Orange_mock_Data.png Graphic file (type png)
+<use figs/Lemon_Orange_mock_Data.png>
+Package pdftex.def Info: figs/Lemon_Orange_mock_Data.png  used on input line 66
+3.
+(pdftex.def)             Requested size: 295.60365pt x 186.32063pt.
+
+Overfull \vbox (38.05612pt too high) detected at line 663
+ []
+
+[64
+
+ <./figs/Lemon_Orange_mock_Data.png>]
+<figs/Tree_Structure_Lemon_Orange.png, id=2620, 1133.73563pt x 875.77188pt>
+File: figs/Tree_Structure_Lemon_Orange.png Graphic file (type png)
+<use figs/Tree_Structure_Lemon_Orange.png>
+Package pdftex.def Info: figs/Tree_Structure_Lemon_Orange.png  used on input li
+ne 681.
+(pdftex.def)             Requested size: 260.75371pt x 201.4233pt.
+
+Overfull \vbox (53.15878pt too high) detected at line 681
+ []
+
+[65
+
+ <./figs/Tree_Structure_Lemon_Orange.png>]
+<figs/Lemon_Orange_T1_W.png, id=2652, 1133.23375pt x 873.2625pt>
+File: figs/Lemon_Orange_T1_W.png Graphic file (type png)
+<use figs/Lemon_Orange_T1_W.png>
+Package pdftex.def Info: figs/Lemon_Orange_T1_W.png  used on input line 698.
+(pdftex.def)             Requested size: 260.63828pt x 200.84615pt.
+
+Overfull \vbox (52.58163pt too high) detected at line 698
+ []
+
+[66
+
+ <./figs/Lemon_Orange_T1_W.png>]
+<figs/Three_Fruits.png, id=2684, 1174.88937pt x 889.82437pt>
+File: figs/Three_Fruits.png Graphic file (type png)
+<use figs/Three_Fruits.png>
+Package pdftex.def Info: figs/Three_Fruits.png  used on input line 713.
+(pdftex.def)             Requested size: 270.21887pt x 204.6553pt.
+
+Overfull \vbox (56.3908pt too high) detected at line 713
+ []
+
+[67
+
+ <./figs/Three_Fruits.png>]
+<figs/Lemon_Orange_T2_H.png, id=2716, 1169.87062pt x 881.2925pt>
+File: figs/Lemon_Orange_T2_H.png Graphic file (type png)
+<use figs/Lemon_Orange_T2_H.png>
+Package pdftex.def Info: figs/Lemon_Orange_T2_H.png  used on input line 727.
+(pdftex.def)             Requested size: 292.46693pt x 220.32259pt.
+
+Overfull \vbox (72.05807pt too high) detected at line 727
+ []
+
+[68
+
+ <./figs/Lemon_Orange_T2_H.png>]
+<figs/Impurity.png, id=2748, 641.39626pt x 526.96875pt>
+File: figs/Impurity.png Graphic file (type png)
+<use figs/Impurity.png>
+Package pdftex.def Info: figs/Impurity.png  used on input line 745.
+(pdftex.def)             Requested size: 269.38458pt x 221.32536pt.
+
+Overfull \vbox (73.06085pt too high) detected at line 745
+ []
+
+[69
+
+ <./figs/Impurity.png>]
+<figs/Three_Fruits1.png, id=2781, 410.03188pt x 340.27126pt>
+File: figs/Three_Fruits1.png Graphic file (type png)
+<use figs/Three_Fruits1.png>
+Package pdftex.def Info: figs/Three_Fruits1.png  used on input line 775.
+(pdftex.def)             Requested size: 82.00491pt x 68.05304pt.
+
+Overfull \vbox (47.81642pt too high) detected at line 775
+ []
+
+[70
+
+ <./figs/Three_Fruits1.png>] [71
+
+] [72
+
+]
+File: figs/Lemon_Orange_T2_H.png Graphic file (type png)
+<use figs/Lemon_Orange_T2_H.png>
+Package pdftex.def Info: figs/Lemon_Orange_T2_H.png  used on input line 842.
+(pdftex.def)             Requested size: 292.46693pt x 220.32259pt.
+
+Overfull \vbox (72.05807pt too high) detected at line 842
+ []
+
+[73
+
+]
+Overfull \vbox (21.76938pt too high) detected at line 852
+ []
+
+[74
+
+]
+Overfull \vbox (25.4188pt too high) detected at line 865
+ []
+
+[75
+
+]
+Overfull \vbox (11.46292pt too high) detected at line 877
+ []
+
+[76
+
+]
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+<STAT380-Unit3.pdf, id=3145, page=95, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 95>
+Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 95>
+Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 95>
+Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 95>
+Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 95>
+Package pdftex.def Info: STAT380-Unit3.pdf , page95 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [77
+
+ <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=3170, page=96, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 96>
+Package pdftex.def Info: STAT380-Unit3.pdf , page96 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 96>
+Package pdftex.def Info: STAT380-Unit3.pdf , page96 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 96>
+Package pdftex.def Info: STAT380-Unit3.pdf , page96 used on input line 885.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [78 <./STAT380-Unit3.pdf>]
+<figs/Decission_Tree1.png, id=3195, 717.68124pt x 463.7325pt>
+File: figs/Decission_Tree1.png Graphic file (type png)
+<use figs/Decission_Tree1.png>
+Package pdftex.def Info: figs/Decission_Tree1.png  used on input line 900.
+(pdftex.def)             Requested size: 215.30603pt x 139.12082pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 900--900
+[][]  
+ []
+
+[79 <./figs/Decission_Tree1.png>]
+<figs/Decission_Tree2.png, id=3233, 964.60374pt x 617.30624pt>
+File: figs/Decission_Tree2.png Graphic file (type png)
+<use figs/Decission_Tree2.png>
+Package pdftex.def Info: figs/Decission_Tree2.png  used on input line 915.
+(pdftex.def)             Requested size: 221.85419pt x 141.97745pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 915--915
+[][]  
+ []
+
+[80
+
+ <./figs/Decission_Tree2.png>]
+File: figs/RegressionTreeDiagram.png Graphic file (type png)
+<use figs/RegressionTreeDiagram.png>
+Package pdftex.def Info: figs/RegressionTreeDiagram.png  used on input line 939
+.
+(pdftex.def)             Requested size: 254.3956pt x 158.67604pt.
+
+Overfull \vbox (11.22989pt too high) detected at line 939
+ []
+
+[81
+
+]
+File: figs/R1_R2.png Graphic file (type png)
+<use figs/R1_R2.png>
+Package pdftex.def Info: figs/R1_R2.png  used on input line 959.
+(pdftex.def)             Requested size: 277.9405pt x 136.71179pt.
+File: figs/Decission_Tree1.png Graphic file (type png)
+<use figs/Decission_Tree1.png>
+Package pdftex.def Info: figs/Decission_Tree1.png  used on input line 959.
+(pdftex.def)             Requested size: 157.89035pt x 102.02145pt.
+ [82
+
+]
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 987--987
+[][] 
+ []
+
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 987--987
+[][] 
+ []
+
+
+Overfull \vbox (24.04214pt too high) detected at line 987
+ []
+
+[83
+
+]
+<figs/R1_R2_table1_impurity.png, id=3392, 841.1425pt x 442.65375pt>
+File: figs/R1_R2_table1_impurity.png Graphic file (type png)
+<use figs/R1_R2_table1_impurity.png>
+Package pdftex.def Info: figs/R1_R2_table1_impurity.png  used on input line 102
+7.
+(pdftex.def)             Requested size: 294.40428pt x 154.93112pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 1027--1027
+[][]  
+ []
+
+
+Overfull \vbox (58.41867pt too high) detected at line 1027
+ []
+
+[84
+
+ <./figs/R1_R2_table1_impurity.png>]
+File: figs/Decission_Tree1.png Graphic file (type png)
+<use figs/Decission_Tree1.png>
+Package pdftex.def Info: figs/Decission_Tree1.png  used on input line 1049.
+(pdftex.def)             Requested size: 143.5337pt x 92.74484pt.
+File: figs/Decission_Tree2.png Graphic file (type png)
+<use figs/Decission_Tree2.png>
+Package pdftex.def Info: figs/Decission_Tree2.png  used on input line 1049.
+(pdftex.def)             Requested size: 144.68431pt x 92.59193pt.
+ [85
+
+]
+<figs/1_tree_class.png, id=3480, 1199.98312pt x 898.35625pt>
+File: figs/1_tree_class.png Graphic file (type png)
+<use figs/1_tree_class.png>
+Package pdftex.def Info: figs/1_tree_class.png  used on input line 1071.
+(pdftex.def)             Requested size: 335.99298pt x 251.53802pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 1071--1071
+[][]  
+ []
+
+
+Overfull \vbox (73.05717pt too high) detected at line 1071
+ []
+
+[86
+
+ <./figs/1_tree_class.png>]
+<figs/2_tree_class.png, id=3517, 1189.44376pt x 897.85437pt>
+File: figs/2_tree_class.png Graphic file (type png)
+<use figs/2_tree_class.png>
+Package pdftex.def Info: figs/2_tree_class.png  used on input line 1085.
+(pdftex.def)             Requested size: 333.04198pt x 251.3975pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 1085--1085
+[][]  
+ []
+
+
+Overfull \vbox (29.5542pt too high) detected at line 1085
+ []
+
+[87
+
+ <./figs/2_tree_class.png>]
+<figs/3_tree_class.png, id=3553, 1191.95313pt x 896.34875pt>
+File: figs/3_tree_class.png Graphic file (type png)
+<use figs/3_tree_class.png>
+Package pdftex.def Info: figs/3_tree_class.png  used on input line 1098.
+(pdftex.def)             Requested size: 297.98755pt x 224.08664pt.
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 1098--1098
+[][]  
+ []
+
+
+Overfull \vbox (2.24335pt too high) detected at line 1098
+ []
+
+[88
+
+ <./figs/3_tree_class.png>]
+<figs/4_tree_class.png, id=3590, 1445.4pt x 903.375pt>
+File: figs/4_tree_class.png Graphic file (type png)
+<use figs/4_tree_class.png>
+Package pdftex.def Info: figs/4_tree_class.png  used on input line 1110.
+(pdftex.def)             Requested size: 361.34912pt x 225.8432pt.
+
+Overfull \hbox (21.68034pt too wide) in paragraph at lines 1110--1110
+ [] 
+ []
+
+
+Overfull \hbox (4.45271pt too wide) in paragraph at lines 1110--1110
+[][]  
+ []
+
+
+Overfull \vbox (4.99991pt too high) detected at line 1110
+ []
+
+[89
+
+ <./figs/4_tree_class.png>]
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 1117.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf>
+Package pdftex.def Info: STAT380-Unit3.pdf  used on input line 1117.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+<STAT380-Unit3.pdf, id=3628, page=97, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 97>
-Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 97>
-Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 97>
-Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [33 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1433, page=98, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 97>
+Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 1117.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 97>
+Package pdftex.def Info: STAT380-Unit3.pdf , page97 used on input line 1117.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [90
+
+ <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=3654, page=98, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 98>
-Package pdftex.def Info: STAT380-Unit3.pdf , page98 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page98 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 98>
-Package pdftex.def Info: STAT380-Unit3.pdf , page98 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page98 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 98>
-Package pdftex.def Info: STAT380-Unit3.pdf , page98 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page98 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [34 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1459, page=99, 364.19562pt x 273.14648pt>
+ [91 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=3681, page=99, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 99>
-Package pdftex.def Info: STAT380-Unit3.pdf , page99 used on input line 226.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 99>
-Package pdftex.def Info: STAT380-Unit3.pdf , page99 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page99 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 99>
-Package pdftex.def Info: STAT380-Unit3.pdf , page99 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page99 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [35 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1492, page=100, 364.19562pt x 273.14648pt>
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 99>
+Package pdftex.def Info: STAT380-Unit3.pdf , page99 used on input line 1117.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [92 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=3715, page=100, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 100>
-Package pdftex.def Info: STAT380-Unit3.pdf , page100 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page100 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 100>
-Package pdftex.def Info: STAT380-Unit3.pdf , page100 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page100 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 100>
-Package pdftex.def Info: STAT380-Unit3.pdf , page100 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page100 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [36 <./STAT380-Unit3.pdf>]
-<STAT380-Unit3.pdf, id=1518, page=101, 364.19562pt x 273.14648pt>
+ [93 <./STAT380-Unit3.pdf>]
+<STAT380-Unit3.pdf, id=3741, page=101, 364.19562pt x 273.14648pt>
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 101>
-Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 226.
-(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
-File: STAT380-Unit3.pdf Graphic file (type pdf)
-<use STAT380-Unit3.pdf, page 101>
-Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
 File: STAT380-Unit3.pdf Graphic file (type pdf)
 <use STAT380-Unit3.pdf, page 101>
-Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 226.
+Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 1117.
 (pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
- [37 <./STAT380-Unit3.pdf>]
+File: STAT380-Unit3.pdf Graphic file (type pdf)
+<use STAT380-Unit3.pdf, page 101>
+Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 1117.
+(pdftex.def)             Requested size: 364.19473pt x 273.14581pt.
+ [94 <./STAT380-Unit3.pdf>]
+Overfull \hbox (3.45665pt too wide) in paragraph at lines 1121--1121
+[][] 
+ []
+
+[95]
 \tf@nav=\write6
 \openout6 = `STAT380_Classification_TreeBasedMethod.nav'.
 
@@ -1930,45 +2725,56 @@ Package pdftex.def Info: STAT380-Unit3.pdf , page101 used on input line 226.
 \tf@snm=\write8
 \openout8 = `STAT380_Classification_TreeBasedMethod.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1123.
+ (./STAT380_Classification_TreeBasedMethod.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1123.
 
-(./STAT380_Classification_TreeBasedMethod.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
-Package rerunfilecheck Info: File `STAT380_Classification_TreeBasedMethod.out' 
-has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `STAT380_Classification_TreeBasedMethod.ou
+t' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `STAT380_Classification_TreeBasedMet
+hod.out':
+(rerunfilecheck)             Before: C67D31ABD409670D85ACA530B2DD9DB7;258
+(rerunfilecheck)             After:  7AB6F1A69E3CC15F5CDAC8F6CAF6741D;378.
  ) 
 Here is how much of TeX's memory you used:
- 28294 strings out of 480608
- 549115 string characters out of 5903631
- 949568 words of memory out of 5000000
- 43398 multiletter control sequences out of 15000+600000
- 584218 words of font info for 91 fonts, out of 8000000 for 9000
+ 29490 strings out of 480608
+ 575170 string characters out of 5903631
+ 971416 words of memory out of 5000000
+ 44420 multiletter control sequences out of 15000+600000
+ 614662 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,19n,79p,824b,1838s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,24n,79p,824b,2526s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
-/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/he
-lvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/
-uhvro8a.pfb>
-Output written on STAT380_Classification_TreeBasedMethod.pdf (37 pages, 461737 
-bytes).
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/u
+rw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helv
+etic/uhvro8a.pfb>
+Output written on STAT380_Classification_TreeBasedMethod.pdf (95 pages, 1679267
+7 bytes).
 PDF statistics:
- 1593 PDF objects out of 1728 (max. 8388607)
- 1106 compressed objects within 12 object streams
- 75 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3891 PDF objects out of 4296 (max. 8388607)
+ 3025 compressed objects within 31 object streams
+ 197 named destinations out of 1000 (max. 500000)
+ 1969 words of extra memory for PDF output out of 10000 (max. 10000000)
 

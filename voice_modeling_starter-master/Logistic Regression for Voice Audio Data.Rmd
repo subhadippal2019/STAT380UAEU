@@ -1,0 +1,146 @@
+---
+title: "Voice Classification Data"
+author: "STAT380"
+date: "2024-10-10"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Packages To Load 
+```{r }
+library(tuneR)
+```
+
+
+
+# Set The Directory Where the Data Folder Is Located
+```{r }
+dir_path="/Users/subhadippal/Desktop/STAT380/voice_modeling_starter-master/"
+```
+
+# Related Functions 
+
+## Function for Extracting Features of a Single Audio File
+```{r }
+Extract_Sound_Feature<-function(my_audio){
+  ss<-c( c(summary(my_audio@left)), SD=sd(my_audio@left))
+  names(ss)=c("Min", "Q1", "Median", "Mean", "Q3", "Max", "Sd")
+  return(ss)
+}
+
+```
+
+
+## Function for Extracting Features from all Audio Files in a Folder
+```{r }
+
+
+
+Extract_Sound_Feature_for_AllFile<-function(FolderName,
+                         dir_path,
+                          details=TRUE){
+  
+    files_names<-list.files(paste0(dir_path,FolderName))
+   val_sound_feature=NULL
+  
+          for(FileIndex in 1:length(files_names)){
+                      file_path<-paste0(dir_path,FolderName,"/" , files_names[FileIndex])
+                      sound_file<-readWave(file_path)
+                      sound_feature<-Extract_Sound_Feature(sound_file)
+            
+                     if(!is.null(sound_feature)){val_sound_feature<-rbind(val_sound_feature, c(sound_feature))}
+                     if(details){print(paste0("Sound File='",file_path, "' Loaded Succesfully. Feature Extraction complete"))}
+             }
+
+  Y=as.factor(rep(x = FolderName, dim(val_sound_feature)[1]))
+  return(data.frame(Y,val_sound_feature))
+}
+
+
+```
+
+
+
+## Function To Create a Training Dataset
+```{r }
+
+
+Create_Training_Data_Set<-function(Category1="females", Category2="males", dir_path,  rand_err=20, details=TRUE){
+  #browser()
+  Train_cate1<-Extract_Sound_Feature_for_AllFile(FolderName=Category1,dir_path=dir_path,  details=details)
+  Train_cate2<-Extract_Sound_Feature_for_AllFile(FolderName=Category2,dir_path=dir_path,  details=details)
+  data=rbind(Train_cate1, Train_cate2)
+  #Y_var<-ifelse(data$Y==Category1, 1, 0)
+  
+  #vv<-round(runif(rand_err, 1,length(Y_var) ))
+  #Y_var[vv]= 1- Y_var[vv]
+  #data$Y= Y_var
+  return(data)
+}
+
+```
+
+
+
+
+## Function for Extracting Features for a Testing Audio File
+```{r }
+    Extract_Feature_Test<-function(Test_File_Loc){
+                  file_path<-paste0(Test_File_Loc)
+                  sound_file<-readWave(file_path)
+                  sound_feature<-Extract_Sound_Feature(sound_file)
+                  return(as.data.frame(t(sound_feature)))
+      }
+
+```
+
+
+# Fitting a Logistic Regression model and predict the Gender from the recorded audio file
+
+```{r }
+library(tuneR)
+
+Categories=c("males", "females")
+Training_Sound_Data<-Create_Training_Data_Set(Category1 =Categories[1], Category2 = Categories[2], dir_path = dir_path, details = TRUE )
+
+
+# fitting the model using a logistic regresion model Female==1
+fit<-glm(Y~., data=Training_Sound_Data, family="binomial")
+
+```
+
+
+# Obtaining the predicted probability for a new file
+## Testing a Female Voice Sample
+```{r }
+Test_File_Loc="/Users/subhadippal/Desktop/STAT380/voice_modeling_starter-master/females/1.wav"
+
+newData_feature=Extract_Feature_Test(Test_File_Loc)
+predictedProb<-predict.glm(fit, newdata=newData_feature, type="response")
+paste0("The predicted probability that the selected file is:", "female","( comparing between ", paste0(Categories, collapse=" and "), ") is ", predictedProb )
+predictedProb_1=data.frame(1-predictedProb, predictedProb)
+colnames(predictedProb_1)=Categories
+rownames(predictedProb_1)="Predicted Group Probability"
+predictedProb_1
+```
+
+## Testing a Male Voice Sample
+```{r }
+Test_File_Loc="/Users/subhadippal/Desktop/STAT380/voice_modeling_starter-master/males/2.wav"
+
+newData_feature=Extract_Feature_Test(Test_File_Loc)
+predictedProb<-predict.glm(fit, newdata=newData_feature, type="response")
+paste0("The predicted probability that the selected file is:", "female","( comparing between ", paste0(Categories, collapse=" and "), ") is ", predictedProb )
+predictedProb_1=data.frame(1-predictedProb, predictedProb)
+colnames(predictedProb_1)=Categories
+rownames(predictedProb_1)="Predicted Group Probability"
+predictedProb_1
+```
+
+

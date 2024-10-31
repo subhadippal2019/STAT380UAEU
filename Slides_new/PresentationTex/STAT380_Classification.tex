@@ -251,21 +251,21 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Assumptions}
-	
-
-	\begin{itemize}
-		\item Extracting knowledge from massive data sets assumes that they contain non-random, useful information.
-			\vspace{0.2cm}
-		\item Classification algorithms, especially predictions, do not have further assumptions about how the data was generated.
-			\vspace{0.2cm}
-		\item Most classical statistical methods are not valid if their \textbf{assumptions} are not fulfilled.
-	\end{itemize}
-	\vspace{0.8cm}
-	This does not mean that big data is always good data.
-	
-\end{frame}
+%\begin{frame}
+%	\frametitle{Assumptions}
+%	
+%
+%	\begin{itemize}
+%		\item Extracting knowledge from massive data sets assumes that they contain non-random, useful information.
+%			\vspace{0.2cm}
+%		\item Classification algorithms, especially predictions, do not have further assumptions about how the data was generated.
+%			\vspace{0.2cm}
+%		\item Most classical statistical methods are not valid if their \textbf{assumptions} are not fulfilled.
+%	\end{itemize}
+%	\vspace{0.8cm}
+%	This does not mean that big data is always good data.
+%	
+%\end{frame}
 
 
 \begin{frame}
@@ -666,7 +666,7 @@ Probabilities: $P(Y=1)=\pi$ and $P(Y=0)=1-\pi$
 
 \begin{frame}{ The Logistic Regression}
 \qbx[4.55in]{teal!40}{ \sqBullet{teal} 
-The  random sample of size $n$ is denoted as  $\{\HLTY{\by_i} , bx_i\}_{i=1}^n $ where  $\HLTY{\by_i}\in \{0,1\}$ and $\bx_i $ can be of any type numerical or categorical.}
+The  random sample of size $n$ is denoted as  $\{\HLTY{\by_i} , \bx_i\}_{i=1}^n $ where  $\HLTY{\by_i}\in \{0,1\}$ and $\bx_i $ can be of any type numerical or categorical.}
  \qbx[4.1in]{olive!40}{$\by_i \sim \text{Bernouli}(\pi_i),  0<\pi_i<1. $} 
  
  
@@ -704,7 +704,7 @@ $\implies\HLTY{ {\pi_i}= \Expit{\bx_i^T \bbeta}  }$
 
 
 \begin{frame}{ Explanation of `Logit' Link}
-\qBrd[3 in]{yellow!40}{$$\Huge  {\Huge \boldsymbol{\pi_i}}= {\small \Expit{\bx_i^T \bbeta}  }= \frac{\text{exp}\left( {\bx_i^T \bbeta}\right)}{1+\text{exp}\left( {\bx_i^T \bbeta}\right) }$$}
+\qBrd[3 in]{yellow!40}{$$\Huge  {\Huge \boldsymbol{\pi_i}}= {\small \Expit{\bx_i^T \bbeta}  }= \frac{\text{exp}\left( {\bx_i^T \bbeta}\right)}{{\Huge 1}+\text{exp}\left( {\bx_i^T \bbeta}\right) }$$}
 \vspace{2in}
 \end{frame}
 
@@ -744,6 +744,148 @@ $\implies\HLTY{ {\pi_i}= \Expit{\bx_i^T \bbeta}  }$
 \vspace{2in}
 \end{frame}
 
+
+
+\TransitionFrame{ Fitting a Logistic Regression Model }
+
+
+
+
+\begin{frame}{Objective function}
+\vspace{-.05in}
+\qbx[4.6in]{teal!40}{ \Large How to estimate the Parameters of the model?
+\vspace{2in}
+ }
+ \vspace{2in}
+\end{frame}
+
+
+\begin{frame}{Model Formulation}
+\qbx[4.55in]{teal!40}{ \sqBullet{teal} 
+The  random sample of size $n$ is denoted as  $\{\HLTY{\by_i} , bx_i\}_{i=1}^n $ where  $\HLTY{\by_i}\in \{0,1\}$ and $\bx_i $ can be of any type numerical or categorical.}
+ \qbx[4.1in]{olive!40}{$\by_i \sim \text{Bernouli}(\pi_i),  0<\pi_i<1. $} 
+ 
+ 
+ \qBrd[1.5in]{gray!40}{ 
+$\pi_i = Prob(Y_i =1)$   
+ }\\
+ \vspace{.5in}
+\qbx[4.6in]{lime!40}{ 
+{\bf Model: } \DBX{\Logit{\pi_i}= \bx_i^T \bbeta   }   $\implies$  \DBX{{\pi_i}= \ExpitExpr{\bx_i^T \bbeta}   }  
+ }\\
+\vspace{1in}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Likelihood}
+
+
+\qbx[4.6in]{lime!40}{ 
+{\bf Likelihood : }  
+%$$ \mathcal{L}(\bbeta):= \prod_{i=1}^{n } \left[\Expit{ \bx_i^T \bbeta}\right]^{y_i} \left[ (1-\Expit{\bx_i^T \bbeta})\right]^{1-y_i}$$
+$$ \mathcal{L}(\bbeta):= \prod_{i=1}^{n } \left[\pi_i\right]^{y_i} \left[ (1-\pi_i)\right]^{1-y_i} = \prod_{i=1}^{n } \left[\frac{\pi_i}{1-\pi_i}\right]^{y_i} \left[ (1-\pi_i)\right]  $$
+  }  
+  \\
+  \vspace{.2in}
+\qbx[4.6in]{lime!40}{ 
+{\bf Likelihood : }  
+%$$ \mathcal{L}(\bbeta):= \prod_{i=1}^{n } \left[\Expit{ \bx_i^T \bbeta}\right]^{y_i} \left[ (1-\Expit{\bx_i^T \bbeta})\right]^{1-y_i}$$
+$$ \mathcal{L}(\bbeta):= \prod_{i=1}^{n } e^{y_i\bx_i^T\bbeta} \left[\frac{1}{1+e^{\bx_i^T\bbeta }}\right]  $$
+  }  
+
+\end{frame}
+
+
+\begin{frame}{Objective function}
+
+
+\qbx[4.6in]{lime!40}{ 
+{\bf MInimize the Objective Function : }  
+%$$ \mathcal{L}(\bbeta):= \prod_{i=1}^{n } \left[\Expit{ \bx_i^T \bbeta}\right]^{y_i} \left[ (1-\Expit{\bx_i^T \bbeta})\right]^{1-y_i}$$
+$$ \mathcal{O}(\bbeta):=-\log(\mathcal{L}(\bbeta)):= \sum_{i=1}^n\left\{ -{y_i\bx_i^T\bbeta}+ \log\left(1+e^{\bx_i^T\bbeta }\right) \right\} $$
+  }  
+
+\vspace{2in}
+\end{frame}
+
+
+
+
+\begin{frame}{Estimating Equation for the optimal value}
+\qbx[4.5in]{lime!40}{ 
+{\bf Score Function  }  
+\begin{eqnarray}
+\mathcal{S}(\bbeta) =  \frac{d}{d\bbeta}\mathcal{O}(\bbeta) 
+& := &  \sum_{i=1}^n\left\{ -{y_i\bx_i}+\left( \ExpitExpr{{\bx_i^T\bbeta }} \right)\bx_i\right\} \nonumber\\
+& = &   \sum_{i=1}^n\left\{ \left( \pi_i ({\tiny\bbeta  })-y_i\right)\bx_i\right\} \nonumber
+\end{eqnarray}
+  }  
+  \vspace{-.2in}
+  
+  \qbx[4.5in]{lime!40}{ 
+  {\bf Estimating Equation for the Optimal Value $\hat{\bbeta}$: }  
+$$ \hat{\bbeta}:= \argmin_{\bbeta\in \R^p}   \sum_{i=1}^n\left\{ \left( \pi_i ({\tiny\bbeta  })-y_i\right)\bx_i\right\}$$
+  }  
+
+\vspace{2in}
+\end{frame}
+
+
+
+
+\begin{frame}{Hessian Matrix}
+\qbx[4.5in]{lime!40}{ 
+{\bf Hessian Function  }  
+\begin{eqnarray}
+ \mathcal{H}(\bbeta)=\frac{d^2 \; \mathcal{O}(\bbeta)}{d\bbeta \; d\bbeta^T}
+& := & \sum_{i=1}^n\left\{ \left( \ExpitExpr{{\bx_i^T\bbeta }}  \frac{1}{1+e^{\bx_i^T\bbeta }}    \right) \bx_i\bx_i^T \right\}  \nonumber\\
+& = &   \sum_{i=1}^n\left\{  \pi_i(1-\pi_i ) \bx_i \bx_i^T\right\}\nonumber\\
+& =& \bX^T W\bX, 
+\end{eqnarray}  
+where $W$ is the diagonal matrix with diagonal elements $\pi_i(1-\pi_i)$, X refers to the design matrix.
+  }  
+  
+ 
+
+\vspace{2in}
+\end{frame}
+
+
+\begin{frame}{General Iterative Algorithm}
+
+ \qBrd[3 in]{purple!30}{
+ $\HLTW{ \beta^{(m+1)}= \beta^{(m)}-\left[ \mathcal{H}(\bbeta)\right]^{-1}  \mathcal{S}(\bbeta) }$
+ }
+ \vspace{2in}
+\end{frame}
+
+
+\begin{frame}{IRLS Algorithm }
+\qbx[4.5in]{lime!40}{ 
+{\bf  }
+\begin{itemize}
+\qBrd[3 in]{purple!30}{\item {\bf Step(1):} Start   with an initial value $\bbeta^{(0)}$.}\\
+\vspace{.05in}
+\qBrd[4 in]{teal!30}{\item{\bf Step(2):} Update iteratively,  for $m=0, 1, 2, \ldots $ using the following equation 
+$$\HLTW{ \bbeta^{(m+1)} := \bbeta^{(m)}+  (\bX^T W\bX)^{-1}\bX^TW\MakeVec{z} } ,  $$
+where $\MakeVec{z}= \left[ z_1, z_2, \ldots, z_n\right]^T$, with  $z_i = \frac{(y_i-\pi)}{\pi_i (1-\pi_i)})$
+where $W$ is the diagonal matrix with diagonal elements $\pi_i(1-\pi_i)$, X refers to the design matrix.}\\
+\vspace{.05in}
+\qBrd[4 in]{olive!30}{\item {\bf Step(3):} Stop when  $ \norm{\bbeta^{(m+1)} - \bbeta^{(m)}}<\epsilon$, a predetermined tolerence limit. }
+\end{itemize}
+  }  
+  
+ 
+
+\vspace{2in}
+\end{frame}
+
+
+
+
 \TransitionFrame{ Interpretation of a Regression Coefficient: Intercept}
 \begin{frame}{ Interpretation of the Intercept}
 Let the fitted model be
@@ -765,6 +907,9 @@ Let the fitted model be
 $ \HLTY{ e^{\beta_0}}$ : Odds that the corresponding Response is 1 when all the covariate values are zero. }
  
 \end{frame}
+
+
+
 
 
 \TransitionFrame{ Interpretation of a Regression Coef.: A Numerical Covariate}
@@ -929,6 +1074,10 @@ $\hat{{\beta}} = 0$ &remains the  same &  $0\%$ &  same \\
 \end{frame}
 
 
+
+
+
+
 \TransitionFrame{A Data Example}
 
 
@@ -1058,6 +1207,8 @@ $\hat{{\beta}} = 0$ &remains the  same &  $0\%$ &  same \\
 	}
 
 \end{frame}
+
+
 
 
 
@@ -1644,6 +1795,63 @@ $\hat{{\beta}} = 0$ &remains the  same &  $0\%$ &  same \\
 %
 %\TransitionFrame[antiquebrass]{\Huge Thank You}
 %
+
+\TransitionFrame{Residual, Pearson residual, Deviance, Cook's Distance}
+
+
+\begin{frame}
+ \qBrd[4.2in]{teal!35}{  \sqBullet{teal}Raw Residual:   The raw residual is the difference between the actual response and the estimated probability from the model. The formula for the raw residual is
+ $\HLTW{r_{_i} :=  y_i - \hat{\pi}_i}$.}
+	
+	\vspace{0.2cm}	
+	\qBrd[4.2in]{teal!35}{  \sqBullet{teal}Pearson Residual:   The Pearson residual corrects for the unequal variance in the raw residuals by dividing by the standard deviation. The formula for the Pearson residuals is 
+ $\HLTW{r_{_p,_i} :=  \frac{ y_i -  \hat{\pi}_i}{   \sqrt{ \hat{\pi}_i  (1- \hat{\pi}_i)  } }    }$.}
+ 
+ 
+	\vspace{0.2cm}	
+	\qBrd[4.2in]{teal!35}{  \sqBullet{teal}Deviance: 
+Deviance residuals are also popular because the sum of squares of these residuals is the deviance statistic. The formula for the deviance residual is
+ $\HLTW{r_{_d,_i} :=\text{sign}(y_i -\hat{\pi}_i)\sqrt{ 2\left[  y_i \log\left( \frac{y_i}{\hat{\pi}_i} \right)     +     (1-y_i) \log\left( \frac{1-y_i}{1-\hat{\pi}_i} \right)    \right]     }      }$.} 
+ 
+\end{frame}
+
+
+
+
+\begin{frame}
+ \qBrd[4.2in]{teal!35}{  \sqBullet{teal}Hat Matrix:  The hat matrix serves a similar purpose as in the case of linear regression,   to measure the influence of each observation on the overall fit of the model,  but the interpretation is not as clear due to its more complicated form. The hat values (leverages) are given by
+ $\HLTW{  H= W^{\frac{1}{2}}\bX (\bX^T W\bX)^{-1}\bX^T W^{\frac{1}{2}}    }$.   \HLTY{h_{ii}} is the $i^{\text{th}}$ diagonal element of $H$. }
+	
+	\vspace{0.2cm}	
+	\qBrd[4.2in]{teal!35}{  \sqBullet{teal}Standardized Pearson Residual:   The Pearson residual corrects for the unequal variance in the raw residuals by dividing by the standard deviation. The formula for the Pearson residuals is 
+ $\HLTW{r_{_{sp},_i} :=  \frac{r_{_p,_i}}{1-h_{ii}}  }$.}
+ 
+ 
+	\vspace{0.2cm}	
+	\qBrd[4.2in]{teal!35}{  \sqBullet{teal} Studentized deviance residuals are given by
+  $\HLTW{r_{_{sd}, _i} :=  \frac{r_{_d,_i}}{1-h_{ii}}  }$.} 
+\end{frame}
+
+
+
+
+\begin{frame}
+ 
+	\vspace{0.2cm}	
+	\qBrd[4.2in]{teal!35}{  \sqBullet{teal} Cook's Distances
+An extension of Cook's distance for logistic regression measures the overall change in fitted logits due to deleting the ith observation. It is defined by:
+  $\HLTW{C_i :=  \frac{r_{_p,_i}^2 h_{ii}}{(p)(1-h_{ii})^2}  }$.} 
+	
+	\vspace{2.5in}
+	
+% \vspace{0.2cm}	
+%	\qBrd[4.2in]{teal!35}{  \sqBullet{teal} $R^2_{_\text{logidtic}}$
+%An extension of Cook's distance for logistic regression measures the overall change in fitted logits due to deleting the ith observation. It is defined by:
+%  $\HLTW{C_i :=  \frac{r_{_p,_i}^2 h_{ii}}{(p)(1-h_{ii})^2}  }$.} 
+%	
+\end{frame}
+
+
 \TransitionFrame{THANK YOU}
 
 \section{Example: O-Ring Failure Data}

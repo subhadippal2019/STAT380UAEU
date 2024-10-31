@@ -1,1 +1,7 @@
 \babel@toc {english}{}
+\beamer@sectionintoc {1}{Regression Tree}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{An Example}{26}{0}{1}
+\beamer@sectionintoc {2}{Classification Tree}{59}{0}{2}
+\beamer@subsectionintoc {2}{1}{Various Impurity Measures}{69}{0}{2}
+\beamer@subsectionintoc {2}{2}{Classification Tree Algorithm}{79}{0}{2}
+\beamer@subsectionintoc {2}{3}{An Example}{86}{0}{2}
