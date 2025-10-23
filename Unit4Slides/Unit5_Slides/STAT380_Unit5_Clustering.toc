@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Bagging}{3}{0}{1}
+\beamer@sectionintoc {2}{Random Forest}{22}{0}{2}
+\beamer@sectionintoc {3}{Boosting}{45}{0}{3}

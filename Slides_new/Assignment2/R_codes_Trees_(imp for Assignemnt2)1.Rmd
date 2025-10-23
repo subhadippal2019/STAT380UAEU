@@ -1,0 +1,154 @@
+---
+title: 'Class Activity '
+author: "STAT380"
+date: ' '
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r }
+###
+library(tree)
+###
+library(ISLR)
+#attach(Carseats)
+library(rattle)
+library(rpart.plot)
+library(RColorBrewer)
+library(partykit)
+```
+
+
+
+
+### We will use the classification trees for the Boston Housing data
+
+Load the data from the github course page using: 
+
+```{r }
+BostonHousing<-read.csv(url("https://raw.githubusercontent.com/subhadippal2019/STAT380UAEU/main/BostonHousing.csv"))
+names(BostonHousing)
+```
+
+##Some notations
+Some notations on the response variable and additional information on Data. Also remove the continuous response, `MEDV' as objective of this activity is to construct a Classification tree on the categorical covariate `CAT..MEDV' 
+```{r }
+## Classification tree using Boston Housing data: 
+# Some notation and additional information on Data
+head(BostonHousing)
+str(BostonHousing)
+BostonHousing$MEDV_Fac = factor(BostonHousing$CAT..MEDV,labels=c("Below","Above"))
+BostonHousing$MEDV_Fac
+# As we will be using the MEDV_Fac as categorical response, we will remove both, `CAT..MEDV' and `MEDV' to keep on the required of the data. 
+BostonH=BostonHousing[,-c(13,14)] 
+#We will work on the BostonH for rest of the activity
+```
+
+
+
+### Split the data in Training and Testing Set. Use a 70%/30% split for the Training and Testing Set. Print the dimension of the Testing and the Training set.
+```{r }
+#### A5.1:
+set.seed(234)
+ #inTrain = createDataPartition(Carseats$Sales, p = 0.6, list = FALSE)
+  Total_data_size=as.integer(nrow(BostonH))
+  inTrain = sample(1:Total_data_size, round(Total_data_size*0.70))
+  Training_Set = BostonH[inTrain, ]
+  dim(Training_Set)
+  
+  Testing_Set<-BostonH[-inTrain, ]
+  dim(Testing_Set)
+  names(BostonH)
+
+```
+
+### Fitting a classification Tree
+
+We Fit a classification tree on the Training Set using the response  `MEDV_Fac', the median price of houses in a region, as the response variable while all the other variables. We also Display/plot the fitted tree.
+
+```{r }
+#-------------------------------------
+# Grow a general classification tree with multiple covariates
+# - minimum number of units that exists in a node in order for a split to be attempted
+# - change complexity parameter alpha to -1 - full tree
+set.seed(12043)
+cls_fit_train = rpart(MEDV_Fac~CRIM+ZN+INDUS+CHAS+NOX+RM+AGE+DIS+RAD+TAX+PTRATIO+LSTAT,data=Training_Set,method="class",minsplit=5,cp=0)
+
+# plot fitted tree# You may use fancyRpartPlot(fitted_object, caption = NULL)
+fancyRpartPlot(cls_fit_train, caption = NULL)
+
+```
+
+###  Print the summary and the tables containig the crossvalidated ``` cp' and plot the `crossvalidated ``cp'.  (summary, printcp, plotcp) We also,  identify an optimal value for the complexity parameter \`cp'.
+
+```{r }
+summary(cls_fit_train)
+printcp(cls_fit_train)
+plotcp(cls_fit_train) 
+
+
+```
+
+### 
+
+##  Find the optimal value of \`cp' and Prune the regression tree.
+
+```{r }
+## B4.
+bestcp <-cls_fit_train$cptable[which.min(cls_fit_train$cptable[,"xerror"]),"CP"]
+
+
+```
+
+### 
+
+
+##  Prune the regression tree to find the optimal number of nodes.
+```{r }
+
+#bestcp <-fit_train$cptable[which.min(fit_train$cptable[,"xerror"]),"CP"]
+cls_pruned.tree <- prune(cls_fit_train, cp = bestcp)
+rpart.plot(cls_pruned.tree)
+
+```
+###
+
+##  Predict on the Testing set with the pruned tree. Plot the predicted values vs the response values in the test set.
+
+## Predict on the Testing set with the Entire tree fitted to the training set. Plot the predicted values vs the response values in the test set.
+
+```{r }
+##Predict: 
+cls_pred_test.prune_prob = predict(cls_pruned.tree, Testing_Set)
+
+cls_pred_test.prune = predict(cls_pruned.tree, Testing_Set, type="class")
+
+### 
+cls_pred_test.full_tree=predict(cls_fit_train, Testing_Set, main="Entire Tree on Trainig Set", type="class")
+
+
+
+```
+
+### 
+
+
+
+### Create A classification Tables of the errors  using both the Predicted values from the pruned tree and the entire tree fitted using the training set.
+
+###  Compare the classification performance of the tree and the pruned tree. 
+```{r }
+#A9.1
+table(cls_pred_test.prune ,Testing_Set$MEDV_Fac )
+#A9.2
+table(cls_pred_test.full_tree,Testing_Set$MEDV_Fac )
+```
+
+
+
